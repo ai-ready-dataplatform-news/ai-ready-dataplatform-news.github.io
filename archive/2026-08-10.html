@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The AI-Ready Data Brief · Monday 10 August 2026</title>
+<meta name="description" content="What changed today for people building enterprise data platforms — curated daily, because the signal is buried in vendor noise.">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body>
+<div class="band band-top">
+  <div class="inner">
+    <div class="masthead"><a href="../">The AI-Ready Data Brief</a></div>
+    <div class="day-date">Monday · 10 August 2026</div>
+    <p class="standfirst">What changed today for people building enterprise data platforms — curated daily, because the signal is buried in vendor noise.</p>
+    <a class="archive-link" href="../archive/">Browse all 32 days in the archive &rarr;</a>
+  </div>
+</div>
+
+<div class="band">
+  <div class="inner">
+    
+  <section class="quote">
+    <h2 class="heading">On leading</h2>
+    <blockquote>Great vision without great people is irrelevant.</blockquote>
+    <div class="attribution">Jim Collins · Good to Great</div>
+    <p class="quote-prompt">Check whether your boldest roadmap bet has the right person on it, not just the available one.</p>
+  </section>
+    
+  <section class="news">
+    <h2 class="heading">AI news for Enterprise Data Platform Product Management</h2>
+    <ol class="items">
+    <li>
+      <span class="numeral">01</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://docs.snowflake.com/en/developer-guide/native-apps/agents-mcp-servers">Snowflake native apps can now ship their own MCP servers</a></div>
+        <p class="item-line">As of August 7, a Snowflake Native App can create Cortex Agents and Snowflake-managed MCP servers directly, exposing its shared data and functionality as MCP tools to agents inside or outside Snowflake. <span class="item-meta">Snowflake Documentation · 2026-08-07</span></p>
+        
+        <p class="item-sowhat">Vendors can now ship an MCP surface as part of the app itself, so evaluating Snowflake-native tooling no longer means budgeting a separate integration layer just to make it agent-reachable.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">02</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://thehackernews.com/2026/08/paperclip-ai-flaws-let-attackers-run.html">Critical flaws let attackers hijack AI agent control planes</a></div>
+        <p class="item-line">Oasis Security disclosed three flaws in Paperclip, an open-source control plane for orchestrating autonomous AI agents — including an unauthenticated bug (CVSS 10.0) that let an attacker self-register and obtain persistent admin-level API access — now patched in 2026.416.0. <span class="item-meta">The Hacker News · 2026-08-05</span></p>
+        
+        <p class="item-sowhat">Any team standing up agent orchestration on top of its data platform now has a concrete case for treating that control plane with the same access-review rigor as the warehouse it drives.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">03</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://docs.databricks.com/aws/en/release-notes/product/2026/august">Databricks makes Delta sharing with deletion vectors GA</a></div>
+        <p class="item-line">From August 4, Databricks generally supports sharing Delta tables that have deletion vectors or column mapping enabled, removing a prior blocker to exchanging modern Delta tables through Delta Sharing. <span class="item-meta">Databricks Release Notes · 2026-08-04</span></p>
+        
+        <p class="item-sowhat">Teams sharing Delta tables across business units or with partners no longer have to strip out performance features to make a table shareable — one less table-format compromise on the lakehouse roadmap.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">04</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://docs.snowflake.com/en/sql-reference/account-usage/access_history">Snowflake adds an agent-activity column to its access-history view</a></div>
+        <p class="item-line">Since August 3, the ACCESS_HISTORY view carries a new agents_info column recording which AI agents accessed data on a user&#39;s behalf, across both account- and organization-usage views. <span class="item-meta">Snowflake Documentation · 2026-08-03</span></p>
+        
+        <p class="item-sowhat">It&#39;s a small feature with an outsized governance payoff: audit and data-quality teams get a native way to see which queries against a table were agent-initiated rather than human, instead of inferring it after the fact.</p>
+      </div>
+    </li></ol>
+  </section>
+    
+  <section class="readiness">
+    <h2 class="heading">AI-ready vs analytical-ready data</h2>
+    
+    
+    <div class="learn">
+      <div class="learn-tag">video · AtScale — expert panel (on-demand video)</div>
+      <div class="learn-title"><a href="https://www.atscale.com/resource/intelligent-data-layer-ai-readiness/">Building the Intelligent Data Layer: Governance, Semantics, AI Readiness</a></div>
+      <p class="learn-eli5">Picture a company&#39;s data as a huge library where every department labels its own shelves differently. A semantic layer is a librarian who translates all those labels into one shared catalogue, so when someone — or an AI model — asks for &quot;revenue,&quot; everyone gets the same number, calculated the same way, instead of five different answers from five different spreadsheets. Governance is the library&#39;s rulebook layered on top: who&#39;s allowed to see which shelf, and a record of who looked. Put the two together and the data isn&#39;t just organized — it&#39;s trustworthy enough to hand to a model that will act on the answer without a human checking it first.</p>
+      <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> The panel&#39;s core argument — that governance and semantics have to be built together, not bolted on after the AI features ship — is the case for funding the semantic layer as infrastructure on this year&#39;s roadmap rather than revisiting it as a BI nice-to-have once agents are already in production.</p>
+    </div>
+  </section>
+    <div class="site-foot">
+      <a href="../">Today</a> · <a href="../archive/">Archive</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

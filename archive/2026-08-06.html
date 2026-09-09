@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The AI-Ready Data Brief · Thursday 6 August 2026</title>
+<meta name="description" content="What changed today for people building enterprise data platforms — curated daily, because the signal is buried in vendor noise.">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body>
+<div class="band band-top">
+  <div class="inner">
+    <div class="masthead"><a href="../">The AI-Ready Data Brief</a></div>
+    <div class="day-date">Thursday · 6 August 2026</div>
+    <p class="standfirst">What changed today for people building enterprise data platforms — curated daily, because the signal is buried in vendor noise.</p>
+    <a class="archive-link" href="../archive/">Browse all 32 days in the archive &rarr;</a>
+  </div>
+</div>
+
+<div class="band">
+  <div class="inner">
+    
+  <section class="quote">
+    <h2 class="heading">On leading</h2>
+    <blockquote>I&#39;ve learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.</blockquote>
+    <div class="attribution">Maya Angelou</div>
+    <p class="quote-prompt">Notice how someone leaves your next one-to-one, not just what was agreed.</p>
+  </section>
+    
+  <section class="news">
+    <h2 class="heading">AI news for Enterprise Data Platform Product Management</h2>
+    <ol class="items">
+    <li>
+      <span class="numeral">01</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.techtarget.com/searchitoperations/news/366646492/Stateless-MCP-seen-as-step-forward-for-enterprise-AI">MCP goes stateless, adds enterprise auth in major update</a></div>
+        <p class="item-line">The Model Context Protocol&#39;s July 28 spec release rebuilds the core as a stateless request/response protocol and stabilizes an Enterprise-Managed Authorization extension already being adopted by Anthropic, Microsoft and Okta. <span class="item-meta">TechTarget · 2026-07-28</span></p>
+        
+        <p class="item-sowhat">Stateless servers can run behind standard load balancers on existing Kubernetes tooling — worth revisiting any MCP server design that assumed persistent sessions before the next agent rollout.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">02</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://responsibleailabs.ai/knowledge-hub/articles/eu-ai-act-august-2026-compliance">EU AI Act&#39;s high-risk training-data rules take effect</a></div>
+        <p class="item-line">As of August 2, Article 10 of the EU AI Act requires providers of high-risk AI systems to document and govern training, validation and testing data — origin, labelling, cleaning and enrichment included — alongside Annex III conformity assessments. <span class="item-meta">Responsible AI Labs · 2026-08-02</span></p>
+        
+        <p class="item-sowhat">Data-prep steps that used to be internal engineering choices are now regulated inputs with a documentation requirement — worth checking whether current lineage tooling can actually produce that trail on demand.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">03</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://siliconangle.com/2026/07/28/snowflake-debuts-cortex-ai-gateway-govern-monitor-enterprise-ai-agents/">Snowflake launches Cortex AI Gateway to govern agent fleets</a></div>
+        <p class="item-line">Snowflake&#39;s new Cortex AI Gateway, built on its Natoma Labs acquisition, gives enterprises a centralized control layer for AI agent identity, MCP governance, data-exfiltration prevention and cost tracking across more than 100 supported MCP servers. <span class="item-meta">SiliconANGLE · 2026-07-28</span></p>
+        
+        <p class="item-sowhat">A platform vendor is now selling agent governance as a native gateway rather than leaving it to a third-party tool — worth comparing against whatever bespoke agent-access controls are already on the roadmap.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">04</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://polaris.apache.org/downloads/1.7.0/">Apache Polaris 1.7.0 tightens credential vending</a></div>
+        <p class="item-line">The August 2 Polaris 1.7.0 release adds opt-in idempotent createTable/updateTable calls, a stricter least-privilege credential-vending model with per-request IAM session policies, and a pass on orphan-file cleanup. <span class="item-meta">Apache Polaris · 2026-08-02</span></p>
+        
+        <p class="item-sowhat">Tighter, request-scoped vended credentials close a real gap for any Iceberg catalog exposed to more callers as agentic tools start querying it directly — worth a version check before the next catalog upgrade window.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">05</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.networkworld.com/article/4204009/groundcover-raises-100m-as-observability-pivots-from-monitoring-to-ai-infrastructure.html">Groundcover raises $100M to build observability for the AI era</a></div>
+        <p class="item-line">Groundcover closed a $100M Series C led by One Peak to expand its eBPF-based, zero-instrumentation observability platform, now serving 250+ customers including Fortune 5 enterprises, and to build out an agentic &quot;Agent Mode&quot; for production troubleshooting. <span class="item-meta">Network World · 2026-07-29</span></p>
+        
+        <p class="item-sowhat">Fresh capital flowing into agentless observability tooling signals the buy case for monitoring AI-era pipelines is strengthening relative to building one in-house — worth a look before committing engineering time to a homegrown collector.</p>
+      </div>
+    </li></ol>
+  </section>
+    
+  <section class="readiness">
+    <h2 class="heading">AI-ready vs analytical-ready data</h2>
+    <ol class="items">
+    <li>
+      <span class="numeral">01</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.databricks.com/blog/governing-ai-agents-scale-unity-catalog">Databricks extends Unity Catalog to govern AI assets, not just tables</a></div>
+        <p class="item-line">Unity Catalog now registers, discovers, secures and audits models, MCP services, agents and skills through the same governance framework used for tables, with Unity AI Gateway enforcing contextual policy at runtime. <span class="item-meta">Databricks · 2026-05-20</span></p>
+        
+        <p class="item-sowhat">A catalog bought to govern tables is being asked to govern agents too — worth checking whether the current catalog&#39;s policy model actually extends to non-tabular AI assets before agents multiply faster than the governance does.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">02</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://cloud.google.com/blog/products/business-intelligence/looker-updates-for-agentic-bi-at-next26">Looker ties its semantic layer to agent actions, not just dashboards</a></div>
+        <p class="item-line">At Next &#39;26, Google announced Looker BI Agents that trigger downstream business actions grounded directly in Looker&#39;s LookML semantic layer and enterprise governance framework, plus a native MCP server exposing that layer to outside tools. <span class="item-meta">Google Cloud Blog · 2026-04-22</span></p>
+        
+        <p class="item-sowhat">The semantic layer is becoming the thing agents act through, not just query — a reason to weigh metric-definition debt in the BI layer as an AI-readiness cost, not only a reporting-consistency one.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">03</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.collibra.com/blog/turn-ai-activity-into-measurable-business-oversight">Collibra scores AI trust as a business metric, not a dashboard extra</a></div>
+        <p class="item-line">Collibra&#39;s new Business Metrics dashboard in AI Command Center quantifies AI trust and risk concentration across agents, use cases and models in one comparable score, arguing trust scoring is becoming a governance dependency rather than a nice-to-have. <span class="item-meta">Collibra · 2026-06-26</span></p>
+        
+        <p class="item-sowhat">A quantified trust score is a concrete artifact to demand from any governance vendor evaluation — a comparison point that&#39;s harder to dodge than a feature checklist.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">04</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.prnewswire.com/news-releases/deloittes-chief-data-and-analytics-officer-survey-finds-cdaos-acting-as-ai-trailblazers-and-influential-leaders-in-driving-long-term-ai-value-302701424.html">Deloitte: CDAOs gain power but structures lag AI ambition</a></div>
+        <p class="item-line">Deloitte&#39;s CDAO survey of 100 C-suite data and AI leaders at $1B+ revenue companies found 78% say AI has increased their decision-making power and 89% are actively evolving data and AI strategy, but most still lack a settled operating structure for it. <span class="item-meta">Deloitte · 2026-03-03</span></p>
+        
+        <p class="item-sowhat">Influence is growing faster than the org chart is catching up — a case for naming who actually owns AI-readiness decisions before the next reorg gets forced by an incident rather than a plan.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">05</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.servicenow.com/workflow/ai/enterprise-ai-maturity-index-2026.html">59% of enterprises run AI agents; 26% can govern them</a></div>
+        <p class="item-line">ServiceNow&#39;s Enterprise AI Maturity Index, surveying 4,500 executives across 19 countries, found the average maturity score rose 16 points to 51 as AI spending grew 110% — but governance capability trails deployment by a wide margin. <span class="item-meta">ServiceNow · 2026-06-09</span></p>
+        
+        <p class="item-sowhat">A named gap between deployment and governance maturity is a sharper budget argument than a general readiness plea — useful when governance work is competing against the next agent feature for funding.</p>
+      </div>
+    </li></ol>
+    
+    <div class="learn">
+      <div class="learn-tag">blog · Lumenalta · 2026-05-08</div>
+      <div class="learn-title"><a href="https://lumenalta.com/insights/how-enterprises-move-from-data-migration-to-ai-ready-platforms">Data migration isn&#39;t the same job as building an AI-ready platform</a></div>
+      <p class="learn-eli5">Moving data to the cloud and making it usable by AI are two different jobs, even though they get bundled into one project. Migration answers &quot;where does the data live now&quot; — it copies tables from an old system to a new one. Readiness answers a harder question: can a model, a dashboard, and an application all trust the same number for &quot;revenue&quot; without three teams rebuilding the logic three different ways? That trust comes from a &quot;data product&quot; — a dataset with an owner, a contract describing what it means and how fresh it has to be, and rules about who can use it and how. Fix the contract once, in one place, and every downstream consumer inherits the fix instead of needing its own patch.</p>
+      <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> Migration budget and readiness budget are not interchangeable — a platform roadmap that funds the move but not the data-product layer on top of it will land data in the cloud that still can&#39;t be trusted by the next model, which is the actual ask most stakeholders meant when they asked for &quot;AI-ready.&quot;</p>
+    </div>
+  </section>
+    <div class="site-foot">
+      <a href="../">Today</a> · <a href="../archive/">Archive</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

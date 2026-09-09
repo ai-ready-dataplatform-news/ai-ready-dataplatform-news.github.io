@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The AI-Ready Data Brief · Wednesday 2 September 2026</title>
+<meta name="description" content="What changed today for people building enterprise data platforms — curated daily, because the signal is buried in vendor noise.">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body>
+<div class="band band-top">
+  <div class="inner">
+    <div class="masthead"><a href="../">The AI-Ready Data Brief</a></div>
+    <div class="day-date">Wednesday · 2 September 2026</div>
+    <p class="standfirst">What changed today for people building enterprise data platforms — curated daily, because the signal is buried in vendor noise.</p>
+    <a class="archive-link" href="../archive/">Browse all 32 days in the archive &rarr;</a>
+  </div>
+</div>
+
+<div class="band">
+  <div class="inner">
+    
+  <section class="quote">
+    <h2 class="heading">On leading</h2>
+    <blockquote>Leadership is unlocking people&#39;s potential to become better.</blockquote>
+    <div class="attribution">Bill Bradley</div>
+    <p class="quote-prompt">Tell one person specifically what you see in them that they may not.</p>
+  </section>
+    
+  <section class="news">
+    <h2 class="heading">AI news for Enterprise Data Platform Product Management</h2>
+    <ol class="items">
+    <li>
+      <span class="numeral">01</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.npr.org/2026/08/28/nx-s1-5947951/judge-says-the-pentagon-cant-designate-ai-company-anthropic-a-supply-chain-risk">Judge voids Pentagon&#39;s Anthropic risk label</a></div>
+        <p class="item-line">A federal judge ruled the Pentagon&#39;s &#39;supply chain risk&#39; designation of Anthropic was unconstitutional retaliation and a due-process violation, and ordered it lifted. <span class="item-meta">NPR · 2026-08-28</span></p>
+        
+        <p class="item-sowhat">Vendor-risk labels a federal agency pins on an AI supplier are now provably contestable in court, so procurement should treat one as a challengeable claim, not a final verdict, when scoring AI vendor risk.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">02</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://docs.databricks.com/aws/en/ai-bi/release-notes/2026">Genie One adds web search with citations</a></div>
+        <p class="item-line">Genie One can now search the public web for release notes, documentation and news to answer questions, and cites the external sources it used as links in its response. <span class="item-meta">Databricks AI/BI and Genie One release notes · 2026-09-01</span></p>
+        
+        <p class="item-sowhat">Ungoverned public search inside a Unity Catalog-grounded assistant blurs the audit line between answers backed by governed data and ones pulled from the open web, so admins need a way to scope or log when Genie steps outside the catalog.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">03</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://news.wfu.edu/2026/08/26/ai-agents-are-all-the-rage-but-research-shows-they-leak-private-data/">Study finds 90% of leaked agent-skill secrets usable</a></div>
+        <p class="item-line">Testing 170,226 outputs from 17,022 skills on the SkillsMP marketplace, Wake Forest researchers found 89.6% of credentials leaked by LLM agent skills were immediately exploitable. <span class="item-meta">Wake Forest News · 2026-08-26</span></p>
+        
+        <p class="item-sowhat">Any roadmap that lets agents install third-party skills needs a credential-scanning gate before a marketplace skill reaches production, not a policy document after the fact.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">04</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://en.sedaily.com/technology/2026/08/31/kt-to-rebuild-woori-banks-ai-chatbot-and-consultation-bot">KT rebuilds Woori Bank&#39;s chatbot on agent hand-offs</a></div>
+        <p class="item-line">KT won the contract to rebuild Woori Bank&#39;s chatbot and consultation-bot systems around its new Agent Connect layer, which carries context across channels and hands off between agents. <span class="item-meta">Seoul Economic Daily · 2026-08-31</span></p>
+        
+        <p class="item-sowhat">A regulated bank betting customer service on context-preserving agent hand-offs is a live test of whether that architecture survives financial-services audit and continuity requirements.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">05</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.doit.com/blog/august-2026-in-review">DoIT itemizes AI inference spend by model</a></div>
+        <p class="item-line">DoIT&#39;s Cloud Intelligence now itemizes inference spend by model across OpenRouter, xAI, Fireworks AI, Snowflake and Databricks alongside the rest of cloud costs. <span class="item-meta">DoIT · 2026-08-31</span></p>
+        
+        <p class="item-sowhat">Per-model cost attribution across vendors closes a blind spot FinOps teams have been guessing around all year, and it is the kind of visibility a platform PM should be demanding on every AI billing line.</p>
+      </div>
+    </li></ol>
+  </section>
+    
+  <section class="readiness">
+    <h2 class="heading">AI-ready vs analytical-ready data</h2>
+    
+    
+    <div class="learn">
+      <div class="learn-tag">video · AtScale Data-Driven Podcast (YouTube) · 2026</div>
+      <div class="learn-title"><a href="https://www.youtube.com/watch?v=yJ95elCx0z0">AI Needs Context: Semantic Layers, Metadata &amp; Trust</a></div>
+      <p class="learn-eli5">A language model can write a database query, but it has no idea what your business means by &#39;active customer&#39; or &#39;net revenue&#39; unless someone tells it. A semantic layer is that telling: a governed map of what each term means, which tables hold it, and how it should be combined. Without the map, the model is guessing at a schema it has never really understood. With it, the model works from an agreed answer instead of inventing one.</p>
+      <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> The discussion cites research showing GPT-4 wrote correct SQL from a bare schema only 16.7% of the time, rising to 54.2% once the same database was wrapped in an ontology and mappings — evidence that a semantic and metadata layer belongs on the roadmap before agentic BI, not after, since accuracy roughly triples on identical data once context is added.</p>
+    </div>
+  </section>
+    <div class="site-foot">
+      <a href="../">Today</a> · <a href="../archive/">Archive</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

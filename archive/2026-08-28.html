@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The AI-Ready Data Brief · Friday 28 August 2026</title>
+<meta name="description" content="What changed today for people building enterprise data platforms — curated daily, because the signal is buried in vendor noise.">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body>
+<div class="band band-top">
+  <div class="inner">
+    <div class="masthead"><a href="../">The AI-Ready Data Brief</a></div>
+    <div class="day-date">Friday · 28 August 2026</div>
+    <p class="standfirst">What changed today for people building enterprise data platforms — curated daily, because the signal is buried in vendor noise.</p>
+    <a class="archive-link" href="../archive/">Browse all 32 days in the archive &rarr;</a>
+  </div>
+</div>
+
+<div class="band">
+  <div class="inner">
+    
+  <section class="quote">
+    <h2 class="heading">On leading</h2>
+    <blockquote>The essence of strategy is choosing what not to do.</blockquote>
+    <div class="attribution">Michael E. Porter · What Is Strategy?, Harvard Business Review, 1996</div>
+    <p class="quote-prompt">Cut one item from the roadmap today and say why out loud.</p>
+  </section>
+    
+  <section class="news">
+    <h2 class="heading">AI news for Enterprise Data Platform Product Management</h2>
+    <ol class="items">
+    <li>
+      <span class="numeral">01</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.databricks.com/blog/introducing-governance-hub-intelligent-account-level-governance-over-your-databricks-estate">Databricks launches account-level Governance Hub</a></div>
+        <p class="item-line">Databricks shipped Governance Hub on 26 August, a single account-level view combining data governance coverage, AI usage and spend, and cost drivers with prioritized fix-it recommendations, alongside a new Tags page in beta for auditing tag coverage. <span class="item-meta">Databricks Blog · 2026-08-26</span></p>
+        
+        <p class="item-sowhat">A built-in, estate-wide governance dashboard changes the buy-vs-build calculus for any bolt-on catalog or FinOps tool that was about to make the shortlist.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">02</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.theregister.com/security/2026/08/25/cisa-slaps-its-tightest-three-day-patching-deadline-on-perfect-10-oracle-flaw/">CISA flags critical, exploited Oracle WebLogic flaw</a></div>
+        <p class="item-line">CISA added the maximum-severity CVE-2026-21962, an unauthenticated RCE in Oracle HTTP Server and the WebLogic Proxy plugin, to its Known Exploited Vulnerabilities catalog on 24 August and gave federal agencies a 72-hour patching deadline, warning it lets attackers create, delete or modify critical data. <span class="item-meta">The Register · 2026-08-25</span></p>
+        
+        <p class="item-sowhat">Any pipeline sitting behind Oracle HTTP Server or WebLogic — a common front door for on-prem data integrations — needs a patch-status check this week, not at the next quarterly review.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">03</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.techtimes.com/articles/325645/20260826/amazon-mechanical-turk-will-close-september-30-shutting-down-sagemaker-ground-truth-too.htm">Amazon exits human-data labeling with Mechanical Turk</a></div>
+        <p class="item-line">Amazon announced on 26 August that Mechanical Turk will close September 30, taking SageMaker Ground Truth and Amazon Augmented AI down with it and ending Amazon&#39;s run in human-in-the-loop data-labeling infrastructure. <span class="item-meta">Tech Times · 2026-08-26</span></p>
+        
+        <p class="item-sowhat">Any pipeline leaning on MTurk or Ground Truth for labeling or human review needs a migration plan before September 30, and it&#39;s a data point on how much vendor risk sits in unglamorous &quot;utility&quot; data-labeling tooling.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">04</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://dev.to/alexmercedcoder/apache-data-lakehouse-weekly-august-19-to-26-2026-4emn">Iceberg splits conformance tests into their own repo</a></div>
+        <p class="item-line">Apache Iceberg&#39;s community passed a vote this week to create apache/iceberg-verification, a standalone, language-neutral home for conformance fixtures that every implementation can run against, so no single client library owns the spec&#39;s test suite. <span class="item-meta">Apache Data Lakehouse Weekly · 2026-08-26</span></p>
+        
+        <p class="item-sowhat">A shared conformance suite makes cross-engine Iceberg compatibility claims — Snowflake vs. Databricks vs. Trino — actually checkable rather than marketing, worth citing the next time a vendor claims full spec compliance.</p>
+      </div>
+    </li></ol>
+  </section>
+    
+  <section class="readiness">
+    <h2 class="heading">AI-ready vs analytical-ready data</h2>
+    <ol class="items">
+    <li>
+      <span class="numeral">01</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.ciodive.com/news/verizon-google-cloud-partner-enterprise-AI/828648/">Verizon taps Google&#39;s Agentic Data Cloud to unify data</a></div>
+        <p class="item-line">Verizon and Google Cloud announced an expanded partnership on 24 August under which Verizon will deploy Google&#39;s Agentic Data Cloud and Gemini Enterprise to unify data across the company as the foundation for building and deploying AI agents. <span class="item-meta">CIO Dive · 2026-08-24</span></p>
+        
+        <p class="item-sowhat">A telco-scale customer treating data unification as the prerequisite step before agent rollout, not the agents themselves, is a template worth citing when pitching a readiness roadmap to a skeptical board.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">02</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://docs.databricks.com/aws/en/data-governance/unity-catalog/access-control/privileges-reference">Databricks adds least-privilege table write grants</a></div>
+        <p class="item-line">Databricks put INSERT, UPDATE and DELETE privileges into beta on 24 August as least-privilege alternatives to the blanket MODIFY grant, letting teams give write access to a table&#39;s data without also granting the ability to change its schema. <span class="item-meta">Databricks Docs · 2026-08-24</span></p>
+        
+        <p class="item-sowhat">Finer-grained write grants close a real gap in the access-control story teams reach for when asked whether a table is safe to expose to an agent — worth flagging to whoever owns the next access review.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">03</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://docs.databricks.com/aws/en/genie-one/desktop">Databricks brings Genie One to the desktop</a></div>
+        <p class="item-line">Databricks shipped a native macOS desktop app for Genie One in beta on 25 August, giving business users the same natural-language chat over Unity Catalog tables and Genie Agents as the web experience, plus desktop conveniences like an unread-activity badge. <span class="item-meta">Databricks Docs · 2026-08-25</span></p>
+        
+        <p class="item-sowhat">Packaging natural-language query as a native app rather than a browser tab is a small but real signal that vendors are betting business users, not just analysts, become the primary consumers of AI-ready data.</p>
+      </div>
+    </li></ol>
+    
+    <div class="learn">
+      <div class="learn-tag">blog · TechTarget · 2026-03-27</div>
+      <div class="learn-title"><a href="https://www.techtarget.com/searchdatamanagement/feature/Data-domain-ownership-data-mesh-chart-path-to-AI-ready-data">Data domain ownership and data mesh chart a path to AI-ready data</a></div>
+      <p class="learn-eli5">A data mesh treats each business domain — billing, say, or logistics — as the owner and publisher of its own data, the way a product team owns a product, instead of funnelling every table through one central data team that can&#39;t keep up. Each domain team becomes responsible for making its data discoverable, documented and trustworthy for whoever needs it next, a model included. The idea isn&#39;t a new tool — it&#39;s a change in who is accountable for a dataset being good enough to hand to an AI system, rather than assuming a central pipeline will clean it up eventually.</p>
+      <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> Before buying another catalog or quality tool, it&#39;s worth asking whether the real gap is ownership — nobody accountable for a given dataset being AI-ready — since no tool fixes that on its own.</p>
+    </div>
+  </section>
+    <div class="site-foot">
+      <a href="../">Today</a> · <a href="../archive/">Archive</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

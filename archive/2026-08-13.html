@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The AI-Ready Data Brief · Thursday 13 August 2026</title>
+<meta name="description" content="What changed today for people building enterprise data platforms — curated daily, because the signal is buried in vendor noise.">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body>
+<div class="band band-top">
+  <div class="inner">
+    <div class="masthead"><a href="../">The AI-Ready Data Brief</a></div>
+    <div class="day-date">Thursday · 13 August 2026</div>
+    <p class="standfirst">What changed today for people building enterprise data platforms — curated daily, because the signal is buried in vendor noise.</p>
+    <a class="archive-link" href="../archive/">Browse all 32 days in the archive &rarr;</a>
+  </div>
+</div>
+
+<div class="band">
+  <div class="inner">
+    
+  <section class="quote">
+    <h2 class="heading">On leading</h2>
+    <blockquote>Not finance. Not strategy. Not technology. It is teamwork that remains the ultimate competitive advantage.</blockquote>
+    <div class="attribution">Patrick Lencioni · The Five Dysfunctions of a Team</div>
+    <p class="quote-prompt">Name the unresolved tension between two people on your team and open it gently.</p>
+  </section>
+    
+  <section class="news">
+    <h2 class="heading">AI news for Enterprise Data Platform Product Management</h2>
+    <ol class="items">
+    <li>
+      <span class="numeral">01</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html">Metabase zero-day lets attackers seize admin access</a></div>
+        <p class="item-line">An unauthenticated SQL injection in Metabase, CVSS 10.0 and added to CISA&#39;s Known Exploited Vulnerabilities catalog on August 11, has already been used to steal customer data from Tally and Framework. <span class="item-meta">The Hacker News</span></p>
+        
+        <p class="item-sowhat">Any embedded BI tool sitting on your data platform is now an admin-access attack surface — patch and audit access before your own board asks.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">02</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://hudi.apache.org/blog/2026/08/13/hudi-vs-iceberg-performance-benchmarks/">Apache Hudi publishes benchmarks against Iceberg</a></div>
+        <p class="item-line">Apache Hudi&#39;s own engineering team published mutation-heavy workload benchmarks against Iceberg today, arguing its indexing gives it an edge on update-heavy tables. <span class="item-meta">Apache Hudi Blog</span></p>
+        
+        <p class="item-sowhat">If your lakehouse roadmap assumed table formats had converged, today&#39;s benchmark is a reminder to re-test on your actual update pattern before locking in a default.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">03</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://iapp.org/news/a/notes-from-the-asia-pacific-region-china-rolls-out-new-ai-governance-data-protection-measures">China rolls out new AI and data-transfer rules</a></div>
+        <p class="item-line">China is simultaneously updating cross-border data-transfer rules, financial-AI use rules and a draft anti-cyber-violence law, with the personal-information-protection standard open for comment until August 16. <span class="item-meta">IAPP</span></p>
+        
+        <p class="item-sowhat">If your data platform serves China-based users or vendors, the transfer and AI-use rules are moving faster than the EU AI Act conversation most roadmaps are still tracking.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">04</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://syncrosecure.com/blog/introducing-syncro-mcp-server/">Syncro ships a native MCP server to Claude</a></div>
+        <p class="item-line">Syncro&#39;s IT-management platform went GA on August 11 with a native MCP server piped straight into Claude, ChatGPT and Copilot, alongside automated ticket triage and dispatch. <span class="item-meta">Syncro</span></p>
+        
+        <p class="item-sowhat">Vertical SaaS is shipping native MCP servers ahead of most core data platforms — worth asking whether your own platform&#39;s MCP exposure is a 2027 roadmap item or already behind.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">05</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.databricks.com/blog/managing-ai-coding-costs-scale">Databricks details how it controls AI coding costs</a></div>
+        <p class="item-line">Databricks&#39; own engineering team published its playbook for containing agentic-coding spend on August 7, after finding the cost curve was unsustainable even though the output gains were real. <span class="item-meta">Databricks</span></p>
+        
+        <p class="item-sowhat">If engineering is already fighting agentic-coding cost sprawl, the same governance gap is coming for agentic data-pipeline and analytics spend — budget for it now rather than after the first surprise bill.</p>
+      </div>
+    </li></ol>
+  </section>
+    
+  <section class="readiness">
+    <h2 class="heading">AI-ready vs analytical-ready data</h2>
+    <ol class="items">
+    <li>
+      <span class="numeral">01</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://cloud.google.com/blog/products/data-analytics/new-bigquery-data-transfer-service-capabilities">BigQuery can now ingest straight into Iceberg tables</a></div>
+        <p class="item-line">BigQuery&#39;s Data Transfer Service can now land data from Cloud Storage, S3 and Azure Blob directly into Iceberg managed tables in preview, published August 8. <span class="item-meta">Google Cloud Blog</span></p>
+        
+        <p class="item-sowhat">One less pipeline hop between raw ingestion and an open table format your model-serving layer can actually read — worth testing against your current landing-zone ETL.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">02</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.fivetran.com/blog/open-data-infrastructure-needs-context-engineering-to-unify-data-use-cases">Fivetran argues open data infra needs context engineering</a></div>
+        <p class="item-line">Fivetran published its case on August 7 for treating context engineering as the missing layer that lets one open data architecture serve BI, ML and agentic use cases without forking pipelines. <span class="item-meta">Fivetran</span></p>
+        
+        <p class="item-sowhat">A useful gut-check for any platform still running separate &#39;analytics&#39; and &#39;AI&#39; pipelines: the vendor pitch is consolidation, but whether you need one governed source or two is yours to answer either way.</p>
+      </div>
+    </li></ol>
+    
+    <div class="learn">
+      <div class="learn-tag">blog · Context &amp; Chaos (Vivek Dubey)</div>
+      <div class="learn-title"><a href="https://contextandchaos.substack.com/p/bi-ready-is-not-ai-ready">BI-Ready Is Not AI-Ready</a></div>
+      <p class="learn-eli5">Data that&#39;s ready for a human analyst and data that&#39;s ready for an AI system are not the same thing. BI-ready data just needs to be clean and labeled well enough that a person reading a report can make sense of it — if something&#39;s ambiguous, the person asks a follow-up question or uses judgment to fill the gap. AI-ready data has no one to ask: every definition, business rule and exception has to be spelled out and travel with the data itself, because the system acts on its first reading with full confidence and no hesitation.</p>
+      <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> The build-vs-buy question for your platform isn&#39;t &#39;do we have a data catalog&#39; — it&#39;s whether your governance survives a consumer that never asks a clarifying question; budget for the encoding work, not just the pipe.</p>
+    </div>
+  </section>
+    <div class="site-foot">
+      <a href="../">Today</a> · <a href="../archive/">Archive</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

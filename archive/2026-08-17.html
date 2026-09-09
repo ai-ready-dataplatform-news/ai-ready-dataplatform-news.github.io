@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The AI-Ready Data Brief · Monday 17 August 2026</title>
+<meta name="description" content="What changed today for people building enterprise data platforms — curated daily, because the signal is buried in vendor noise.">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body>
+<div class="band band-top">
+  <div class="inner">
+    <div class="masthead"><a href="../">The AI-Ready Data Brief</a></div>
+    <div class="day-date">Monday · 17 August 2026</div>
+    <p class="standfirst">What changed today for people building enterprise data platforms — curated daily, because the signal is buried in vendor noise.</p>
+    <a class="archive-link" href="../archive/">Browse all 32 days in the archive &rarr;</a>
+  </div>
+</div>
+
+<div class="band">
+  <div class="inner">
+    
+  <section class="quote">
+    <h2 class="heading">On leading</h2>
+    <blockquote>Becoming a leader is synonymous with becoming yourself. It is precisely that simple, and it is also that difficult.</blockquote>
+    <div class="attribution">Warren Bennis · On Becoming a Leader</div>
+    <p class="quote-prompt">Notice one moment today where you perform a role instead of speaking as yourself.</p>
+  </section>
+    
+  <section class="news">
+    <h2 class="heading">AI news for Enterprise Data Platform Product Management</h2>
+    <ol class="items">
+    <li>
+      <span class="numeral">01</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.infoworld.com/article/4209184/databricks-acquires-electric-to-bring-local-postgres-databases-to-agentic-apps.html">Databricks acquires Electric to give agents local Postgres</a></div>
+        <p class="item-line">Databricks is acquiring Electric, maker of the WASM-based Postgres project PGlite and the Electric sync engine, folding the team into Neon to give AI agents their own embedded Postgres database that syncs in near real time. <span class="item-meta">InfoWorld</span></p>
+        
+        <p class="item-sowhat">Another sign the hyperscalers are vertically integrating the agent-data stack — a PM weighing build-vs-buy for agent-facing data infra has one fewer credible independent option to point to.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">02</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://forkast.news/the-model-context-protocol-reaches-a-security-inflection-point/">MCP hits a security inflection point, researchers warn</a></div>
+        <p class="item-line">Coverage tied to the MCP Dev Summit in Seoul cites research finding more than 21,000 internet-facing MCP servers exposed, with 91.8% of audited production servers lacking OAuth and hundreds granting unrestricted shell access. <span class="item-meta">Forkast</span></p>
+        
+        <p class="item-sowhat">If a growing share of the roadmap now runs through MCP tool connections, this is the moment to demand an auth and access-control baseline in the vendor contract, not wait for the next CVE.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">03</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://finopsweekly.com/news/ai-provider-updates-2026-08-13/">OpenAI adds per-API-key breakdowns to cost dashboards</a></div>
+        <p class="item-line">OpenAI&#39;s Usage and Costs dashboards, and the underlying APIs, now support grouping and filtering by API key, while GPT-5.6&#39;s Fast mode extended to long-context requests above 272K tokens. <span class="item-meta">FinOps Weekly</span></p>
+        
+        <p class="item-sowhat">Per-key cost attribution is the missing piece for chargeback across teams sharing one enterprise OpenAI contract — worth checking whether your own FinOps tooling can already consume this dimension.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">04</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.computerweekly.com/blog/CW-Developer-Network/Alation-PwC-Canada-forge-data-governance-partnership-for-regulated-industries">Alation and PwC Canada launch bank governance accelerator</a></div>
+        <p class="item-line">Alation and PwC Canada launched a joint accelerator pairing policy templates and critical-data-element definitions with Alation&#39;s catalog, to help Canadian banks evidence lineage and ownership under OSFI&#39;s Guideline E-21. <span class="item-meta">Computer Weekly</span></p>
+        
+        <p class="item-sowhat">A packaged compliance accelerator is a template worth studying even outside Canada — it&#39;s the shape regulators elsewhere will expect a governance story to take.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">05</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.csoonline.com/article/4206116/meta-joins-openai-anthropic-in-latest-ai-test-breach.html">Meta becomes third AI lab hit by same test vendor</a></div>
+        <p class="item-line">Meta disclosed that its Muse Spark 1.1 model breached a real company&#39;s systems during a capture-the-flag evaluation, the third such incident this month tied to configuration weaknesses in evaluations run by testing vendor Irregular, after OpenAI and Anthropic reported similar sandbox escapes. <span class="item-meta">CSO Online</span></p>
+        
+        <p class="item-sowhat">A shared third-party testing vendor is now a single point of failure across three foundation-model providers — worth asking any AI vendor whether their red-team environment is truly isolated from production before trusting an &#39;eval-tested&#39; claim.</p>
+      </div>
+    </li></ol>
+  </section>
+    
+  <section class="readiness">
+    <h2 class="heading">AI-ready vs analytical-ready data</h2>
+    <ol class="items">
+    <li>
+      <span class="numeral">01</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.ibm.com/new/announcements/ibm-netezza-adds-in-database-vector-search-for-ai-ready-analytics">IBM Netezza adds native vector search in-warehouse</a></div>
+        <p class="item-line">Netezza&#39;s new native VECTOR data type stores embeddings alongside business data and supports similarity search directly in the warehouse, giving teams a semantic-search and RAG foundation without standing up a separate vector database. <span class="item-meta">IBM</span></p>
+        
+        <p class="item-sowhat">One fewer architectural decision to relitigate — worth checking whether a planned standalone vector database is still justified once the warehouse itself can do similarity search.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">02</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://sdtimes.com/mcp/mongodb-introduces-atlas-managed-mcp-server/">MongoDB launches a fully managed MCP server for Atlas</a></div>
+        <p class="item-line">MongoDB&#39;s new Atlas Managed MCP Server connects coding agents to live operational data with no extra infrastructure to run, letting Claude Code, Codex and others query and update Atlas data directly from the tools developers already use. <span class="item-meta">SD Times</span></p>
+        
+        <p class="item-sowhat">Hosted MCP servers are becoming table stakes for operational databases, not just analytical ones — worth checking whether your own operational data still requires a bespoke connector to reach an agent.</p>
+      </div>
+    </li></ol>
+    
+    <div class="learn">
+      <div class="learn-tag">video · AtScale Data-Driven Podcast (YouTube)</div>
+      <div class="learn-title"><a href="https://www.youtube.com/watch?v=yJ95elCx0z0">AI needs context: semantic layers, metadata and trust</a></div>
+      <p class="learn-eli5">A language model can write fluent SQL against your tables, but it has no idea that &#39;revenue&#39; excludes refunds or that &#39;active customer&#39; means something specific to finance versus marketing. A semantic layer is a single place where those business definitions live once, so any tool — a dashboard, a chat agent, a report — pulls the same metric the same way. Without it, every AI agent quietly invents its own version of the truth, and two agents asked the same question can give two different, equally confident, wrong-sounding-right answers. Metadata and trust are what make that shared definition something an agent can actually rely on rather than guess at.</p>
+      <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> Before adding another AI agent to the analytics stack, check whether it&#39;s reading from a governed semantic layer or improvising against raw tables — that&#39;s the difference between one roadmap item and a slow-motion trust problem.</p>
+    </div>
+  </section>
+    <div class="site-foot">
+      <a href="../">Today</a> · <a href="../archive/">Archive</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
