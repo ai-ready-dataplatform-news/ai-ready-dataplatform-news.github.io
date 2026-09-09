@@ -163,6 +163,7 @@
   .archive-link:hover { border-bottom-color: var(--clay); }
   .archive-link:focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; }
   .band-top .day-date { margin-bottom: 18px; }
+  .top-nav { display: flex; gap: 22px; flex-wrap: wrap; }
 
   /* --- the archive index ---------------------------------------------- */
   .day { border-top: 1px solid var(--hairline); padding: 22px 0; }
