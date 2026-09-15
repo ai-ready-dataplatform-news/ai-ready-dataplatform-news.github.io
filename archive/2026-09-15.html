@@ -48,37 +48,10 @@
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.unite.ai/openai-introduces-data-agent-in-chatgpt-work-to-analyze-company-data/">OpenAI&#39;s Data Agent Turns Warehouses Into Chat</a></div>
-        <p class="item-line">OpenAI&#39;s new Data agent in ChatGPT Work connects to Redshift, BigQuery, Databricks, Snowflake and MongoDB, plus BI tools including Power BI, Tableau and ThoughtSpot, to build dashboards from a single conversation. <span class="item-meta">Unite.AI · 2026-09-10</span></p>
+        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/new-features">Snowflake opens interactive warehouses to every table format</a></div>
+        <p class="item-line">Support for all table formats in Snowflake&#39;s interactive warehouses reached general availability on 14 September, removing the restriction that had kept sub-second, high-concurrency queries to a subset of table types. <span class="item-meta">Snowflake Documentation · 2026-09-14</span></p>
         
-        <p class="item-sowhat">A platform PM weighing further semantic-layer investment now has to ask whether a general chat agent routes around the BI layer entirely, not just extends it.</p>
-      </div>
-    </li>
-    <li>
-      <span class="numeral">02</span>
-      <div class="item-body">
-        <div class="item-title"><a href="https://www.microsoft.com/en-us/security/blog/2026/09/09/passkey-themed-social-engineering-leads-identity-cloud-compromise/">Passkey Phishing Hijacks Microsoft Cloud Accounts</a></div>
-        <p class="item-line">Microsoft disclosed a campaign in which attackers use passkey-themed social engineering to add their own authentication method to compromised cloud identities, then quietly harvest SharePoint, OneDrive and mailbox data over Graph API. <span class="item-meta">Microsoft Security Blog · 2026-09-09</span></p>
-        
-        <p class="item-sowhat">Identity, not the network edge, is now the perimeter a data platform&#39;s access controls have to assume is already under attack.</p>
-      </div>
-    </li>
-    <li>
-      <span class="numeral">03</span>
-      <div class="item-body">
-        <div class="item-title"><a href="https://www.salesforce.com/news/stories/enterprise-ai-harness/">Salesforce Formalizes a Governance Stack for Agents</a></div>
-        <p class="item-line">Salesforce introduced the Trusted Enterprise AI Harness, six capabilities under a new AI Control Plane that registers, identifies and cost-controls both Salesforce and third-party agents. <span class="item-meta">Salesforce · 2026-09-10</span></p>
-        
-        <p class="item-sowhat">Agent governance is becoming a control-plane feature bundled with the CRM rather than a separate purchase, which changes the buy-vs-build case for an internal one.</p>
-      </div>
-    </li>
-    <li>
-      <span class="numeral">04</span>
-      <div class="item-body">
-        <div class="item-title"><a href="https://venturebeat.com/orchestration/companies-are-spending-millions-rewiring-how-ai-gets-used-almost-none-can-prove-its-working">Enterprises Can&#39;t Prove Their AI Spend Is Working</a></div>
-        <p class="item-line">Reporting on Uber&#39;s entire 2026 AI coding budget disappearing in four months with no proven link to better products, VentureBeat finds most enterprises rewiring workflows around AI still can&#39;t show the spend is paying off. <span class="item-meta">VentureBeat · 2026-09-08</span></p>
-        
-        <p class="item-sowhat">Before the next platform budget cycle, a PM needs a metric that ties token or compute spend to a decision it actually changed, or the line item is the next one cut.</p>
+        <p class="item-sowhat">Not a platform this seat runs, but it closes a buy-vs-build gap worth knowing before any future interactive-serving decision leans on an assumption that only one table format gets the fast path.</p>
       </div>
     </li></ol>
   </section>
@@ -88,10 +61,10 @@
     
     
     <div class="learn">
-      <div class="learn-tag">case study · Concurrency</div>
-      <div class="learn-title"><a href="https://concurrency.com/case-study/establishing-an-ai-ready-data-governance-foundation-with-microsoft-purview/">Establishing an AI-Ready Data Governance Foundation</a></div>
-      <p class="learn-eli5">Before you can safely point an AI assistant at a company&#39;s files, you need to know two things: where the sensitive data actually lives, and who can already see it. This write-up walks through a governance engagement that mapped both first with Microsoft Purview — scanning for sensitive data across Microsoft 365, tightening who could access what, and watching for insider risk — before any AI tool was switched on, rather than patching access control after an assistant was already reading things it shouldn&#39;t.</p>
-      <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> Sequencing is the lesson: a visibility-and-access pass before the AI rollout, not after, is what avoids the retrofit costs that show up once an assistant is found reading something it was never supposed to reach.</p>
+      <div class="learn-tag">course · Regulation AI Academy</div>
+      <div class="learn-title"><a href="https://www.regulation-ai.eu/en/academy/ai-act-fundamentals/">AI Act Fundamentals: a free five-module course</a></div>
+      <p class="learn-eli5">The EU AI Act doesn&#39;t regulate AI in one lump; it sorts systems into risk tiers — unacceptable, high-risk, limited-risk, minimal-risk — and attaches different duties to each. A customer-facing chatbot mainly owes people a disclosure that they&#39;re talking to AI; a system used in credit decisions or fraud detection sits in the high-risk tier and owes a risk-management file, human oversight and logging that a regulator can inspect. The course walks through those tiers, the deadlines attached to each, and who has to prove what.</p>
+      <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> DORA already forces documented ICT risk management for anything a bank&#39;s platform touches; the AI Act&#39;s Article 9(10) lets that same risk file double up for AI obligations rather than building a parallel one — which makes &#39;which of our governed datasets feed a high-risk system&#39; a mapping exercise worth doing on this platform now, ahead of the tightened 2027 deadline rather than after it.</p>
     </div>
   </section>
     <div class="site-foot">
