@@ -45,42 +45,45 @@
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://venturebeat.com/orchestration/most-pipeline-monitoring-checks-if-the-job-ran-this-one-didnt-check-if-the-numbers-were-right">Pipeline ran clean while numbers were 40% wrong</a></div>
-        <p class="item-line">InMarket&#39;s ad-event pipeline logged zero errors for days while a silent upstream field rename cut audience counts by 40%, caught only when a client&#39;s campaign underperformed. <span class="item-meta">VentureBeat · 2026-09-09</span></p>
+        <div class="item-title"><a href="https://docs.databricks.com/aws/en/data-governance/unity-catalog/abac/deny-policies">Databricks adds explicit DENY rules to Unity Catalog ABAC</a></div>
+        <p class="item-line">Beta DENY policies let a catalog or schema explicitly block the MANAGE ACCESS CONTROL privilege, overriding any grant, including for object owners. <span class="item-meta">Databricks · 2026-09-08</span></p>
         
-        <p class="item-sowhat">Job-success monitoring proves nothing about correctness — a governed gold layer needs a semantic check on the numbers themselves, not just a green pipeline run.</p>
+        <p class="item-sowhat">Closes the gap where a table owner could reassign access outside policy — a real lever for keeping a governed gold layer&#39;s controls from drifting as more consumers attach to it.</p>
       </div>
     </li>
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.databricks.com/aws/en/security/auth/system-group-entitlements-migration">Databricks enforces default-deny workspace access</a></div>
-        <p class="item-line">As of 14 September, every Databricks workspace grants entitlements explicitly per principal instead of inheriting them from the users system group, moving from default-allow to explicit grant. <span class="item-meta">Databricks documentation · 2026-09-14</span></p>
+        <div class="item-title"><a href="https://docs.databricks.com/aws/en/tables/features/change-data-feed">Databricks ships automatic change data feed for Delta and Iceberg v3</a></div>
+        <p class="item-line">Auto CDF computes row-level changes at query time from row tracking, without manually enabling CDF per table, cutting MERGE and UPDATE time by about 15% on tables that are queried for changes. <span class="item-meta">Databricks · 2026-09-10</span></p>
         
-        <p class="item-sowhat">Any onboarding script or automation that relied on inherited access loses it silently unless it was migrated first — worth an audit before it shows up as a support ticket.</p>
+        <p class="item-sowhat">Removes a manual step teams reliably forget to apply consistently across tables — one less place a change-tracking gap can hide inside a medallion pipeline.</p>
       </div>
     </li>
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-09-10-dbt-artifacts-slim-ci-defer-to-production-ga">dbt Projects on Snowflake ships Slim CI, GA</a></div>
-        <p class="item-line">Slim CI, defer-to-production and failed-run recovery are now generally available for dbt Projects on Snowflake, reusing production dbt artifacts instead of a separate artifact store. <span class="item-meta">Snowflake documentation · 2026-09-10</span></p>
+        <div class="item-title"><a href="https://docs.databricks.com/aws/en/release-notes/product/2026/september">Databricks enforces explicit entitlement grants across every workspace</a></div>
+        <p class="item-line">New workspace entitlement control behaviour is now enforced everywhere, requiring admins to explicitly grant entitlements when adding principals rather than inheriting them by default. <span class="item-meta">Databricks · 2026-09-14</span></p>
         
-        <p class="item-sowhat">Cuts CI/CD cost and recovery time for teams running dbt natively on a warehouse — a concrete data point in the buy-vs-build case for the transformation layer.</p>
+        <p class="item-sowhat">A default-access assumption a few onboarding scripts likely rely on just stopped being safe — worth checking before the next cohort of users lands on the platform.</p>
       </div>
     </li></ol>
   </section>
     
   <section class="readiness">
     <h2 class="heading">AI-ready vs analytical-ready data</h2>
+    <ol class="items">
+    <li>
+      <span class="numeral">01</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.geekwire.com/2026/amazon-acquires-ducklabs-adding-the-team-behind-duckdb-amid-broader-shakeup-in-cloud-data/">AWS agrees to acquire DuckLabs, the team behind DuckDB</a></div>
+        <p class="item-line">AWS signed a definitive agreement to acquire Amsterdam-based DuckLabs while committing to keep DuckDB and its DuckLake table format open source. <span class="item-meta">GeekWire · 2026-08-26</span></p>
+        
+        <p class="item-sowhat">A hyperscaler now stands behind the embedded engine teams reach for beside a warehouse — worth a line in any buy-vs-build case for lightweight, local AI-ready processing.</p>
+      </div>
+    </li></ol>
     
-    
-    <div class="learn">
-      <div class="learn-tag">video · Chad Sanderson</div>
-      <div class="learn-title"><a href="https://www.youtube.com/watch?v=xycPzr5Rbb4">Data Contracts: The Rise of Modern Data Management</a></div>
-      <p class="learn-eli5">A data contract is a formal agreement between whoever produces a piece of data and whoever consumes it: what fields exist, what they mean, and what happens before either one changes. Instead of an analyst discovering a broken dashboard after the fact, the producer has to check with consumers before a change ships — the way an API versioning policy protects the people calling it.</p>
-      <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> Reframes &#39;data quality&#39; as an interface problem rather than a testing problem — the case for treating the gold layer&#39;s schema as a versioned contract with named consumers, not just a governed table.</p>
-    </div>
   </section>
     <div class="site-foot">
       <a href="./">Today</a> · <a href="archive/">Archive</a>
