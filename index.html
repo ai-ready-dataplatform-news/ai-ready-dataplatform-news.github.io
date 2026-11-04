@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The AI-Ready Data Platform Brief · Tuesday 3 November 2026</title>
+<title>The AI-Ready Data Platform Brief · Wednesday 4 November 2026</title>
 <meta name="description" content="Data products and the platforms beneath them, and the shift from analytics-ready to AI-ready data — each read from the product seat.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The AI-Ready Data Platform Brief">
@@ -22,7 +22,7 @@
 <div class="band band-top">
   <div class="inner">
     <div class="masthead">The AI-Ready Data Platform Brief</div>
-    <div class="day-date">Tuesday · 3 November 2026</div>
+    <div class="day-date">Wednesday · 4 November 2026</div>
     <p class="standfirst">Data products and the platforms beneath them, and the shift from analytics-ready to AI-ready data — each read from the product seat.</p>
     <p class="byline">Curated by <a href="https://www.linkedin.com/in/rathnamuthumanickam">Rathna Muthumanickam</a> with the use of Claude Code. <span class="byline-note">I build data platforms and the data products on top of them. I read this stuff anyway, so I automated the reading and published the result.</span></p>
     <a class="archive-link" href="archive/">Browse the last 30 days in the archive &rarr;</a>
@@ -34,9 +34,9 @@
     
   <section class="quote">
     <h2 class="heading">On leading</h2>
-    <blockquote>Management is doing things right; leadership is doing the right things.</blockquote>
-    <div class="attribution">Peter Drucker · The Effective Executive</div>
-    <p class="quote-prompt">Pick the one thing on today&#39;s list that is right rather than merely due.</p>
+    <blockquote>Leadership is the capacity to translate vision into reality.</blockquote>
+    <div class="attribution">Warren Bennis · On Becoming a Leader</div>
+    <p class="quote-prompt">Name the next concrete step that moves your vision one notch toward shipped.</p>
   </section>
     
   <section class="news">
@@ -45,19 +45,19 @@
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.dataiku.com/company/news/dataiku-introduces-headless">Dataiku lets coding agents build governed projects</a></div>
-        <p class="item-line">Dataiku Headless, announced on 27 October, ships as a plugin for Claude Code, Codex, Cursor, GitHub Copilot and other coding agents and uses an MCP server so that pipelines, models and dashboards an agent builds land as governed Dataiku projects rather than loose scripts, including rebuilds of legacy Excel and Alteryx work. <span class="item-meta">Dataiku · 2026-10-27</span></p>
+        <div class="item-title"><a href="https://hackread.com/arrakis-security-report-finds-76-of-ai-agents-are-dormant-but-keep-their-credentials-and-connections/">Three in four enterprise AI agents sit dormant with live credentials</a></div>
+        <p class="item-line">Arrakis Security&#39;s 2026 Autonomous Agents Threat Report, published 21 October from 12 weeks of telemetry on thousands of agents in customer environments, found 76% of enabled agents had not run in 60 days yet kept working credentials and connections, about a quarter could be woken by an unsigned external webhook, and 99.4% of sensitive connections lacked verified data loss prevention. <span class="item-meta">Hackread, on Arrakis Security&#39;s 2026 threat report · 2026-10-21</span></p>
         
-        <p class="item-sowhat">Agents writing transformation code will route around a governed platform unless the platform meets them in their tools; a buy-versus-build call on the transformation layer now has to ask whether work done through a coding agent inherits the same lineage, review and ownership as work done in the UI.</p>
+        <p class="item-sowhat">Agent access to the platform needs a lifecycle like any service account: a PM putting agents on governed data has a case for expiry, owner attestation and usage-based revocation in the access model before the agent count grows. The figures are a security vendor&#39;s own telemetry, and the percentages use different denominators.</p>
       </div>
     </li>
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.globenewswire.com/news-release/2026/10/22/3386300/0/en/introducing-agentspot-from-chatbots-to-multiplayer-ai.html">ThoughtSpot opens AgentSpot for shared agents on its semantic layer</a></div>
-        <p class="item-line">ThoughtSpot launched AgentSpot on 22 October, a platform for building and sharing agents, workflows and business apps across teams, built on the company&#39;s existing semantic layer so that agents draw on the same metric definitions as its analytics. <span class="item-meta">ThoughtSpot, via GlobeNewswire · 2026-10-22</span></p>
+        <div class="item-title"><a href="https://docs.snowflake.com/release-notes/2026/other/2026-10-30-iceberg-snowflake-storage-tss-ga">Snowflake brings customer-held keys to its managed Iceberg tables</a></div>
+        <p class="item-line">Tri-Secret Secure, which combines a Snowflake key with a customer-managed key, became generally available on 30 October for Iceberg tables in Snowflake-managed storage on AWS and Azure, with its own registration functions, no waiting period before activation, no rekeying of existing data on key change and no private connectivity for key access. <span class="item-meta">Snowflake release notes · 2026-10-30</span></p>
         
-        <p class="item-sowhat">A BI vendor building agents directly on the metrics layer is a bet that the agent&#39;s answer and the dashboard&#39;s number stay the same because they share one definition; that makes the gold layer&#39;s business definitions, not the model, the asset to govern before any agent use case goes live.</p>
+        <p class="item-sowhat">Customer-held keys were a common reason regulated teams kept sensitive tables in proprietary formats; with that gap closed, the open-format decision for those tables turns on the documented differences, especially that existing data is not rekeyed when a key changes.</p>
       </div>
     </li></ol>
   </section>
@@ -65,30 +65,30 @@
   <section class="readiness">
     <h2 class="heading">AI-ready vs analytical-ready data</h2>
     <ol class="items">
-    <li class="is-update">
+    <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.dnb.com/en-us/newsroom/press-releases/dnb-survey-finds-ai-returns-stable-for-most.html">Fully AI-ready data edges up to 8% in Dun &amp; Bradstreet&#39;s survey</a></div>
-        <p class="item-line">Dun &amp; Bradstreet&#39;s fourth-quarter AI Momentum survey of 10,000 businesses in 32 countries found 8% describe their enterprise data as fully ready for AI at scale, with 33% mostly and 44% partially ready; 81% of the fully ready report broad or strong ROI against 12% of the partially ready, while overall broad-or-strong ROI held at 28%. <span class="item-meta">Dun &amp; Bradstreet · 2026-10-28</span></p>
-        <p class="item-update"><span class="item-update-tag">Update</span> <span class="item-meta">you saw this on 2026-10-09</span> A new quarterly wave: the share with fully AI-ready data rose from 6% to 8%, and the ready-versus-partly-ready ROI gap was put at 6.5 times.</p>
-        <p class="item-sowhat">A two-point move in a quarter is the pace to plan against, and the gap in returns between ready and partly ready firms is an argument for judging a foundation-phase platform on readiness of what it holds rather than on adoption. The sponsor sells business data, so read the ROI link as correlation.</p>
+        <div class="item-title"><a href="https://cloud.google.com/blog/products/data-analytics/borderless-lakehouse-integrates-with-gemini">Google&#39;s borderless Lakehouse caches across Glue, Unity and Horizon</a></div>
+        <p class="item-line">Google said on 15 October that bi-directional caching with AWS Glue, Databricks Unity Catalog and Snowflake Horizon, and Knowledge Catalog integration, are now generally available in its borderless Lakehouse, while letting Gemini agents reach Unity Catalog and Horizon data through catalog federation remains in preview. <span class="item-meta">Google Cloud blog · 2026-10-15</span></p>
+        
+        <p class="item-sowhat">Agents reading across clouds through federated catalogs make the catalog, not the warehouse, the place where access and meaning are enforced. A platform roadmap should check that its policies and business definitions travel with the table, because the GA parts here cover the caching while the agent access is still preview.</p>
       </div>
     </li>
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://siliconangle.com/?p=852113">Jedify formally launches Data Agents on its context graph</a></div>
-        <p class="item-line">Jedify formally launched Data Agents on 28 October, letting business teams set up autonomous analysts in plain language that monitor metrics, investigate anomalies and identify likely drivers, grounded in the company&#39;s context graph of business definitions; it is free during the launch period, with pricing to follow. <span class="item-meta">SiliconANGLE · 2026-10-28</span></p>
+        <div class="item-title"><a href="https://www.pymnts.com/personnel/2026/jpmorgan-ai-chief-teresa-heitsenrether-plans-year-end-retirement/">JPMorgan folds its data and analytics office into technology</a></div>
+        <p class="item-line">JPMorgan told staff on 1 July that chief data and analytics officer Teresa Heitsenrether retires at the end of 2026 and that CTO Scot Baldry adds the firmwide data and analytics title, aligning the function with global technology under the CIO and without the operating-committee seat she held. <span class="item-meta">PYMNTS · 2026-07-01</span></p>
         
-        <p class="item-sowhat">Agents that watch metrics on their own only stay trustworthy if the definitions beneath them are owned and versioned; a platform that wants analysts and agents reading one source needs its business glossary in a form a context graph can consume, not only in a BI tool.</p>
+        <p class="item-sowhat">One of the largest data and AI programmes moving its data office under technology is a reference point for the operating-model question: when the data function reports into engineering, ownership of data products and of their business value needs an explicit home, or it drifts to whoever runs the pipelines.</p>
       </div>
     </li></ol>
     
     <div class="learn">
-      <div class="learn-tag">case study · Uber Engineering blog · 2025-07-17</div>
-      <div class="learn-title"><a href="https://www.uber.com/blog/unlocking-financial-insights-with-finch">Unlocking financial insights with Finch, Uber&#39;s conversational data agent</a></div>
-      <p class="learn-eli5">Finance staff at Uber wanted answers without writing SQL or waiting on a data request, so Uber built an assistant in Slack that turns a plain question into a query. It works well because it does not search the whole warehouse: it reads from a small set of curated single-table marts, and it keeps a lookup of the everyday words people use for columns and values so its filters match the data. Permissions decide who can ask about sensitive figures, so the assistant cannot see more than the person asking.</p>
-      <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> The accuracy came from curating the data an agent reads, not from the model; for a gold layer meant to serve both analysts and conversational access, it argues for publishing a narrow, well-named set of agent-ready tables with mapped business terms and inherited permissions before widening scope.</p>
+      <div class="learn-tag">video · InfoQ, Zhamak Dehghani · 2019-11-13</div>
+      <div class="learn-title"><a href="https://www.infoq.com/presentations/data-mesh-paradigm">Data Mesh: Paradigm Shift in Data Platform Architecture</a></div>
+      <p class="learn-eli5">Most companies pour all their data into one central lake or warehouse and ask one central team to clean it for everyone, and that team becomes the bottleneck. This talk argues for flipping it: the teams that create the data, such as orders or payments, own it and publish it as a product, with a description, quality promises and an owner who answers for it. A shared self-serve platform gives those teams the storage, pipelines and access controls so they don&#39;t each rebuild them, and a light set of common rules keeps the products working together.</p>
+      <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> The talk is the source of the data-as-a-product idea that later work builds on, and it frames the platform PM&#39;s job as building the self-serve layer rather than owning every dataset. For a roadmap it asks one question to test against: which capabilities let a domain publish a governed, discoverable product without a ticket to the central team.</p>
     </div>
   </section>
     <div class="site-foot">
