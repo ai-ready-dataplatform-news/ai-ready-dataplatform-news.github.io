@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The AI-Ready Data Platform Brief · Friday 6 November 2026</title>
+<meta name="description" content="Data products and the platforms beneath them, and the shift from analytics-ready to AI-ready data — each read from the product seat.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The AI-Ready Data Platform Brief">
+<meta property="og:title" content="The AI-Ready Data Platform Brief · Friday 6 November 2026">
+<meta property="og:description" content="A daily brief on data products, the platforms beneath them, and the shift from analytical-ready to AI-ready data.">
+<meta property="og:url" content="https://ai-ready-dataplatform-news.github.io/archive/2026-11-06.html">
+<meta property="og:image" content="https://ai-ready-dataplatform-news.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The AI-Ready Data Platform Brief, curated by Rathna Muthumanickam">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://ai-ready-dataplatform-news.github.io/archive/2026-11-06.html">
+<link rel="stylesheet" href="../assets/brief.css">
+<script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
+  if (!a || !window.goatcounter || !window.goatcounter.count) return;
+  window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
+});
+</script>
+</head>
+<body>
+<div class="band band-top">
+  <div class="inner">
+    <div class="masthead"><a href="../">The AI-Ready Data Platform Brief</a></div>
+    <div class="day-date">Friday · 6 November 2026</div>
+    <p class="standfirst">Data products and the platforms beneath them, and the shift from analytics-ready to AI-ready data — each read from the product seat.</p>
+    <p class="byline">Curated by <a href="https://www.linkedin.com/in/rathnamuthumanickam">Rathna Muthumanickam</a> with the use of Claude Code. <span class="byline-note">I build data platforms and the data products on top of them. I read this stuff anyway, so I automated the reading and published the result.</span></p>
+    <div class="top-nav">
+      <a class="archive-link" href="../">&larr; Today</a>
+      <a class="archive-link" href="../archive/">Browse the last 30 days in the archive &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<div class="band">
+  <div class="inner">
+    
+  <section class="quote">
+    <h2 class="heading">On leading</h2>
+    <blockquote>Before you are a leader, success is all about growing yourself. When you become a leader, success is all about growing others.</blockquote>
+    <div class="attribution">Jack Welch</div>
+    <p class="quote-prompt">Give one person on your team a piece of work slightly beyond their current reach.</p>
+  </section>
+    
+  <section class="news">
+    <h2 class="heading">AI news for Data Products and Data Platforms</h2>
+    <ol class="items">
+    <li>
+      <span class="numeral">01</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.datastudios.org/post/snowflake-open-data-sharing-generally-available-iceberg-rest-open-clients">Snowflake shares Iceberg tables with non-Snowflake engines</a></div>
+        <p class="item-line">Snowflake&#39;s release note of 2 November moves Open Data Sharing to general availability: providers can share live, read-only Snowflake-managed Iceberg tables with consumers who have no Snowflake account, who read them from their own engine through the standard Iceberg REST Catalog API with short-lived tokens; standard Snowflake tables and externally managed Iceberg tables are not shareable this way. <span class="item-meta">Data Studios, on Snowflake&#39;s 2 November release note · 2026-11-02</span></p>
+        
+        <p class="item-sowhat">A data product team selling or exchanging data no longer has to make buyers open a Snowflake account or run export jobs, which changes the packaging decision for partner-facing data supply: the open table format becomes the delivery contract, and the consumer&#39;s engine stops being the provider&#39;s problem.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">02</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.fca.org.uk/publications/multi-firm-reviews/wholesale-banks-supervision-insights-3-autumn-2026">FCA finds a coding defect starved a bank&#39;s crime control</a></div>
+        <p class="item-line">The FCA&#39;s Wholesale Banks Supervision Insights 3, published 2 November, describes data that was never ingested into a financial crime control because of a coding defect and went unnoticed for an extended period, and expects firms to check source-data lineage and completeness rather than trust downstream monitoring; on AI it found incomplete inventories, weak kill-switch arrangements and enterprise search making misclassified data easier to find. <span class="item-meta">Financial Conduct Authority · 2026-11-02</span></p>
+        
+        <p class="item-sowhat">A regulator now names completeness checks at ingestion, not dashboards downstream, as the control it expects, so a platform PM in financial services has a supervisory reference for funding source-to-control reconciliation and for gating enterprise AI search on classification quality.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">03</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://learn.microsoft.com/en-us/azure/databricks/release-notes/product/2026/november">Unity Catalog can now keep managed tables in OneLake</a></div>
+        <p class="item-line">Azure Databricks&#39; 2 November release notes put OneLake external locations into Public Preview: a OneLake location can serve as a Unity Catalog catalog&#39;s managed storage, holding managed tables, volumes, materialized views and streaming tables in Microsoft OneLake while Unity Catalog keeps governing access, enabled by workspace admins from the Previews page. <span class="item-meta">Azure Databricks release notes · 2026-11-02</span></p>
+        
+        <p class="item-sowhat">For an estate running Databricks for engineering and Power BI for consumption, the question of whether gold data has to be copied into Fabric gets a preview answer of no; a platform PM can test one governed catalog in OneLake before committing to a mirroring pipeline, keeping in mind it is not yet production-supported.</p>
+      </div>
+    </li></ol>
+  </section>
+    
+  <section class="readiness">
+    <h2 class="heading">AI-ready vs analytical-ready data</h2>
+    <ol class="items">
+    <li>
+      <span class="numeral">01</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://iapp.org/news/a/eu-member-states-finalize-digital-omnibus-negotiating-stance">EU governments keep the GDPR&#39;s personal data definition</a></div>
+        <p class="item-line">EU member states agreed their Digital Omnibus negotiating mandate on 21 October, keeping the GDPR&#39;s existing definition of personal data, rejecting the Commission&#39;s proposed change to Article 4(1), adding a provision on pseudonymisation standards and attaching safeguards to processing personal data for AI training; nothing is law until Parliament sets its position and trilogue concludes. <span class="item-meta">IAPP · 2026-10-22</span></p>
+        
+        <p class="item-sowhat">The hoped-for relief that pseudonymised data might fall outside the GDPR is off the table for now, so a roadmap that treats pseudonymisation as making data safe to hand a model should keep pseudonymised datasets inside the same access, lineage and purpose controls as raw personal data.</p>
+      </div>
+    </li></ol>
+    
+    <div class="learn">
+      <div class="learn-tag">course · CDQ Academy · 2026-11-10</div>
+      <div class="learn-title"><a href="https://www.cdq.com/DataProductManagementTraining">Managing Data Products at Enterprise Scale</a></div>
+      <p class="learn-eli5">A data product is a dataset someone has promised to look after for the people who use it, the way a shop promises the milk is fresh and in the same place tomorrow. That promise needs an owner, a description of what is inside, and a written agreement about what the consumer can rely on, which is what a data contract is. This three half-day online course walks through that lifecycle: who owns a data product, how it is changed and retired, and how contracts and metadata let other teams use and share it safely.</p>
+      <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> Most data product writing stops at the idea; this course spends its time on roles, processes and contracts, which is the part a platform roadmap has to fund. A PM deciding whether modelling authority sits centrally or with consuming domains can use its lifecycle as a checklist for what each side must own before the second governed dataset goes live.</p>
+    </div>
+  </section>
+    <div class="site-foot">
+      <a href="../">Today</a> · <a href="../archive/">Archive</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
