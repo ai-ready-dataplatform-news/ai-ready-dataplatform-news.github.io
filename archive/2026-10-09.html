@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://blog.cloudflare.com/cloudflare-basin/">Cloudflare Basin reaches general availability on Iceberg</a></div>
+        <div class="item-title"><a href="https://blog.cloudflare.com/cloudflare-basin/" target="_blank" rel="noopener">Cloudflare Basin reaches general availability on Iceberg</a></div>
         <p class="item-line">Cloudflare renamed its data platform Basin and made it generally available: pipelines, an Iceberg catalog and a SQL engine over R2 storage, with open tables that Snowflake, Spark and DuckDB can query and no transfer fees across clouds. <span class="item-meta">Cloudflare blog · 2026-10-02</span></p>
         
         <p class="item-sowhat">A serverless Iceberg stack with zero egress gives a platform PM a concrete low-cost option to price against for edge and event data before committing it to the warehouse.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.snowflake.com/en/blog/engineering/s3-compatible-storage-iceberg-horizon-catalog/">Snowflake Horizon Iceberg tables now reach S3-compatible storage</a></div>
+        <div class="item-title"><a href="https://www.snowflake.com/en/blog/engineering/s3-compatible-storage-iceberg-horizon-catalog/" target="_blank" rel="noopener">Snowflake Horizon Iceberg tables now reach S3-compatible storage</a></div>
         <p class="item-line">A private preview lets Horizon-managed Iceberg tables sit on S3-compatible stores such as MinIO, Ceph, Wasabi and Cloudflare R2, readable and writable from any compatible engine, aimed at residency, sovereign-cloud and on-premises needs. <span class="item-meta">Snowflake engineering blog · 2026-10-05</span></p>
         
         <p class="item-sowhat">Where residency rules keep data off public cloud storage, the catalog-versus-storage split now decides whether one governed Iceberg layer can span on-premises and cloud.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li class="is-update">
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.engineering.com/dynatrace-completes-acquisition-of-ai-platform-arize/">Dynatrace closes its Arize acquisition for AI observability</a></div>
+        <div class="item-title"><a href="https://www.engineering.com/dynatrace-completes-acquisition-of-ai-platform-arize/" target="_blank" rel="noopener">Dynatrace closes its Arize acquisition for AI observability</a></div>
         <p class="item-line">Dynatrace completed the $915 million deal on 1 October; Arize keeps supporting open-source Phoenix and the enterprise AX platform while its evaluation tooling is folded into Dynatrace over time. <span class="item-meta">Engineering.com · 2026-10-01</span></p>
         <p class="item-update"><span class="item-update-tag">Update</span> <span class="item-meta">you saw this on 2026-09-19</span> The deal was announced in August and has now closed, on 1 October.</p>
         <p class="item-sowhat">An independent AI evaluation vendor leaving the market is a vendor-risk input for any team that standardised on Arize or Phoenix for model-output monitoring.</p>
@@ -88,7 +90,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.dnb.com/en-us/newsroom/press-releases/dnb-survey-finds-enterprise-ai-returns-continue-to-advance.html">Only 6% of firms say enterprise data is fully AI-ready</a></div>
+        <div class="item-title"><a href="https://www.dnb.com/en-us/newsroom/press-releases/dnb-survey-finds-enterprise-ai-returns-continue-to-advance.html" target="_blank" rel="noopener">Only 6% of firms say enterprise data is fully AI-ready</a></div>
         <p class="item-line">Dun &amp; Bradstreet&#39;s survey of 10,000 businesses in 32 countries finds about three-quarters see measurable AI return, yet only 6% call their data fully ready, 36% mostly ready and 47% partially ready, with access, privacy and quality the main obstacles. <span class="item-meta">Dun &amp; Bradstreet · 2026-07-28</span></p>
         
         <p class="item-sowhat">A vendor-run but large-sample yardstick for the readiness gap, useful as the baseline when a platform PM argues for governed-access work ahead of more models.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.unite.ai/?p=470761">BigID AgentIQ runs data security and compliance from a prompt</a></div>
+        <div class="item-title"><a href="https://www.unite.ai/?p=470761" target="_blank" rel="noopener">BigID AgentIQ runs data security and compliance from a prompt</a></div>
         <p class="item-line">BigID&#39;s AgentIQ lets customers query their data landscape, investigate access violations, rank findings by sensitivity and exposure, and trigger remediation such as revoking access, from a prompt or from Claude, Copilot, GPT or Gemini. <span class="item-meta">Unite.AI · 2026-09-21</span></p>
         
         <p class="item-sowhat">Agent-driven remediation on top of data discovery shifts governed-clean work from manual review towards continuous enforcement, which changes how a roadmap sizes the stewardship team.</p>
@@ -106,7 +108,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">podcast · Experiencing Data</div>
-      <div class="learn-title"><a href="https://brian2r.podbean.com/e/144-the-data-product-debate-essential-tech-or-excessive-effort-with-shashank-garg-ceo-of-infocepts-promoted-episode">The Data Product Debate: Essential Tech or Excessive Effort?</a></div>
+      <div class="learn-title"><a href="https://brian2r.podbean.com/e/144-the-data-product-debate-essential-tech-or-excessive-effort-with-shashank-garg-ceo-of-infocepts-promoted-episode" target="_blank" rel="noopener">The Data Product Debate: Essential Tech or Excessive Effort?</a></div>
       <p class="learn-eli5">A data product is a dataset or dashboard handled like something you ship to customers: it has an owner, a purpose, a quality promise and a way for users to complain. Some people say that is overhead and a plain table is fine. This episode lets a host and a data-services CEO argue whether the extra effort pays back in better decisions and AI that works.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> It frames the cost-versus-return question a platform PM faces when deciding which datasets deserve product treatment, owners and contracts, and which stay as plain tables.</p>
     </div>

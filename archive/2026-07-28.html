@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://aigovernance.com/news/ai-governance-weekly-july-16-2026">China&#39;s agentic AI rules take effect</a></div>
+        <div class="item-title"><a href="https://aigovernance.com/news/ai-governance-weekly-july-16-2026" target="_blank" rel="noopener">China&#39;s agentic AI rules take effect</a></div>
         <p class="item-line">China&#39;s Implementation Opinions on intelligent agents became enforceable on 15 July as the first dedicated regulatory framework for agentic AI, with the EU Digital Omnibus deadline landing in August. <span class="item-meta">AI Governance Institute · 16 July 2026</span></p>
         
         <p class="item-sowhat">Agent access to your platform now needs logged inputs, explainable automated decisions and jurisdiction-aware policy — platform capabilities to fund, not per-product features to bolt on.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.strategy.com/software/blog/google-next-26-just-validated-agentic-bi-needs-a-semantic-layer">Gartner: MCP alone won&#39;t carry agentic analytics</a></div>
+        <div class="item-title"><a href="https://www.strategy.com/software/blog/google-next-26-just-validated-agentic-bi-needs-a-semantic-layer" target="_blank" rel="noopener">Gartner: MCP alone won&#39;t carry agentic analytics</a></div>
         <p class="item-line">Gartner&#39;s Andres Garcia-Rodeja told the 2026 Data and Analytics Summit that 60% of agentic analytics projects relying solely on MCP will fail by 2028 for want of a consistent semantic layer underneath. <span class="item-meta">Strategy · July 2026</span></p>
         
         <p class="item-sowhat">The semantic layer stops being the BI team&#39;s choice and becomes a platform dependency you own, version and staff — worth pulling forward if it sits late on your roadmap.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.dnb.com/en-us/newsroom/press-releases/dnb-survey-finds-ai-impact-inflection-point.html">Only 6% have data ready to scale AI</a></div>
+        <div class="item-title"><a href="https://www.dnb.com/en-us/newsroom/press-releases/dnb-survey-finds-ai-impact-inflection-point.html" target="_blank" rel="noopener">Only 6% have data ready to scale AI</a></div>
         <p class="item-line">Across 10,000 businesses, 76% now report some measurable AI ROI and 34% are scaling AI, yet only 6% say their enterprise data is fully ready to support it at scale. <span class="item-meta">Dun &amp; Bradstreet AI Momentum Survey · July 2026</span></p>
         
         <p class="item-sowhat">That gap is the clearest business case your platform roadmap will get this quarter — measure readiness on your own estate before the shortfall gets filed as a model problem.</p>
@@ -83,7 +85,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.hpcwire.com/bigdatawire/2026/07/24/databricks-and-microsoft-signal-where-enterprise-ai-is-headed-next/">Databricks deepens Azure bet as Fabric courts agents</a></div>
+        <div class="item-title"><a href="https://www.hpcwire.com/bigdatawire/2026/07/24/databricks-and-microsoft-signal-where-enterprise-ai-is-headed-next/" target="_blank" rel="noopener">Databricks deepens Azure bet as Fabric courts agents</a></div>
         <p class="item-line">At the 2026 AI + Data Summit Databricks said it now runs its own core business operations on Azure Databricks, while Microsoft positions Fabric as the data platform for AI agents. <span class="item-meta">BigDATAwire · 24 July 2026</span></p>
         
         <p class="item-sowhat">Consolidation is being sold on agent-readiness; press both vendors on open-format exit paths before an integration discount quietly settles your architecture.</p>
@@ -92,7 +94,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">05</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://amdatalakehouse.substack.com/p/apache-data-lakehouse-weekly-july-2bb">Iceberg turns to credentials and encryption</a></div>
+        <div class="item-title"><a href="https://amdatalakehouse.substack.com/p/apache-data-lakehouse-weekly-july-2bb" target="_blank" rel="noopener">Iceberg turns to credentials and encryption</a></div>
         <p class="item-line">The community is standardising vended-credential property names across engines and working through table-level encryption in Polaris, alongside staged creates in multi-table transactions. <span class="item-meta">Apache Data Lakehouse Weekly · 16–23 July 2026</span></p>
         
         <p class="item-sowhat">Catalog, credential and encryption boundaries are hardening into contracts — decide now what your platform manages and what it passes through to engines.</p>

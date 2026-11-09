@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.lexisnexis.com/en-gb/legal/news/commission-consults-on-ai-act-implementing-rules-for-enforcement-proceedings-penalties">EU drafts the procedure for AI Act fines</a></div>
+        <div class="item-title"><a href="https://www.lexisnexis.com/en-gb/legal/news/commission-consults-on-ai-act-implementing-rules-for-enforcement-proceedings-penalties" target="_blank" rel="noopener">EU drafts the procedure for AI Act fines</a></div>
         <p class="item-line">The European Commission published a draft implementing regulation on 12 October setting out how the AI Office will run AI Act enforcement proceedings, covering access to the file, business secrets and a five-year limitation period for fines, with consultation open until 9 November and adoption planned for the fourth quarter. <span class="item-meta">LexisNexis UK · 2026-10-12</span></p>
         
         <p class="item-sowhat">Knowing how an investigation would request files and evidence tells a platform PM in a regulated firm what the logging and lineage around AI-facing data has to be able to produce, not just what the rules say.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.snowflake.com/release-notes/2026/other/2026-10-09-agentic-marketplace-discovery-preview">Snowflake lets an assistant shop its data marketplace</a></div>
+        <div class="item-title"><a href="https://docs.snowflake.com/release-notes/2026/other/2026-10-09-agentic-marketplace-discovery-preview" target="_blank" rel="noopener">Snowflake lets an assistant shop its data marketplace</a></div>
         <p class="item-line">Snowflake put Agentic Marketplace Discovery into public preview on 9 October: consumers describe what data they need to Snowflake&#39;s assistant, which finds and compares public Marketplace listings and can install, start a trial or send a sales request from the conversation. <span class="item-meta">Snowflake release notes · 2026-10-09</span></p>
         
         <p class="item-sowhat">When the buyer&#39;s first contact with a data product is an assistant reading its listing, the metadata, descriptions and sample queries become the sales page, which changes what a commercial data product team has to invest in before launch.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.genengnews.com/topics/omics/illumina-combines-multiomics-informatics-applications-in-new-bioinsight-platform/">Illumina sells its curated datasets on usage credits</a></div>
+        <div class="item-title"><a href="https://www.genengnews.com/topics/omics/illumina-combines-multiomics-informatics-applications-in-new-bioinsight-platform/" target="_blank" rel="noopener">Illumina sells its curated datasets on usage credits</a></div>
         <p class="item-line">Illumina launched its BioInsight Platform on 14 October, combining analysis pipelines, AI tools and curated oncology, rare-disease and population-health datasets in one environment, with access sold through usage-based credits rather than a traditional annual subscription. <span class="item-meta">GEN · 2026-10-14</span></p>
         
         <p class="item-sowhat">A data vendor swapping annual licences for metered credits across data and tools is a packaging precedent to test against any commercial data product&#39;s pricing, because it ties revenue to consumption depth rather than seats.</p>
@@ -83,7 +85,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://ventureburn.com/tamr-secures-21m-agentic-ai-data-platform/?amp=1">Tamr raises $21M for agentic master data management</a></div>
+        <div class="item-title"><a href="https://ventureburn.com/tamr-secures-21m-agentic-ai-data-platform/?amp=1" target="_blank" rel="noopener">Tamr raises $21M for agentic master data management</a></div>
         <p class="item-line">Master data management vendor Tamr raised $21 million in growth equity led by Volition Capital, to expand agentic data mastering, after more than doubling SaaS revenue in its last fiscal year; the lead investor said enterprise AI programmes stall most often at the data layer. <span class="item-meta">Ventureburn · 2026-10-14</span></p>
         
         <p class="item-sowhat">Investors funding entity resolution as AI infrastructure supports putting customer and counterparty mastering ahead of new agent use cases in a buy-versus-build review of the quality stack.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://aws.amazon.com/about-aws/whats-new/2026/10/redshift-iceberg-materialized-views">Redshift materialized views now land as open tables</a></div>
+        <div class="item-title"><a href="https://aws.amazon.com/about-aws/whats-new/2026/10/redshift-iceberg-materialized-views" target="_blank" rel="noopener">Redshift materialized views now land as open tables</a></div>
         <p class="item-line">Amazon Redshift can now create and incrementally refresh materialized views stored as Iceberg tables in S3 and registered in the Glue Data Catalog, so the precomputed joins and aggregates can be read by Athena, Spark, Trino and Snowflake as well as Redshift. <span class="item-meta">AWS What&#39;s New · 2026-10-05</span></p>
         
         <p class="item-sowhat">A curated aggregate built once and readable by several engines is one way to keep analytical and model-facing consumers on the same numbers, which is the divergence a governed gold layer has to prevent.</p>
@@ -106,7 +108,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-10-16-iceberg-v3-upgrade-expression-defaults-ga">Snowflake upgrades open-format tables in place</a></div>
+        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-10-16-iceberg-v3-upgrade-expression-defaults-ga" target="_blank" rel="noopener">Snowflake upgrades open-format tables in place</a></div>
         <p class="item-line">Snowflake made in-place upgrades of Iceberg v2 tables to v3 generally available on 16 October, keeping each table&#39;s name, privileges and downstream references, and added expression, sequence and identity column defaults for Snowflake-managed v3 tables. <span class="item-meta">Snowflake release notes · 2026-10-16</span></p>
         
         <p class="item-sowhat">Upgrading a table format without recreating it or re-granting access removes a migration cost that usually delays adopting row lineage and deletion vectors on governed tables.</p>
@@ -115,7 +117,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://martinfowler.com/articles/making-data-ready-for-agentic-ai.html">Three layers for making data ready for agents</a></div>
+        <div class="item-title"><a href="https://martinfowler.com/articles/making-data-ready-for-agentic-ai.html" target="_blank" rel="noopener">Three layers for making data ready for agents</a></div>
         <p class="item-line">Thoughtworks&#39; Pramod Sadalage and Prem Chandrasekaran argue that data serving autonomous agents needs three layers — a foundation for trust, a context layer for meaning, and an access layer controlling what agents can do — with continuous observability keeping it governed and traceable. <span class="item-meta">martinfowler.com (Thoughtworks) · 2026-08-27</span></p>
         
         <p class="item-sowhat">It gives a foundation-phase platform a structure for sequencing the roadmap: trust and context before agent access, rather than opening agent access onto tables that only analysts understand.</p>
@@ -124,7 +126,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">blog · Spotify Engineering · 2026-06-10</div>
-      <div class="learn-title"><a href="https://engineering.atspotify.com/2026/6/encoding-your-domain-expert-the-context-layer-behind-spotifys-data-assistant">Encoding Your Domain Expert: The Context Layer Behind Spotify&#39;s Data Assistant</a></div>
+      <div class="learn-title"><a href="https://engineering.atspotify.com/2026/6/encoding-your-domain-expert-the-context-layer-behind-spotifys-data-assistant" target="_blank" rel="noopener">Encoding Your Domain Expert: The Context Layer Behind Spotify&#39;s Data Assistant</a></div>
       <p class="learn-eli5">Spotify has more than 70,000 tables, and most of them look alike to someone who has not worked with them. An AI assistant asked a data question has the same problem: it can write SQL, but it does not know which table is the trusted one. Spotify&#39;s answer was to write down what its data experts know — which tables to use, what the columns really mean, which ones to avoid — and hand that to the assistant as context with every question. The assistant got better because it was given the expert&#39;s knowledge, not because the model changed.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> It makes the case that the curated context around a governed dataset is a platform deliverable with its own owner, which matters directly when deciding how conversational access over a gold layer stays consistent with the dashboards built on it.</p>
     </div>

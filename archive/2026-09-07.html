@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html">GitSpawn Flaw Lets Malicious Repos Hijack AI Agents</a></div>
+        <div class="item-title"><a href="https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html" target="_blank" rel="noopener">GitSpawn Flaw Lets Malicious Repos Hijack AI Agents</a></div>
         <p class="item-line">A git-config flaw lets a booby-trapped repository silently run code the moment seven AI coding agents perform routine background git status checks, with four of eight disclosed flaws still unpatched at retest. <span class="item-meta">The Hacker News · 2026-09-02</span></p>
         
         <p class="item-sowhat">Vendor-risk reviews of AI coding agents now need a supply-chain check on how repos are handed off, not just an assessment of the model behind the agent.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.teradata.com/press-releases/2026/teradata-enterprise-ai-on-onelake-data">Teradata Links Its AI Platform Directly to OneLake</a></div>
+        <div class="item-title"><a href="https://www.teradata.com/press-releases/2026/teradata-enterprise-ai-on-onelake-data" target="_blank" rel="noopener">Teradata Links Its AI Platform Directly to OneLake</a></div>
         <p class="item-line">Teradata&#39;s Autonomous Knowledge Platform can now read Microsoft OneLake tables directly, letting customers run Teradata AI and analytics against Fabric data without copying or moving it. <span class="item-meta">Teradata · 2026-09-02</span></p>
         
         <p class="item-sowhat">One less lakehouse-vs-warehouse migration to force — a platform decision can now favor reach into existing Fabric estates over rip-and-replace.</p>
@@ -79,7 +81,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.01net.it/barc-study-of-285-organizations-finds-context-leaders-are-four-times-more-likely-to-lead-in-ai/">Context Leaders Are Four Times More Likely to Lead in AI</a></div>
+        <div class="item-title"><a href="https://www.01net.it/barc-study-of-285-organizations-finds-context-leaders-are-four-times-more-likely-to-lead-in-ai/" target="_blank" rel="noopener">Context Leaders Are Four Times More Likely to Lead in AI</a></div>
         <p class="item-line">A BARC study of 285 organizations found that &#39;context leaders&#39; — those with mature data integration, federated metadata, and semantic-layer practices — are four times more likely to qualify as AI leaders, 49% versus 12%. <span class="item-meta">01net (BARC study, sponsored by DataHub) · 2026-09-03</span></p>
         
         <p class="item-sowhat">Context-engineering maturity, not model choice, is what the data shows separating AI leaders from the rest — a concrete line for the next platform roadmap pitch.</p>
@@ -88,7 +90,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.prnewswire.com/news-releases/data-dynamics-launches-enterprise-2-0-5-at-leap-2026--bringing-governed-ai-to-the-data-layer-302864847.html">Data Dynamics Puts AI Governance at the Data Layer</a></div>
+        <div class="item-title"><a href="https://www.prnewswire.com/news-releases/data-dynamics-launches-enterprise-2-0-5-at-leap-2026--bringing-governed-ai-to-the-data-layer-302864847.html" target="_blank" rel="noopener">Data Dynamics Puts AI Governance at the Data Layer</a></div>
         <p class="item-line">Data Dynamics&#39; Enterprise 2.0.5 embeds governance controls directly into unmapped and unstructured data, citing the stat that 60% of AI projects stall on curation and readiness. <span class="item-meta">PR Newswire · 2026-08-31</span></p>
         
         <p class="item-sowhat">Governance-at-the-data-layer is becoming table stakes for unstructured-data tooling — a bar any in-house readiness program should now be measured against.</p>

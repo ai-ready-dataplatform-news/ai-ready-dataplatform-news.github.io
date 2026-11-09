@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li class="is-update">
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-09-15-cortex-ai-gateway">Snowflake&#39;s Cortex AI Gateway enters preview with spend audit</a></div>
+        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-09-15-cortex-ai-gateway" target="_blank" rel="noopener">Snowflake&#39;s Cortex AI Gateway enters preview with spend audit</a></div>
         <p class="item-line">Cortex AI Gateway entered Preview on September 15 with a per-gateway trace table of models called and token counts, an AI_GATEWAY_USAGE_HISTORY view per user and model, and budget attribution by team or cost centre. <span class="item-meta">Snowflake Documentation · 2026-09-15</span></p>
         <p class="item-update"><span class="item-update-tag">Update</span> <span class="item-meta">you saw this on 2026-08-24</span> The gateway moved from announcement to Preview, with the per-request trace table, usage-history view and budget attribution now documented.</p>
         <p class="item-sowhat">Gives a platform PM weighing agent access a concrete audit-and-chargeback surface to compare against Unity Gateway before deciding where model spend is governed.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://natlawreview.com/press-releases/secupi-introduces-data-security-platform-self-hosted-ai">SecuPi launches data security platform for self-hosted AI</a></div>
+        <div class="item-title"><a href="https://natlawreview.com/press-releases/secupi-introduces-data-security-platform-self-hosted-ai" target="_blank" rel="noopener">SecuPi launches data security platform for self-hosted AI</a></div>
         <p class="item-line">SecuPi announced on September 15 runtime attribute-based access control, field-level masking and tokenization, and a kill switch for agent actions, deployable on-premises, in a private cloud or air-gapped. <span class="item-meta">National Law Review (press release) · 2026-09-15</span></p>
         
         <p class="item-sowhat">A regulated-sector data platform team deciding where row and column policy is enforced for agents gets another vendor arguing it belongs outside the platform itself.</p>
@@ -79,7 +81,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.varonis.com/blog/forrester-data-security-platforms-landscape">Forrester maps 31 data security platforms for the AI era</a></div>
+        <div class="item-title"><a href="https://www.varonis.com/blog/forrester-data-security-platforms-landscape" target="_blank" rel="noopener">Forrester maps 31 data security platforms for the AI era</a></div>
         <p class="item-line">Forrester&#39;s Data Security Platforms Landscape, Q3 2026 profiles 31 vendors and argues that as AI changes how data is accessed, created and moved, the data security platform has become the load-bearing wall of enterprise security. <span class="item-meta">Varonis (on Forrester) · 2026-08-19</span></p>
         
         <p class="item-sowhat">Puts classification and access control in the same conversation as the AI-readiness roadmap: data a model may touch has to be findable, labelled and policy-bound before it is handed over.</p>
@@ -88,7 +90,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">video · YouTube / Redpanda (Alex Gallego)</div>
-      <div class="learn-title"><a href="https://www.youtube.com/watch?v=rwCIfzhw2Dk">The Agentic Data Plane — AI Agent Conference 2026</a></div>
+      <div class="learn-title"><a href="https://www.youtube.com/watch?v=rwCIfzhw2Dk" target="_blank" rel="noopener">The Agentic Data Plane — AI Agent Conference 2026</a></div>
       <p class="learn-eli5">An agent is software that decides for itself which data to read and which actions to take. Once a company has many of them, nobody can say who each one acts as, what it may touch, or what it did. A data plane for agents is one checkpoint every agent request passes through, like a security desk at a building entrance. The desk checks identity, applies the rules, and writes a log entry. The talk&#39;s argument is that agents fail because the systems around them lack that control, not because the models are weak.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> Frames the decision of whether agent access is governed once at the platform edge or rebuilt inside each tool, which is the same choice a Genie-to-Claude style pilot has to make before it widens.</p>
     </div>

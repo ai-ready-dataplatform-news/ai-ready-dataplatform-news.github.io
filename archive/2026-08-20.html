@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.theregister.com/ai-and-ml/2026/08/17/agentic-ai-costs-set-to-balloon-fivefold-by-2028/5288363">Gartner: agentic AI costs to balloon fivefold by 2028</a></div>
+        <div class="item-title"><a href="https://www.theregister.com/ai-and-ml/2026/08/17/agentic-ai-costs-set-to-balloon-fivefold-by-2028/5288363" target="_blank" rel="noopener">Gartner: agentic AI costs to balloon fivefold by 2028</a></div>
         <p class="item-line">Gartner warns agentic AI spending will grow roughly fivefold by 2028 as complex multi-step workflows multiply token consumption faster than per-token prices are falling. <span class="item-meta">The Register · 2026-08-17</span></p>
         
         <p class="item-sowhat">Budget models built on today&#39;s per-token pricing trend understate agent-era spend — cost forecasts need a consumption-growth assumption, not just a price-decline one.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://techcrunch.com/2026/08/19/openai-seeks-to-one-up-anthropic-with-new-customer-privacy-protections/">OpenAI tests privacy-preserving misuse detection</a></div>
+        <div class="item-title"><a href="https://techcrunch.com/2026/08/19/openai-seeks-to-one-up-anthropic-with-new-customer-privacy-protections/" target="_blank" rel="noopener">OpenAI tests privacy-preserving misuse detection</a></div>
         <p class="item-line">OpenAI is testing Private Safety Processing with early customers including Microsoft and Databricks, flagging misuse patterns across conversations from metadata alone while preserving zero-data-retention guarantees. <span class="item-meta">TechCrunch · 2026-08-19</span></p>
         
         <p class="item-sowhat">A path is emerging to keep API traffic under strict zero-retention terms without giving up abuse monitoring — worth revisiting any data-residency exception negotiated purely to avoid retention.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li class="is-update">
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://dev.to/alexmercedcoder/apache-data-lakehouse-weekly-august-10-to-18-2026-1nf5">Iceberg v4 debates a Parquet-only manifest</a></div>
+        <div class="item-title"><a href="https://dev.to/alexmercedcoder/apache-data-lakehouse-weekly-august-10-to-18-2026-1nf5" target="_blank" rel="noopener">Iceberg v4 debates a Parquet-only manifest</a></div>
         <p class="item-line">Steven Wu&#39;s proposal to make Iceberg v4 manifests Parquet-only drew early support from Anoop Johnson and Russell Spitzer, since Avro can&#39;t support projection reads on manifest stats. <span class="item-meta">Apache Data Lakehouse Weekly · 2026-08-18</span></p>
         <p class="item-update"><span class="item-update-tag">Update</span> <span class="item-meta">you saw this on 2026-08-14</span> formal scoping has moved to a specific technical proposal — Parquet-only manifests — with early committer consensus forming</p>
         <p class="item-sowhat">The v4 scoping opened in mid-August is now converging on a concrete break from Avro — engines and tools that assume dual-format manifests should plan the migration now, not after the spec lands.</p>
@@ -88,7 +90,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">course · DeepLearning.AI / Coursera</div>
-      <div class="learn-title"><a href="https://www.coursera.org/professional-certificates/data-engineering">DeepLearning.AI Data Engineering Professional Certificate</a></div>
+      <div class="learn-title"><a href="https://www.coursera.org/professional-certificates/data-engineering" target="_blank" rel="noopener">DeepLearning.AI Data Engineering Professional Certificate</a></div>
       <p class="learn-eli5">Before any model or dashboard sees a number, something has to fetch it from wherever it lives, clean up the mess, and land it somewhere queryable — that&#39;s data engineering, and it&#39;s mostly plumbing, not magic. This course walks through that plumbing end to end: pulling data in, transforming it, storing it, and scheduling all of that to run itself. None of it is AI-specific, which is exactly the point — a model trained or grounded on data that came through sloppy plumbing inherits the sloppiness, no matter how good the model is.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> Treat pipeline reliability as a prerequisite line item on any AI roadmap, not a shared-services assumption — a governance layer or semantic model built on top of ungoverned ingestion just moves the mess one layer up.</p>
     </div>

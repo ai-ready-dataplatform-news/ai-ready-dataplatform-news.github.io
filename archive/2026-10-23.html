@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://scmp.com/tech/policy/article/3371540/china-creates-state-owned-firm-xiongan-develop-nations-ai-data-resources">China sets up a state company to sell its data</a></div>
+        <div class="item-title"><a href="https://scmp.com/tech/policy/article/3371540/china-creates-state-owned-firm-xiongan-develop-nations-ai-data-resources" target="_blank" rel="noopener">China sets up a state company to sell its data</a></div>
         <p class="item-line">China inaugurated the National Data Group in Xiong&#39;an on 20 October, a state-owned company charged with developing data resources, unlocking their economic value and supporting AI, run by a former China Unicom general manager while the National Data Administration keeps policy. <span class="item-meta">South China Morning Post · 2026-10-20</span></p>
         
         <p class="item-sowhat">Splitting the rule-setter from the operator that packages and supplies data is the same split a platform team faces between owning data-sharing policy and running the supply, and it marks commercially packaged data, not models, as where national AI money is now going.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.blocksandfiles.com/data-management/2026/10/19/geniez-ai-acquired-by-rocket-software/5303774">Rocket Software buys Geniez AI to put agents on mainframes</a></div>
+        <div class="item-title"><a href="https://www.blocksandfiles.com/data-management/2026/10/19/geniez-ai-acquired-by-rocket-software/5303774" target="_blank" rel="noopener">Rocket Software buys Geniez AI to put agents on mainframes</a></div>
         <p class="item-line">Rocket Software said on 13 October it had acquired Geniez AI, whose agents work directly on mainframes to monitor systems, diagnose incidents, run workflows in natural language and pull live data for AI use, and will fold it into its Rocket EVA platform; Calcalist estimates the deal at up to $100 million. <span class="item-meta">Blocks and Files · 2026-10-19</span></p>
         
         <p class="item-sowhat">In regulated firms whose system of record still sits on a mainframe, agents reaching core data directly is a path that bypasses the governed gold layer, so the bar for agentic access has to cover routes that never touch the platform.</p>
@@ -79,7 +81,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://help.sap.com/whats-new/31c53b47cac6482d89f167a1d2a4a50b">SAP data products now carry terms consumers must accept</a></div>
+        <div class="item-title"><a href="https://help.sap.com/whats-new/31c53b47cac6482d89f167a1d2a4a50b" target="_blank" rel="noopener">SAP data products now carry terms consumers must accept</a></div>
         <p class="item-line">From 9 September, producers in SAP Business Data Cloud attach usage terms to a data product, consumers must accept them before requesting access, and a steward approves each request or auto-approves low-risk ones, leaving a permanent agreement of who uses what, where, why and for how long. <span class="item-meta">SAP Help Portal, What&#39;s New in SAP Business Data Cloud · 2026-09-09</span></p>
         
         <p class="item-sowhat">This is a data contract enforced at the point of access rather than a page on a wiki, and a working answer to the named-owner question: domain owners set the terms, stewards approve, and the platform keeps the audit trail.</p>
@@ -88,7 +90,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-10-20-sensitive-data-entitlement-access-reports-ga">Snowflake reports who can reach sensitive data</a></div>
+        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-10-20-sensitive-data-entitlement-access-reports-ga" target="_blank" rel="noopener">Snowflake reports who can reach sensitive data</a></div>
         <p class="item-line">Trust Center&#39;s Sensitive Data Entitlement and Access reports became generally available on 20 October for Enterprise Edition and above, listing the users whose roles hold privileges on tables classified as containing sensitive data, alongside a report on access to that data. <span class="item-meta">Snowflake release notes · 2026-10-20</span></p>
         
         <p class="item-sowhat">Who could read the PII, set against who actually did, is the evidence an access review needs before agents are given credentials, and a built-in report sets the bar any catalog&#39;s system tables should be able to match.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.snowflake.com/en/blog/workday-data-cloud-snowflake-zero-copy-integration/">Workday shares its tables and definitions live over Iceberg</a></div>
+        <div class="item-title"><a href="https://www.snowflake.com/en/blog/workday-data-cloud-snowflake-zero-copy-integration/" target="_blank" rel="noopener">Workday shares its tables and definitions live over Iceberg</a></div>
         <p class="item-line">Snowflake&#39;s zero-copy integration with Workday Data Cloud became generally available on 7 October: Workday tables are queried live through a catalog-linked database over an Apache Iceberg share, with no ETL or replication, and Workday&#39;s semantic layer and governance travel with the data. <span class="item-meta">Snowflake blog · 2026-10-12</span></p>
         
         <p class="item-sowhat">When a SaaS source ships its own definitions with its data, onboarding stops being a pipeline job and becomes a choice of whose semantic layer wins, which decides whether faster onboarding forks the business definitions.</p>
@@ -106,7 +108,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">case study · Atlan Re:Govern 2025 (recorded session)</div>
-      <div class="learn-title"><a href="https://atlan.com/regovern-watch-center/data-product-success/">Certifying 350 KPIs: how Invitation Homes found metrics that disagreed</a></div>
+      <div class="learn-title"><a href="https://atlan.com/regovern-watch-center/data-product-success/" target="_blank" rel="noopener">Certifying 350 KPIs: how Invitation Homes found metrics that disagreed</a></div>
       <p class="learn-eli5">Two teams can both report a number called the same thing and quietly calculate it differently, so the same question gets two answers. Certifying a metric means writing down exactly how it is calculated and who owns it, then marking that version as the official one. When Invitation Homes, which rents out about 100,000 homes, certified 350 of its KPIs, the work itself exposed metrics that shared a name but not a calculation. Its director of enterprise data products, Chris Durham, describes how the team ran this as data products with scorecards.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> Certification is the step that makes an agent&#39;s answer match the dashboard&#39;s: certify the gold layer&#39;s metrics once, point both consumers at the certified versions, and report the count of certified metrics as a foundation-phase measure rather than leaning on adoption.</p>
     </div>

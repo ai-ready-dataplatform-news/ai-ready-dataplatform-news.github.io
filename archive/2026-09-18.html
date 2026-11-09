@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://insurance-edge.net/2026/09/15/sapiens-nv-launches-autonomous-insurance-platform/">Sapiens launches AI-native autonomous insurance platform</a></div>
+        <div class="item-title"><a href="https://insurance-edge.net/2026/09/15/sapiens-nv-launches-autonomous-insurance-platform/" target="_blank" rel="noopener">Sapiens launches AI-native autonomous insurance platform</a></div>
         <p class="item-line">SapiensAIP unifies underwriting, policy, billing and claims into one agentic platform, built on a foundation layer drawn from Sapiens&#39; own insurance ontology. <span class="item-meta">Insurance Edge · 2026-09-15</span></p>
         
         <p class="item-sowhat">A core-admin vendor packaging governed context as a product raises the bar for what &#39;AI-ready&#39; means in regulated insurance data, and what a platform roadmap now has to match.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.cnbc.com/2026/09/10/openai-chatgpt-for-financial-services-targets-work-of-junior-bankers.html">OpenAI launches ChatGPT for Financial Services</a></div>
+        <div class="item-title"><a href="https://www.cnbc.com/2026/09/10/openai-chatgpt-for-financial-services-targets-work-of-junior-bankers.html" target="_blank" rel="noopener">OpenAI launches ChatGPT for Financial Services</a></div>
         <p class="item-line">GPT-6 Astra ships bundled with PitchBook, LSEG and Crunchbase data, plus shared access to Capital IQ and Factiva, aimed at the research work junior bankers do today. <span class="item-meta">CNBC · 2026-09-10</span></p>
         
         <p class="item-sowhat">A model vendor is now also a data distributor: buy-vs-build and vendor-risk calls for research data have to weigh a single AI subscription against a stack of licensed feeds.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-09-10-external-secret-providers-preview">Snowflake previews reading secrets from cloud vaults</a></div>
+        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-09-10-external-secret-providers-preview" target="_blank" rel="noopener">Snowflake previews reading secrets from cloud vaults</a></div>
         <p class="item-line">Queries can now read credentials straight from AWS Secrets Manager, Azure Key Vault or Google Cloud Secret Manager via workload identity federation, instead of holding a duplicate copy. <span class="item-meta">Snowflake Documentation · 2026-09-10</span></p>
         
         <p class="item-sowhat">One fewer place secrets sit unmanaged is one fewer finding in the next access review, a small governance pattern worth copying into any platform&#39;s own credential story.</p>
@@ -83,7 +85,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.kai-waehner.de/blog/2026/09/07/data-streaming-landscape-q3-2026-who-controls-your-streams/">Streaming landscape report adds sovereignty to vendor risk</a></div>
+        <div class="item-title"><a href="https://www.kai-waehner.de/blog/2026/09/07/data-streaming-landscape-q3-2026-who-controls-your-streams/" target="_blank" rel="noopener">Streaming landscape report adds sovereignty to vendor risk</a></div>
         <p class="item-line">Citing June&#39;s government-ordered suspension of a major AI vendor&#39;s access for foreign users, the Q3 data streaming landscape report argues every platform dependency now carries a sovereignty question. <span class="item-meta">Kai Waehner · 2026-09-07</span></p>
         
         <p class="item-sowhat">Vendor risk assessment needs a sovereignty column alongside cost and lock-in, not just an uptime SLA, before the next platform contract is signed.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.databricks.com/blog/introducing-file-type-native-column-type-multimodal-data">Databricks ships a native FILE column type</a></div>
+        <div class="item-title"><a href="https://www.databricks.com/blog/introducing-file-type-native-column-type-multimodal-data" target="_blank" rel="noopener">Databricks ships a native FILE column type</a></div>
         <p class="item-line">FILE, now in beta, stores documents, images, audio and video natively inside Delta tables, with vector and full-text indexes for direct search and retrieval. <span class="item-meta">Databricks Blog · 2026-08-10</span></p>
         
         <p class="item-sowhat">Unstructured data stops being a side pipeline and becomes a governed column: the same lineage and access controls that cover a gold table now have to extend to what&#39;s inside it.</p>
@@ -106,7 +108,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.globenewswire.com/news-release/2026/09/17/3364105/0/en/alation-launches-aios-expansion-with-six-products-that-accelerate-ai-transformation.html">Alation expands AIOS with six governance products</a></div>
+        <div class="item-title"><a href="https://www.globenewswire.com/news-release/2026/09/17/3364105/0/en/alation-launches-aios-expansion-with-six-products-that-accelerate-ai-transformation.html" target="_blank" rel="noopener">Alation expands AIOS with six governance products</a></div>
         <p class="item-line">The six new components, including AI Governance, Ontologies and Governed Collections, target a gap Alation cites: 78% of C-suite leaders lack confidence they&#39;d pass an AI governance audit within 90 days. <span class="item-meta">GlobeNewswire · 2026-09-17</span></p>
         
         <p class="item-sowhat">That 78% figure is a useful number to bring into a board conversation about what a foundation-phase platform should be judged on, rather than adoption alone.</p>

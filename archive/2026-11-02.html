@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.techzine.eu/news/applications/145341/pinecone-brings-its-own-vector-search-technology-to-postgresql/">Pinecone puts its vector search inside Postgres</a></div>
+        <div class="item-title"><a href="https://www.techzine.eu/news/applications/145341/pinecone-brings-its-own-vector-search-technology-to-postgresql/" target="_blank" rel="noopener">Pinecone puts its vector search inside Postgres</a></div>
         <p class="item-line">Pinecone released pg_pinecone, an Apache 2.0 PostgreSQL extension that runs its vector search engine natively in Postgres 17 and 18 with no Pinecone account required, applies metadata filters during the search rather than after it, and by Pinecone&#39;s own figures holds a million 768-dimension vectors in a 136 MB index against 2.0 GB for pgvector&#39;s HNSW on half-precision vectors. <span class="item-meta">Techzine · 2026-10-28</span></p>
         
         <p class="item-sowhat">When the specialist vector vendor ships its engine as a free extension to the operational database, a separate vector store gets harder to justify as its own platform component; the retrieval build-vs-buy call can lean towards keeping embeddings beside the governed rows they describe.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://a-teaminsight.com/?p=80747">Sell-side banks run ahead of asset managers on agents</a></div>
+        <div class="item-title"><a href="https://a-teaminsight.com/?p=80747" target="_blank" rel="noopener">Sell-side banks run ahead of asset managers on agents</a></div>
         <p class="item-line">A study commissioned by LSEG Data &amp; Analytics of 200 senior AI decision-makers in the US, UK and Canada found 65% of sell-side institutions at the scaling or fully operational stage of agentic AI, against 47% of buy-side firms, and more than 70% planning to use MCP for internal and external data connectivity. <span class="item-meta">A-Team Insight, on an LSEG Data &amp; Analytics study · 2026-10-19</span></p>
         
         <p class="item-sowhat">If most financial institutions plan to connect agents to data over MCP, the access layer stops being an integration detail and becomes a governed product surface; a platform roadmap needs a position on how entitlements travel through it before the first agent asks. The sponsor sells MCP data access, so read the numbers as direction, not measurement.</p>
@@ -79,7 +81,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.techzine.eu/news/data-management/144719/microsoft-and-google-to-contribute-to-the-apache-ossie-project/">Microsoft joins Apache Ossie, the portable semantic model effort</a></div>
+        <div class="item-title"><a href="https://www.techzine.eu/news/data-management/144719/microsoft-and-google-to-contribute-to-the-apache-ossie-project/" target="_blank" rel="noopener">Microsoft joins Apache Ossie, the portable semantic model effort</a></div>
         <p class="item-line">Microsoft joined Apache Ossie, the incubating project formerly called Open Semantic Interchange, and is building a two-way converter between Power BI semantic models and the Ossie format; Google says it is joining, BigQuery&#39;s dialect is already in the spec, and more than 60 companies including Snowflake and Databricks back it, though version 0.2 is still a development draft. <span class="item-meta">Techzine · 2026-10-02</span></p>
         
         <p class="item-sowhat">With the Power BI vendor inside, business definitions written once in a gold layer have a credible route to travel between BI and agent tools rather than being re-keyed per platform; a semantic-layer decision now can favour whatever exports cleanly to Ossie, while treating the spec as early.</p>
@@ -88,7 +90,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-10-21-declarative-feature-store-ga">Snowflake features become version-controlled specs</a></div>
+        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-10-21-declarative-feature-store-ga" target="_blank" rel="noopener">Snowflake features become version-controlled specs</a></div>
         <p class="item-line">Snowflake made its Declarative Feature Store generally available: feature store resources are defined as version-controlled specs and deployed with the snow feature CLI through a plan-and-apply step, and existing feature stores can be migrated with snow feature sync. <span class="item-meta">Snowflake release notes · 2026-10-21</span></p>
         
         <p class="item-sowhat">Model features declared in a repository and promoted through plan-and-apply get the same review, lineage and rollback as the transformation code beneath them; that makes feature definitions a governed asset with an owner, which is the bar a gold layer serving both analysts and models has to meet.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://a-teaminsight.com/blog/clearwater-warns-on-agentic-use-in-risk-management-without-data-quality-check/">Asset managers&#39; AI results track their data accuracy</a></div>
+        <div class="item-title"><a href="https://a-teaminsight.com/blog/clearwater-warns-on-agentic-use-in-risk-management-without-data-quality-check/" target="_blank" rel="noopener">Asset managers&#39; AI results track their data accuracy</a></div>
         <p class="item-line">Clearwater Analytics&#39; GenAI and the Data Divide survey of 178 asset managers, run by PureProfile in March, found 44% of firms rating their data accuracy good or excellent said risk management had become much more proactive, against 17% of firms with moderate or poor data; Clearwater warns against handing hedging or leverage decisions to agents before data quality checks are in place. <span class="item-meta">A-Team Insight, on Clearwater Analytics research · 2026-10-24</span></p>
         
         <p class="item-sowhat">A measured gap between firms with accurate data and those without is the kind of evidence a foundation-phase platform can use to argue for quality controls ahead of more agent use cases, and to judge progress by accuracy rather than adoption.</p>
@@ -106,7 +108,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">blog · Uber Engineering blog · 2021-04-01</div>
-      <div class="learn-title"><a href="https://www.uber.com/at/en/blog/ubers-journey-toward-better-data-culture-from-first-principles/">Uber&#39;s journey toward better data culture from first principles</a></div>
+      <div class="learn-title"><a href="https://www.uber.com/at/en/blog/ubers-journey-toward-better-data-culture-from-first-principles/" target="_blank" rel="noopener">Uber&#39;s journey toward better data culture from first principles</a></div>
       <p class="learn-eli5">When thousands of tables exist and nobody is clearly responsible for them, people stop trusting any of them and build their own copies. Uber&#39;s answer was to treat important datasets like products: each has a named owner, a tier saying how critical it is, and promises about freshness and quality that come with that tier. Problems with data are then handled like outages in software, with reporting, deadlines and follow-up, so quality stops being a favour and becomes a commitment.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> Tiering datasets and attaching owners and service levels to the top tier is a way to scale a governance bar beyond the first gold dataset without applying it to everything at once; it also gives a foundation-phase platform a metric that is not adoption: how many critical datasets meet their promises.</p>
     </div>

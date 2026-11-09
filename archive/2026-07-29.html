@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.databricks.com/blog/prototype-production-high-qps-databricks-ai-search">Databricks AI Search now scales to thousands of QPS</a></div>
+        <div class="item-title"><a href="https://www.databricks.com/blog/prototype-production-high-qps-databricks-ai-search" target="_blank" rel="noopener">Databricks AI Search now scales to thousands of QPS</a></div>
         <p class="item-line">Databricks made high-QPS scaling for AI Search generally available on July 28, letting a single target-QPS setting take a vector index from prototype to full production throughput with built-in observability. <span class="item-meta">Databricks Blog · 2026-07-28</span></p>
         
         <p class="item-sowhat">Closes a real buy-vs-build gap for production-grade vector search inside the lakehouse — worth weighing against a dedicated search vendor for retrieval-heavy agent workloads.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems">EU publishes AI Act transparency rules before Aug 2</a></div>
+        <div class="item-title"><a href="https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems" target="_blank" rel="noopener">EU publishes AI Act transparency rules before Aug 2</a></div>
         <p class="item-line">The European Commission adopted guidelines on July 20 for the AI Act&#39;s Article 50 transparency obligations, which take effect August 2 with fines of up to €15 million or 3% of global turnover. <span class="item-meta">European Commission · 2026-07-20</span></p>
         
         <p class="item-sowhat">Any platform feature that lets an AI system interact with users or generate synthetic content needs a live disclosure mechanism in days, not on next quarter&#39;s roadmap.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/">MCP&#39;s biggest spec revision makes the protocol stateless</a></div>
+        <div class="item-title"><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/" target="_blank" rel="noopener">MCP&#39;s biggest spec revision makes the protocol stateless</a></div>
         <p class="item-line">The 2026-07-28 Model Context Protocol specification rewrites the transport core to be stateless, adds a formal extensions framework, and gives three deprecated features a 12-month runway. <span class="item-meta">Model Context Protocol Blog · 2026-07-28</span></p>
         
         <p class="item-sowhat">Any MCP servers already wired into agent-to-data access now have a migration clock running — budget the rework before the deprecation window closes.</p>
@@ -83,7 +85,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.gartner.com/en/newsroom/press-releases/2026-07-20-gartner-forecasts-worldwide-ai-platforms-and-models-market-to-grow-63-percent-in-2026">Gartner: AI platform spending to grow 63% in 2026</a></div>
+        <div class="item-title"><a href="https://www.gartner.com/en/newsroom/press-releases/2026-07-20-gartner-forecasts-worldwide-ai-platforms-and-models-market-to-grow-63-percent-in-2026" target="_blank" rel="noopener">Gartner: AI platform spending to grow 63% in 2026</a></div>
         <p class="item-line">Gartner forecasts worldwide spending on AI platforms and models will reach $64 billion in 2026, up 63.4% from $39 billion in 2025, with GenAI models growing fastest at 117%. <span class="item-meta">Gartner · 2026-07-20</span></p>
         
         <p class="item-sowhat">That&#39;s the scale of budget vendors and competitors are pricing in this year — a useful external benchmark when building the investment case for the platform roadmap.</p>
@@ -92,7 +94,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">05</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://amdatalakehouse.substack.com/p/apache-data-lakehouse-weekly-july-2bb">Iceberg contributors push to drop equality deletes in V4</a></div>
+        <div class="item-title"><a href="https://amdatalakehouse.substack.com/p/apache-data-lakehouse-weekly-july-2bb" target="_blank" rel="noopener">Iceberg contributors push to drop equality deletes in V4</a></div>
         <p class="item-line">Iceberg contributors opened a formal proposal this week to remove equality deletes from the V4 spec, while Polaris debated how much consistency its persistence layer owes users. <span class="item-meta">Apache Data Lakehouse Weekly · 2026-07-23</span></p>
         
         <p class="item-sowhat">A V4 spec change to delete semantics is a compatibility question for any table-maintenance job written against current Iceberg behavior — worth flagging before it lands.</p>

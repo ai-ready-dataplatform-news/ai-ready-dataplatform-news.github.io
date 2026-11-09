@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.snowflake.com/en/news/press-releases/snowflake-advances-the-trusted-agentic-enterprise-era-with-unified-monitoring-and-cost-management/">Snowflake launches Cortex AI Gateway for agents</a></div>
+        <div class="item-title"><a href="https://www.snowflake.com/en/news/press-releases/snowflake-advances-the-trusted-agentic-enterprise-era-with-unified-monitoring-and-cost-management/" target="_blank" rel="noopener">Snowflake launches Cortex AI Gateway for agents</a></div>
         <p class="item-line">Snowflake&#39;s July 28 Cortex AI Gateway centralizes access control, authentication and cost monitoring for both native and third-party agents across more than 100 MCP servers. <span class="item-meta">Snowflake · 2026-07-28</span></p>
         
         <p class="item-sowhat">A native control-plane for agent governance narrows the case for building an in-house MCP gateway — worth a build-vs-buy pass before the next agent rollout.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august">EU AI Act enforcement powers take effect</a></div>
+        <div class="item-title"><a href="https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" target="_blank" rel="noopener">EU AI Act enforcement powers take effect</a></div>
         <p class="item-line">From August 2, the EU AI Office gained formal investigative and fining power over general-purpose AI providers, with Article 50 disclosure duties live and fines reaching €35M or 7% of global turnover, while Article 10&#39;s high-risk data-governance rules stay deferred to 2027. <span class="item-meta">European Commission · 2026-08-02</span></p>
         
         <p class="item-sowhat">Any customer-facing generative feature reaching EU users needs an audited disclosure trail now, and the Article 10 deferral is a one-year runway to get data lineage in order, not a reason to deprioritize it.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/">MCP&#39;s July 28 update drops server-side state</a></div>
+        <div class="item-title"><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/" target="_blank" rel="noopener">MCP&#39;s July 28 update drops server-side state</a></div>
         <p class="item-line">The Model Context Protocol&#39;s 2026-07-28 specification removes server-side session state, aiming to cut the friction of deploying agentic workflows at enterprise scale. <span class="item-meta">Model Context Protocol Blog · 2026-07-28</span></p>
         
         <p class="item-sowhat">A stateless protocol is easier to load-balance and govern, but any semantic-layer or catalog integration built against the old session model needs a compatibility check before the next MCP-based rollout.</p>
@@ -83,7 +85,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.databricks.com/resources/webinar/agents-work-shipping-agentic-apps-scale">Databricks and OpenAI run agent production event</a></div>
+        <div class="item-title"><a href="https://www.databricks.com/resources/webinar/agents-work-shipping-agentic-apps-scale" target="_blank" rel="noopener">Databricks and OpenAI run agent production event</a></div>
         <p class="item-line">Databricks and OpenAI are hosting a three-region virtual event this week on what separates a production agent from a demo, alongside new governed agent-building capabilities on the Databricks platform. <span class="item-meta">Databricks · 2026-08-04</span></p>
         
         <p class="item-sowhat">A direct read on what two major vendors now call production-grade versus a demo is worth an hour before signing off on agent-fleet budget this quarter.</p>
@@ -92,7 +94,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">05</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://amdatalakehouse.substack.com/p/apache-data-lakehouse-weekly-july-9c1">Apache Polaris pulls 1.7.0 over licensing gap</a></div>
+        <div class="item-title"><a href="https://amdatalakehouse.substack.com/p/apache-data-lakehouse-weekly-july-9c1" target="_blank" rel="noopener">Apache Polaris pulls 1.7.0 over licensing gap</a></div>
         <p class="item-line">Polaris withdrew its 1.7.0 release candidate after a licensing gap surfaced in 44 of its staged jars, delaying the open lakehouse catalog&#39;s monthly release cadence. <span class="item-meta">Apache Data Lakehouse Weekly · 2026-07-29</span></p>
         
         <p class="item-sowhat">A stumble in the release process of a catalog this central to Iceberg interoperability is a data point on Polaris&#39;s maturity — worth weighing against Unity Catalog or a cloud REST catalog.</p>

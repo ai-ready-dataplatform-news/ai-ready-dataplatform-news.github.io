@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.businesswire.com/news/home/20260922544278/en/OpenObserve-Reaches-v1.0-Bringing-AI-Observability-into-the-Same-Platform-as-Logs-Metrics-Traces-and-RUM">Open-source OpenObserve reaches v1.0 with AI observability</a></div>
+        <div class="item-title"><a href="https://www.businesswire.com/news/home/20260922544278/en/OpenObserve-Reaches-v1.0-Bringing-AI-Observability-into-the-Same-Platform-as-Logs-Metrics-Traces-and-RUM" target="_blank" rel="noopener">Open-source OpenObserve reaches v1.0 with AI observability</a></div>
         <p class="item-line">OpenObserve&#39;s 1.0 release folds agent tracing, LLM monitoring and session evaluation into the same open-source platform that already covers logs, metrics, traces and real-user monitoring, pitched as a Datadog/Splunk alternative. <span class="item-meta">BusinessWire · 2026-09-22</span></p>
         
         <p class="item-sowhat">A credible open-source entrant at the observability layer we buy from Monte Carlo is a genuine build-vs-buy data point, even before it matches our SLA and incident-response depth.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://ffnews.com/news/finosec-announces-ai-governance-for-banks-and-credit-unionsc-cce4ad3e">Finosec launches an AI Governance module for banks</a></div>
+        <div class="item-title"><a href="https://ffnews.com/news/finosec-announces-ai-governance-for-banks-and-credit-unionsc-cce4ad3e" target="_blank" rel="noopener">Finosec launches an AI Governance module for banks</a></div>
         <p class="item-line">The module gives a bank one inventory of where AI is in use across vendors and systems, scores the risk of each, and produces vendor due-diligence questionnaires and board-level reporting. <span class="item-meta">FF News · 2026-09-21</span></p>
         
         <p class="item-sowhat">A packaged AI-vendor-risk register is the thing a regulated platform team usually ends up building by hand — worth benchmarking our own vendor inventory against what a dedicated tool now ships as standard.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.theregister.com/legal/2026/09/22/privacy-group-slams-eu-for-changing-the-data-rules-to-cater-to-ai/5298175">EU draft would let AI training skip GDPR consent</a></div>
+        <div class="item-title"><a href="https://www.theregister.com/legal/2026/09/22/privacy-group-slams-eu-for-changing-the-data-rules-to-cater-to-ai/5298175" target="_blank" rel="noopener">EU draft would let AI training skip GDPR consent</a></div>
         <p class="item-line">A Council compromise text under the Digital Omnibus, criticised by privacy group noyb, would let personal data be processed to develop and operate AI under GDPR&#39;s &#39;legitimate interest&#39; basis rather than requiring consent. <span class="item-meta">The Register · 2026-09-22</span></p>
         
         <p class="item-sowhat">If this lands, the consent basis we&#39;ve built PII handling around for anything touching model training shifts — worth flagging to legal now, ahead of the Council text firming up.</p>
@@ -88,7 +90,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://landing.ai/blog/introducing-agentic-document-extraction-gen2">LandingAI rebuilds document extraction for agent consumption</a></div>
+        <div class="item-title"><a href="https://landing.ai/blog/introducing-agentic-document-extraction-gen2" target="_blank" rel="noopener">LandingAI rebuilds document extraction for agent consumption</a></div>
         <p class="item-line">The second-generation release, powered by new DPT-3 models, targets agent-friendly outputs with confidence scores and audit-ready citations rather than human-readable OCR text. <span class="item-meta">LandingAI · 2026-09-09</span></p>
         
         <p class="item-sowhat">Unstructured documents are the part of the estate no medallion architecture touches yet — a concrete marker of what &#39;agent-ready&#39; requires beyond a clean gold layer.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">course · Maven / Chad Sanderson</div>
-      <div class="learn-title"><a href="https://maven.com/chad-sanderson/datainfra">Master AI-Ready Data Infrastructure</a></div>
+      <div class="learn-title"><a href="https://maven.com/chad-sanderson/datainfra" target="_blank" rel="noopener">Master AI-Ready Data Infrastructure</a></div>
       <p class="learn-eli5">Dashboards and AI agents ask data for different things. A dashboard wants a stable, scheduled table that a person reads and sanity-checks. An agent wants governed, well-defined context it can query on demand and act on without anyone checking first. Most data platforms were only ever built for the first job. This course walks through what actually changes in modelling, ownership and architecture when the second job becomes a real requirement rather than an afterthought bolted onto the existing warehouse.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> This is the exact seam the one-source, two-consumption-paths problem sits on, taught by someone who has built it at platform scale elsewhere — a source of vocabulary and reference architecture to bring back to the roadmap, not just a survey of trends.</p>
     </div>

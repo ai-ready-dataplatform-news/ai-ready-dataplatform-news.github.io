@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://github.com/apache/iceberg-rust/issues/3034">Iceberg Rust 0.11.0 fails two votes over encryption bug</a></div>
+        <div class="item-title"><a href="https://github.com/apache/iceberg-rust/issues/3034" target="_blank" rel="noopener">Iceberg Rust 0.11.0 fails two votes over encryption bug</a></div>
         <p class="item-line">A cross-engine round-trip test caught a Rust encryption bug that would have written files Java couldn&#39;t read, sinking the RC2 vote after RC1 had already failed over a circular dependency. <span class="item-meta">Apache Iceberg (GitHub) · 2026-09-17</span></p>
         
         <p class="item-sowhat">Standardising on Iceberg tooling still means testing cross-engine compatibility yourself before a release — the vendor&#39;s own release gate isn&#39;t proof enough yet.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.mondaq.com/unitedstates/fintech/1844244/fintech-global-fs-regulatory-round-up-we-11-september-2026">UK regulatory round-up flags AI/cloud vendor concentration risk</a></div>
+        <div class="item-title"><a href="https://www.mondaq.com/unitedstates/fintech/1844244/fintech-global-fs-regulatory-round-up-we-11-september-2026" target="_blank" rel="noopener">UK regulatory round-up flags AI/cloud vendor concentration risk</a></div>
         <p class="item-line">This week&#39;s UK financial-services regulatory round-up names compressed remediation windows and third-party concentration risk — reliance on the same cloud and AI providers cascading disruption across firms — as live supervisory concerns. <span class="item-meta">Mondaq / FinTech Global · 2026-09-11</span></p>
         
         <p class="item-sowhat">Gives a platform PM in regulated financial services a citable regulator concern to bring into any vendor-risk or exit-plan argument against a single AI or cloud dependency.</p>
@@ -79,7 +81,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://github.com/open-metadata/OpenMetadata/releases/tag/2.0.0-release">OpenMetadata Standards 2.0 ships as an open metadata spec</a></div>
+        <div class="item-title"><a href="https://github.com/open-metadata/OpenMetadata/releases/tag/2.0.0-release" target="_blank" rel="noopener">OpenMetadata Standards 2.0 ships as an open metadata spec</a></div>
         <p class="item-line">OpenMetadata Standards 2.0 packages 911 JSON Schemas plus RDF, SHACL and JSON-LD support as an open, vendor-neutral metadata spec, with Open Data Contract Standard 3.1 import and export already built in. <span class="item-meta">OpenMetadata (GitHub) · 2026-08-24</span></p>
         
         <p class="item-sowhat">A live, open interop layer between catalog, contract and lineage tooling narrows the buy-vs-build case for a bespoke context layer — worth weighing before standardising further on one vendor&#39;s own schema.</p>
@@ -88,7 +90,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://dev.to/alexmercedcoder/apache-data-lakehouse-weekly-september-9-to-17-2026-1509">Iceberg drafts FILE-type access delegation for multimodal inference</a></div>
+        <div class="item-title"><a href="https://dev.to/alexmercedcoder/apache-data-lakehouse-weekly-september-9-to-17-2026-1509" target="_blank" rel="noopener">Iceberg drafts FILE-type access delegation for multimodal inference</a></div>
         <p class="item-line">The Iceberg community is designing delegated, permissioned access to a native FILE type so multimodal inference services can read images and documents straight out of governed tables rather than through a side pipeline. <span class="item-meta">Apache Data Lakehouse Weekly · 2026-09-17</span></p>
         
         <p class="item-sowhat">If file-access delegation lands at the open-table-format layer rather than inside one vendor&#39;s proprietary column type, it changes the buy-vs-build call for unstructured-data governance this quarter.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">blog · Silicon Valley Product Group — Marty Cagan · 2026-09-11</div>
-      <div class="learn-title"><a href="https://www.svpg.com/the-product-operating-model/">The Product Operating Model</a></div>
+      <div class="learn-title"><a href="https://www.svpg.com/the-product-operating-model/" target="_blank" rel="noopener">The Product Operating Model</a></div>
       <p class="learn-eli5">Most companies that say they&#39;ve &#39;gone agile&#39; are still running what Cagan calls a feature-team model: business stakeholders write requirements, and engineering builds them to spec on a dated roadmap. The product operating model is a different way of working — small, durable teams of a product manager, designer and engineers are handed a problem to solve, plus direct access to customers and data, rather than a spec to build. Success is judged on whether the problem actually got solved, not whether the ticket shipped on time. The change is organisational as much as anything: who holds the roadmap, who talks to customers, and who is accountable for the outcome all move.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> The platform&#39;s own operating-model question — whether data-modelling authority sits centrally or with consuming domains — is the data-platform version of exactly this shift; reading it from the product side rather than the data side is what makes the argument legible outside data specifically.</p>
     </div>

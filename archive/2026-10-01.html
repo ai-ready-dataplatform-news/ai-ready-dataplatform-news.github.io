@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.dremio.com/blog/apache-iceberg-1-12-0-whats-new-breaking-changes-and-upgrade-guide/">Apache Iceberg 1.12.0 ships with more server-side catalog policy</a></div>
+        <div class="item-title"><a href="https://www.dremio.com/blog/apache-iceberg-1-12-0-whats-new-breaking-changes-and-upgrade-guide/" target="_blank" rel="noopener">Apache Iceberg 1.12.0 ships with more server-side catalog policy</a></div>
         <p class="item-line">Iceberg 1.12.0 landed on September 30 with more than 800 merged changes, extending engine support for Variant, row lineage, deletion vectors and encrypted metadata, and letting Spark delegate DROP TABLE PURGE to the REST catalog so the catalog rather than the client decides how files are deleted. <span class="item-meta">Dremio · 2026-09-30</span></p>
         
         <p class="item-sowhat">Moves deletion and policy decisions onto the catalog, which a platform PM choosing where governance is enforced can use as a reason to pick the catalog layer first.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.financialcontent.com/article/bizwire-2026-9-29-atlan-brings-governed-context-to-microsoft-fabric-and-onelake">Atlan stores its context layer as Iceberg tables in OneLake</a></div>
+        <div class="item-title"><a href="https://www.financialcontent.com/article/bizwire-2026-9-29-atlan-brings-governed-context-to-microsoft-fabric-and-onelake" target="_blank" rel="noopener">Atlan stores its context layer as Iceberg tables in OneLake</a></div>
         <p class="item-line">Announced at FabCon Europe on September 29, Atlan&#39;s Context Lakehouse keeps metric definitions, ownership, lineage, quality and policy, plus observations written back by agents, as open Iceberg tables the customer owns in OneLake, readable by Fabric users and agents without copies. <span class="item-meta">Business Wire · 2026-09-29</span></p>
         
         <p class="item-sowhat">Puts governed context in the customer&#39;s own storage rather than a vendor&#39;s, which a platform PM weighing catalog buy-versus-build can use to test how portable the metadata really is.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.prnewswire.com/news-releases/bloomberg-launches-enterprise-mcp-to-seamlessly-connect-bloomberg-data-with-clients-enterprise-ai-applications-302891331.html">Bloomberg opens an MCP layer on its data licence</a></div>
+        <div class="item-title"><a href="https://www.prnewswire.com/news-releases/bloomberg-launches-enterprise-mcp-to-seamlessly-connect-bloomberg-data-with-clients-enterprise-ai-applications-302891331.html" target="_blank" rel="noopener">Bloomberg opens an MCP layer on its data licence</a></div>
         <p class="item-line">Bloomberg Enterprise MCP, launched September 29, lets clients&#39; agents discover and retrieve licensed data across more than 100 million securities and 50,000 fields, paired with metadata, semantic context and prebuilt skills such as sanctions-exposure checks. <span class="item-meta">PR Newswire · 2026-09-29</span></p>
         
         <p class="item-sowhat">A financial-data vendor now ships semantics and skills with the feed, so a platform PM planning agent access to licensed data has a vendor-side contract to design against.</p>
@@ -83,7 +85,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/fabcon-and-sqlcon-barcelona-2026-what%e2%80%99s-new-in-microsoft-onelake-and-its-rapidly/5369146">OneLake gets a table read API for agents</a></div>
+        <div class="item-title"><a href="https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/fabcon-and-sqlcon-barcelona-2026-what%e2%80%99s-new-in-microsoft-onelake-and-its-rapidly/5369146" target="_blank" rel="noopener">OneLake gets a table read API for agents</a></div>
         <p class="item-line">At FabCon Europe, Microsoft put the OneLake Table Read API into preview, giving agents and applications serverless access to Delta and Iceberg tables without SQL, and added Iceberg catalog federation for AWS Glue and Google&#39;s lakehouse runtime catalog. <span class="item-meta">Microsoft Fabric Blog · 2026-09-29</span></p>
         
         <p class="item-sowhat">Gives a platform PM a vendor-neutral read path for agents across Delta and Iceberg, which bears on how many serving surfaces the governed layer needs.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://cloud.google.com/blog/products/business-intelligence/integrating-looker-and-gemini-enterprise">Looker&#39;s semantic layer becomes an agent inside Gemini Enterprise</a></div>
+        <div class="item-title"><a href="https://cloud.google.com/blog/products/business-intelligence/integrating-looker-and-gemini-enterprise" target="_blank" rel="noopener">Looker&#39;s semantic layer becomes an agent inside Gemini Enterprise</a></div>
         <p class="item-line">Looker analysts can publish conversational agents into Gemini Enterprise over the Agent-to-Agent protocol, so a question about revenue is routed to Looker and answered with SQL generated from version-controlled business logic rather than inferred by the model. <span class="item-meta">Google Cloud Blog · 2026-09-14</span></p>
         
         <p class="item-sowhat">Offers a worked route for one set of metric definitions to serve both dashboards and agents, the divergence risk a governed gold layer has to design out.</p>
@@ -106,7 +108,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://community.fabric.microsoft.com/blog/fbc_pbiupdatesblog/power-bi-september-2026-feature-summary/5325831">Power BI adds an authoring MCP and agentic model building</a></div>
+        <div class="item-title"><a href="https://community.fabric.microsoft.com/blog/fbc_pbiupdatesblog/power-bi-september-2026-feature-summary/5325831" target="_blank" rel="noopener">Power BI adds an authoring MCP and agentic model building</a></div>
         <p class="item-line">The September feature summary makes Power BI agentic experiences generally available for building semantic models and reports, and adds a Power BI Authoring MCP that lets AI applications create and modify semantic models in Fabric workspaces. <span class="item-meta">Power BI Blog · 2026-09-29</span></p>
         
         <p class="item-sowhat">Lets agents edit the semantic model itself, so a platform PM has to decide who reviews a model change that no human wrote.</p>
@@ -115,7 +117,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.thoughtspot.com/cloud/26.9.0.cl/notes">ThoughtSpot Spotter Memory goes GA and learns from conversations</a></div>
+        <div class="item-title"><a href="https://docs.thoughtspot.com/cloud/26.9.0.cl/notes" target="_blank" rel="noopener">ThoughtSpot Spotter Memory goes GA and learns from conversations</a></div>
         <p class="item-line">Release 26.9.0 makes Spotter Memory generally available and on by default, generating memory from conversations and Liveboards, and lets one Spotter conversation search several Models at once, such as a revenue and a finance Model. <span class="item-meta">ThoughtSpot Documentation · 2026-09-30</span></p>
         
         <p class="item-sowhat">Lets answers accumulate user-taught definitions outside the governed model, which a platform PM weighing conversational access has to reconcile with the central metric layer.</p>
@@ -124,7 +126,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">case study · Netflix Tech Blog</div>
-      <div class="learn-title"><a href="https://netflixtechblog.medium.com/data-bridge-how-netflix-simplifies-data-movement-36d10d91c313">Data Bridge: How Netflix simplifies data movement</a></div>
+      <div class="learn-title"><a href="https://netflixtechblog.medium.com/data-bridge-how-netflix-simplifies-data-movement-36d10d91c313" target="_blank" rel="noopener">Data Bridge: How Netflix simplifies data movement</a></div>
       <p class="learn-eli5">Netflix keeps its data in dozens of different stores, and engineers used to learn a dozen different tools just to move data between them. Data Bridge is one front door: an engineer says what they want moved and where, and the platform works out how to do it. The idea is to separate what someone wants from how it is done. That way the tools underneath can change without anyone having to relearn anything.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> Frames the decision of whether onboarding a new dataset should be one declarative request to the platform or a bespoke pipeline per team, which is the lever for cutting time-to-onboard.</p>
     </div>

@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.osfi-bsif.gc.ca/en/guidance/guidance-library/data-collection-modernization-initiative-progress-update-upcoming-priorities">OSFI advances its Regulatory Data Hub for Canadian banks</a></div>
+        <div class="item-title"><a href="https://www.osfi-bsif.gc.ca/en/guidance/guidance-library/data-collection-modernization-initiative-progress-update-upcoming-priorities" target="_blank" rel="noopener">OSFI advances its Regulatory Data Hub for Canadian banks</a></div>
         <p class="item-line">Canada&#39;s banking regulator confirmed its new Regulatory Data Hub goes live in late fall 2026, with a four-step, 22-month transition for regulated institutions and pension plans. <span class="item-meta">OSFI · 2026-09-10</span></p>
         
         <p class="item-sowhat">A regulator building its own governed collection platform, phased over nearly two years, is the shape a regulated-industry data team&#39;s own onboarding roadmap keeps getting measured against.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/09/ico-governance-changes-confirmed-for-30-september-2026">UK confirms the ICO&#39;s abolition, Information Commission takes over</a></div>
+        <div class="item-title"><a href="https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/09/ico-governance-changes-confirmed-for-30-september-2026" target="_blank" rel="noopener">UK confirms the ICO&#39;s abolition, Information Commission takes over</a></div>
         <p class="item-line">Regulations made on 10 September confirm the Information Commissioner&#39;s Office is abolished on 30 September 2026, with functions transferring to a new Information Commission board. <span class="item-meta">ICO · 2026-09-10</span></p>
         
         <p class="item-sowhat">Any UK data-governance policy, DPIA template or escalation path that names &#39;the ICO&#39; by title needs updating before 30 September, when the Information Commission takes over enforcement.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.rubrik.com/company/newsroom/press-releases/26/rubrik-launches-lakehouse-protection-with-apache-iceberg-data-on-aws">Rubrik adds backup protection for Iceberg tables on AWS</a></div>
+        <div class="item-title"><a href="https://www.rubrik.com/company/newsroom/press-releases/26/rubrik-launches-lakehouse-protection-with-apache-iceberg-data-on-aws" target="_blank" rel="noopener">Rubrik adds backup protection for Iceberg tables on AWS</a></div>
         <p class="item-line">Rubrik launched Lakehouse Protection, extending enterprise backup and recovery to Apache Iceberg tables on AWS. <span class="item-meta">Rubrik · 2026-09-08</span></p>
         
         <p class="item-sowhat">Backup and recovery joining the standard tooling checklist for Iceberg is a sign the format has moved past early-adopter risk — a line any lakehouse vendor-risk register should now expect, not flag.</p>
@@ -83,7 +85,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.globenewswire.com/news-release/2026/09/15/3362290/0/en/ensono-research-finds-78-of-it-leaders-see-growing-value-in-legacy-systems-as-ai-reshapes-modernization.html">Ensono survey: 78% now value legacy systems more</a></div>
+        <div class="item-title"><a href="https://www.globenewswire.com/news-release/2026/09/15/3362290/0/en/ensono-research-finds-78-of-it-leaders-see-growing-value-in-legacy-systems-as-ai-reshapes-modernization.html" target="_blank" rel="noopener">Ensono survey: 78% now value legacy systems more</a></div>
         <p class="item-line">Ensono&#39;s second annual State of IT Modernization survey found 78% of IT leaders now see more value in legacy systems than two years ago, arguing AI ambitions depend on the logic already embedded in them. <span class="item-meta">Ensono · 2026-09-15</span></p>
         
         <p class="item-sowhat">A counter-argument worth keeping to hand against any &#39;rip and replace&#39; pressure on a platform still in its foundation phase: the case for AI-readiness doesn&#39;t require abandoning what&#39;s already governed.</p>
@@ -92,7 +94,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">05</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.getdbt.com/blog/dbt-summit-2026-product-announcements">dbt Labs ships dbt v2 and pitches agent-ready data</a></div>
+        <div class="item-title"><a href="https://www.getdbt.com/blog/dbt-summit-2026-product-announcements" target="_blank" rel="noopener">dbt Labs ships dbt v2 and pitches agent-ready data</a></div>
         <p class="item-line">At dbt Summit 2026, Fivetran + dbt Labs shipped dbt v2 (the Rust engine) to general availability alongside a new Fivetran Context Layer and dbt Wizard, pitched squarely at making transformed data agent-ready. <span class="item-meta">dbt Labs · 2026-09-16</span></p>
         
         <p class="item-sowhat">dbt shipping an agent-ready layer directly tests whether the transformation framework this platform already standardises on can carry agentic consumption without forking into a second pipeline.</p>
@@ -106,7 +108,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.jamesserra.com/archive/2026/09/what-does-it-mean-to-make-data-ai-ready/">What actually makes data AI-ready, plainly defined</a></div>
+        <div class="item-title"><a href="https://www.jamesserra.com/archive/2026/09/what-does-it-mean-to-make-data-ai-ready/" target="_blank" rel="noopener">What actually makes data AI-ready, plainly defined</a></div>
         <p class="item-line">A practitioner series defines AI-ready data as accurate, well-described, semantically clear, governed, accessible and enriched with enough business context for a model to interpret it correctly. <span class="item-meta">James Serra&#39;s Blog · 2026-09-17</span></p>
         
         <p class="item-sowhat">A clean, non-vendor checklist for &#39;AI-ready&#39; is worth running the gold layer against before calling the foundation phase done, rather than arguing the definition from scratch.</p>
@@ -115,7 +117,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.jamesserra.com/archive/2026/09/microsoft-fabric-data-agents-bringing-structured-and-unstructured-data-together/">Fabric Data Agents unify structured and unstructured data</a></div>
+        <div class="item-title"><a href="https://www.jamesserra.com/archive/2026/09/microsoft-fabric-data-agents-bringing-structured-and-unstructured-data-together/" target="_blank" rel="noopener">Fabric Data Agents unify structured and unstructured data</a></div>
         <p class="item-line">A single Fabric Data Agent now spans warehouse and lakehouse tables, a Power BI semantic model, real-time Eventhouse data and unstructured content via Azure AI Search, all behind one conversational surface. <span class="item-meta">James Serra&#39;s Blog · 2026-09-03</span></p>
         
         <p class="item-sowhat">Unifying a semantic model, live data and unstructured content behind one agent surface is the same integration problem Genie has to solve for Databricks — worth tracking who solves it more cleanly.</p>
@@ -124,7 +126,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://aws.amazon.com/about-aws/whats-new/2026/08/redshift-agenttoolkit-for-ai-assisted-datawarehouse-mgmt/">AWS adds an agent toolkit for Redshift management</a></div>
+        <div class="item-title"><a href="https://aws.amazon.com/about-aws/whats-new/2026/08/redshift-agenttoolkit-for-ai-assisted-datawarehouse-mgmt/" target="_blank" rel="noopener">AWS adds an agent toolkit for Redshift management</a></div>
         <p class="item-line">Amazon Redshift now integrates with Agent Toolkit for AWS, shipping an MCP server plus curated &#39;Redshift skills&#39; for schema discovery, load patterns and semantic-view guidance. <span class="item-meta">AWS What&#39;s New · 2026-08-27</span></p>
         
         <p class="item-sowhat">An MCP server plus curated skills for Redshift is a concrete agent-facing contract for a platform already in the stack — a template for what Unity Catalog&#39;s own agent surface should offer.</p>
@@ -133,7 +135,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://siliconangle.com/2026/08/19/salesforce-expands-headless-data-360-mcp-developers-can-bring-insights-agents/">Salesforce exposes 200 Data 360 APIs as agent skills</a></div>
+        <div class="item-title"><a href="https://siliconangle.com/2026/08/19/salesforce-expands-headless-data-360-mcp-developers-can-bring-insights-agents/" target="_blank" rel="noopener">Salesforce exposes 200 Data 360 APIs as agent skills</a></div>
         <p class="item-line">Salesforce expanded its Data 360 MCP Server with over 100 reusable Agent Skills exposing roughly 200 APIs, letting agents build semantic models and run data Q&amp;A in natural language. <span class="item-meta">SiliconANGLE · 2026-08-19</span></p>
         
         <p class="item-sowhat">Two hundred APIs standardised into agent-callable skills, from a vendor outside the data-platform stack entirely, is a sign the agent-facing contract is becoming table stakes industry-wide, not a Databricks or Snowflake differentiator.</p>
@@ -142,7 +144,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">05</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.dynatrace.com/news/press-release/dynatrace-to-acquire-arize/">Dynatrace buys AI-observability specialist Arize for $915M</a></div>
+        <div class="item-title"><a href="https://www.dynatrace.com/news/press-release/dynatrace-to-acquire-arize/" target="_blank" rel="noopener">Dynatrace buys AI-observability specialist Arize for $915M</a></div>
         <p class="item-line">Dynatrace agreed to acquire Arize for roughly $915 million, aiming to let customers evaluate, operate and improve AI applications from development through production at scale. <span class="item-meta">Dynatrace · 2026-08-13</span></p>
         
         <p class="item-sowhat">An APM vendor buying an AI-observability specialist signals evaluation and observability are consolidating into the same buying decision as monitoring — a data point for the quality/observability build-vs-buy call, not just for catalog and lineage.</p>
@@ -151,7 +153,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">video · YouTube · 2024-05-10</div>
-      <div class="learn-title"><a href="https://www.youtube.com/watch?v=xycPzr5Rbb4">Data Contracts: the rise of modern data management</a></div>
+      <div class="learn-title"><a href="https://www.youtube.com/watch?v=xycPzr5Rbb4" target="_blank" rel="noopener">Data Contracts: the rise of modern data management</a></div>
       <p class="learn-eli5">A data contract is a written agreement between whoever produces a dataset and whoever consumes it: what fields exist, what they mean, what changes are allowed and how consumers get warned before a breaking one ships. Without it, a producer renames a column or changes its meaning and every downstream dashboard, model or agent quietly breaks or, worse, keeps running on wrong numbers. Chad Sanderson&#39;s talk walks through why this became unavoidable once data started feeding models as well as dashboards: a human analyst might notice a weird number, a model usually won&#39;t.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> A contract is the mechanism that lets domains own their data without the platform team re-checking every field by hand — directly the question of where modelling authority sits, and what an operating model needs a named owner for on either side of that boundary.</p>
     </div>

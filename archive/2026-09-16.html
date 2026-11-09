@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.databricks.com/aws/en/data-governance/unity-catalog/abac/deny-policies">Databricks adds explicit DENY rules to Unity Catalog ABAC</a></div>
+        <div class="item-title"><a href="https://docs.databricks.com/aws/en/data-governance/unity-catalog/abac/deny-policies" target="_blank" rel="noopener">Databricks adds explicit DENY rules to Unity Catalog ABAC</a></div>
         <p class="item-line">Beta DENY policies let a catalog or schema explicitly block the MANAGE ACCESS CONTROL privilege, overriding any grant, including for object owners. <span class="item-meta">Databricks · 2026-09-08</span></p>
         
         <p class="item-sowhat">Closes the gap where a table owner could reassign access outside policy — a real lever for keeping a governed gold layer&#39;s controls from drifting as more consumers attach to it.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.databricks.com/aws/en/tables/features/change-data-feed">Databricks ships automatic change data feed for Delta and Iceberg v3</a></div>
+        <div class="item-title"><a href="https://docs.databricks.com/aws/en/tables/features/change-data-feed" target="_blank" rel="noopener">Databricks ships automatic change data feed for Delta and Iceberg v3</a></div>
         <p class="item-line">Auto CDF computes row-level changes at query time from row tracking, without manually enabling CDF per table, cutting MERGE and UPDATE time by about 15% on tables that are queried for changes. <span class="item-meta">Databricks · 2026-09-10</span></p>
         
         <p class="item-sowhat">Removes a manual step teams reliably forget to apply consistently across tables — one less place a change-tracking gap can hide inside a medallion pipeline.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.databricks.com/aws/en/release-notes/product/2026/september">Databricks enforces explicit entitlement grants across every workspace</a></div>
+        <div class="item-title"><a href="https://docs.databricks.com/aws/en/release-notes/product/2026/september" target="_blank" rel="noopener">Databricks enforces explicit entitlement grants across every workspace</a></div>
         <p class="item-line">New workspace entitlement control behaviour is now enforced everywhere, requiring admins to explicitly grant entitlements when adding principals rather than inheriting them by default. <span class="item-meta">Databricks · 2026-09-14</span></p>
         
         <p class="item-sowhat">A default-access assumption a few onboarding scripts likely rely on just stopped being safe — worth checking before the next cohort of users lands on the platform.</p>
@@ -88,7 +90,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.geekwire.com/2026/amazon-acquires-ducklabs-adding-the-team-behind-duckdb-amid-broader-shakeup-in-cloud-data/">AWS agrees to acquire DuckLabs, the team behind DuckDB</a></div>
+        <div class="item-title"><a href="https://www.geekwire.com/2026/amazon-acquires-ducklabs-adding-the-team-behind-duckdb-amid-broader-shakeup-in-cloud-data/" target="_blank" rel="noopener">AWS agrees to acquire DuckLabs, the team behind DuckDB</a></div>
         <p class="item-line">AWS signed a definitive agreement to acquire Amsterdam-based DuckLabs while committing to keep DuckDB and its DuckLake table format open source. <span class="item-meta">GeekWire · 2026-08-26</span></p>
         
         <p class="item-sowhat">A hyperscaler now stands behind the embedded engine teams reach for beside a warehouse — worth a line in any buy-vs-build case for lightweight, local AI-ready processing.</p>

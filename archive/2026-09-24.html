@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.consumerfinancemonitor.com/2026/09/18/csbs-releases-artificial-intelligence-supervisory-framework-for-state-examiners/">US state examiners get a common AI review framework</a></div>
+        <div class="item-title"><a href="https://www.consumerfinancemonitor.com/2026/09/18/csbs-releases-artificial-intelligence-supervisory-framework-for-state-examiners/" target="_blank" rel="noopener">US state examiners get a common AI review framework</a></div>
         <p class="item-line">The Conference of State Bank Supervisors published an AI supervisory framework on 16 September 2026 covering the 3,355 state-chartered banks it oversees, giving examiners questions to ask and documents to request rather than new AI-specific rules. <span class="item-meta">Consumer Finance Monitor · 18 September 2026</span></p>
         
         <p class="item-sowhat">A preview of what &#39;show your AI governance&#39; looks like in an exam room — the lineage, access-log and model-documentation evidence US examiners will ask for is close to what DORA and the FCA&#39;s own audit-trail signals are converging on, so it&#39;s worth treating the governed gold layer&#39;s paper trail as exam-ready now, not after the first request.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.gartner.com/en/newsroom/press-releases/2026-09-21-gartner-predicts-60-percent-of-organizations-that-ignore-data-governance-culture-challenges-will-fail-to-govern-ai-successfully-by-2027">Gartner: most orgs will fail to govern AI on culture, not tools</a></div>
+        <div class="item-title"><a href="https://www.gartner.com/en/newsroom/press-releases/2026-09-21-gartner-predicts-60-percent-of-organizations-that-ignore-data-governance-culture-challenges-will-fail-to-govern-ai-successfully-by-2027" target="_blank" rel="noopener">Gartner: most orgs will fail to govern AI on culture, not tools</a></div>
         <p class="item-line">Gartner predicts 60% of organisations that ignore data-governance culture challenges will fail to govern AI successfully by 2027, and that through 2028 teams that build their own unstructured-metadata tooling instead of buying will pay over 300% more. <span class="item-meta">Gartner · 21 September 2026</span></p>
         
         <p class="item-sowhat">A number to put next to a catalog licence renewal rather than defending a build decision on faith — direct ammunition for this quarter&#39;s buy-versus-build case on catalog, quality and observability tooling.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://dev.to/alexmercedcoder/apache-data-lakehouse-weekly-september-15-to-23-2026-41mi">Apache Polaris 1.8.0 fails a vote over a licence gap</a></div>
+        <div class="item-title"><a href="https://dev.to/alexmercedcoder/apache-data-lakehouse-weekly-september-15-to-23-2026-41mi" target="_blank" rel="noopener">Apache Polaris 1.8.0 fails a vote over a licence gap</a></div>
         <p class="item-line">Polaris 1.8.0&#39;s first release candidate was voted down on 17 September 2026 after reviewers found a missing NOTICE entry and a wrong file header, sending the release to a second candidate before it could ship. <span class="item-meta">Apache Data Lakehouse Weekly · 23 September 2026</span></p>
         
         <p class="item-sowhat">A reminder that the open Iceberg-catalog stack still runs on Apache Software Foundation process rigour rather than a vendor SLA — a data point for treating managed catalog support, not raw open source, as the safer buy this quarter, even with no hands-on Iceberg in the current stack.</p>
@@ -83,7 +85,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.comparethecloud.net/news/semarchy-adds-mcp-server-and-agentic-context-layer-to-master-data-products">Semarchy adds an MCP server to master data products</a></div>
+        <div class="item-title"><a href="https://www.comparethecloud.net/news/semarchy-adds-mcp-server-and-agentic-context-layer-to-master-data-products" target="_blank" rel="noopener">Semarchy adds an MCP server to master data products</a></div>
         <p class="item-line">Semarchy, a Leader in the 2026 Gartner Magic Quadrant for Master Data Management, added an MCP server and an agentic context layer so its governed master data products can be queried directly by AI agents, not just people. <span class="item-meta">Compare the Cloud · 22 September 2026</span></p>
         
         <p class="item-sowhat">One more MDM vendor betting that agent-consumable master data — not just BI-consumable — is the next battleground; worth a line in any catalog or MDM review even outside the Atlan-based stack, since it signals buyers will expect MCP support by default.</p>
@@ -92,7 +94,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">05</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://platformengineering.com/features/platform-teams-own-the-pipeline-nobody-owns-the-data/">Platform teams own the pipeline. Nobody owns the data.</a></div>
+        <div class="item-title"><a href="https://platformengineering.com/features/platform-teams-own-the-pipeline-nobody-owns-the-data/" target="_blank" rel="noopener">Platform teams own the pipeline. Nobody owns the data.</a></div>
         <p class="item-line">A practitioner analysis argues platform teams routinely own infrastructure uptime but not whether the data itself is accurate, and proposes a named accountable owner, a defined interface and schema, known consumers and a deprecation path as the missing contract. <span class="item-meta">Platform Engineering · 24 September 2026</span></p>
         
         <p class="item-sowhat">Near-verbatim the operating-model question live this quarter — whether modelling authority sits with the central platform team or the consuming domains — and gives a concrete four-part definition of &#39;named owner&#39; worth borrowing for the next roadmap review.</p>
@@ -106,7 +108,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.gartner.com/en/newsroom/press-releases/2026-09-22-gartner-data-and-analytics-summit-2026-india-day-2-highlights">Gartner: AI-readiness spend to grow sevenfold by 2029</a></div>
+        <div class="item-title"><a href="https://www.gartner.com/en/newsroom/press-releases/2026-09-22-gartner-data-and-analytics-summit-2026-india-day-2-highlights" target="_blank" rel="noopener">Gartner: AI-readiness spend to grow sevenfold by 2029</a></div>
         <p class="item-line">Gartner told its Data &amp; Analytics Summit in Mumbai that the share of AI spending going to AI-data-readiness work will grow sevenfold from 2025 to 2029, and that multistructured data management will reach 40% of data-management IT spend by 2027. <span class="item-meta">Gartner · 22 September 2026</span></p>
         
         <p class="item-sowhat">A budget-line argument for treating AI-readiness work as its own funded item on next year&#39;s platform roadmap, rather than something absorbed quietly into general data-engineering cost.</p>
@@ -115,7 +117,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.tandfonline.com/doi/full/10.1080/0960085X.2026.2723258?af=R">A maturity model for banking data management, from one bank&#39;s rebuild</a></div>
+        <div class="item-title"><a href="https://www.tandfonline.com/doi/full/10.1080/0960085X.2026.2723258?af=R" target="_blank" rel="noopener">A maturity model for banking data management, from one bank&#39;s rebuild</a></div>
         <p class="item-line">A peer-reviewed case study traces how a German bank built interdependent data-management capabilities across three transformation phases to move from fragmented, Excel-based processes to a cloud-enabled, AI-ready environment under regulatory constraint. <span class="item-meta">Taylor &amp; Francis · 16 September 2026</span></p>
         
         <p class="item-sowhat">A DCAM-adjacent maturity model built specifically for a regulated bank&#39;s data function — worth reading against the platform&#39;s own foundation-phase scorecard and the &#39;what should a platform be judged on&#39; argument live this quarter.</p>
@@ -124,7 +126,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.prnewswire.com/news-releases/collibra-launches-new-capabilities-to-reduce-the-hallucination-tax-on-enterprise-ai-302886404.html">Collibra ships Agent Contracts to cut AI&#39;s &#39;hallucination tax&#39;</a></div>
+        <div class="item-title"><a href="https://www.prnewswire.com/news-releases/collibra-launches-new-capabilities-to-reduce-the-hallucination-tax-on-enterprise-ai-302886404.html" target="_blank" rel="noopener">Collibra ships Agent Contracts to cut AI&#39;s &#39;hallucination tax&#39;</a></div>
         <p class="item-line">Collibra announced Maestro, Live Map and Guardian Agents with Agent Contracts on 23 September 2026, extending governance — context graphs and enforceable contracts — to AI agents built outside its own platform. <span class="item-meta">PR Newswire · 23 September 2026</span></p>
         
         <p class="item-sowhat">A concrete shape for what &#39;governed and clean enough to hand a model&#39; will mean to a catalog buyer at the next renewal — a live comparison point against Atlan&#39;s own agent-context roadmap.</p>
@@ -133,7 +135,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://oneuptime.com/blog/post/2026-09-08-choose-openlineage-datahub-openmetadata-column-lineage/view">Choosing between OpenLineage, DataHub and OpenMetadata for lineage</a></div>
+        <div class="item-title"><a href="https://oneuptime.com/blog/post/2026-09-08-choose-openlineage-datahub-openmetadata-column-lineage/view" target="_blank" rel="noopener">Choosing between OpenLineage, DataHub and OpenMetadata for lineage</a></div>
         <p class="item-line">A practitioner comparison lays out when OpenLineage&#39;s runtime-emission model, DataHub and OpenMetadata&#39;s catalog approach actually complement each other for column-level lineage, rather than compete, and where each falls short alone. <span class="item-meta">OneUptime · 8 September 2026</span></p>
         
         <p class="item-sowhat">Directly useful for the current Atlan-based lineage setup&#39;s own interoperability question — whether an open emission standard underneath a commercial catalog closes the metadata-interop gap or just adds a second system to maintain.</p>
@@ -142,7 +144,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">case study · Data Products (Chad Sanderson)</div>
-      <div class="learn-title"><a href="https://dataproducts.substack.com/p/tackling-datas-biggest-culture-problem">Tackling Data&#39;s Biggest Culture Problem</a></div>
+      <div class="learn-title"><a href="https://dataproducts.substack.com/p/tackling-datas-biggest-culture-problem" target="_blank" rel="noopener">Tackling Data&#39;s Biggest Culture Problem</a></div>
       <p class="learn-eli5">A data contract is just a promise: the team that owns a database tells everyone downstream exactly what shape the data will be in, and what happens if that shape changes, instead of consumers discovering the breakage in production. At Convoy, Chad Sanderson didn&#39;t start by writing contracts — he started by getting engineers and data people to talk to each other at all, because the real problem wasn&#39;t the schema, it was that the two groups had no shared way to even notice they depended on each other. The contracts came after the conversation existed, not before.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> The lesson transfers directly to a governed-gold-layer roadmap: the harder problem is creating the standing conversation between the team that owns a source system and the team that consumes it, not writing the schema — worth treating as its own workstream rather than a byproduct of the tooling.</p>
     </div>

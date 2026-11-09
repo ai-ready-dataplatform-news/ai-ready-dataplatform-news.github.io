@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://technode.global/?p=994053">Trust3 AI syncs access policies across Databricks, Snowflake and OneLake</a></div>
+        <div class="item-title"><a href="https://technode.global/?p=994053" target="_blank" rel="noopener">Trust3 AI syncs access policies across Databricks, Snowflake and OneLake</a></div>
         <p class="item-line">Trust3 AI will automatically sync row- and column-level security policies from Databricks and Snowflake into Microsoft OneLake Security, so agents and Power BI inherit the source platform&#39;s rules. <span class="item-meta">TechNode / press release · 2026-09-30</span></p>
         
         <p class="item-sowhat">A platform PM running more than one engine has a way to avoid maintaining a second set of access rules for agents.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.euronews.com/2026/09/28/nvidia-launches-platform-to-quarantine-rogue-ai-agents-in-milliseconds">Nvidia launches open platform to quarantine rogue AI agents</a></div>
+        <div class="item-title"><a href="https://www.euronews.com/2026/09/28/nvidia-launches-platform-to-quarantine-rogue-ai-agents-in-milliseconds" target="_blank" rel="noopener">Nvidia launches open platform to quarantine rogue AI agents</a></div>
         <p class="item-line">Nvidia&#39;s Open Agent Safety Platform pairs an open-source runtime, OpenShell, with BlueField-4-based Sentry, which it says can quarantine an agent that crosses its boundaries within milliseconds; more than 100 organisations are partners. <span class="item-meta">Euronews · 2026-09-28</span></p>
         
         <p class="item-sowhat">Agent runtime limits are becoming a layer beneath data-platform grants, which changes where a governance requirement gets written.</p>
@@ -79,7 +81,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.cloud.google.com/looker/docs/release-notes?hl=pt">Looker VS Code extension reaches GA with MCP support</a></div>
+        <div class="item-title"><a href="https://docs.cloud.google.com/looker/docs/release-notes?hl=pt" target="_blank" rel="noopener">Looker VS Code extension reaches GA with MCP support</a></div>
         <p class="item-line">The Looker extension for VS Code is generally available, enabling local LookML development with AI assistance over the Model Context Protocol. <span class="item-meta">Looker release notes · 2026-09-10</span></p>
         
         <p class="item-sowhat">Semantic-layer definitions are now edited through agent tooling, which makes review and versioning of those definitions part of the readiness plan.</p>
@@ -88,7 +90,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">course · DeepLearning.AI with Databricks</div>
-      <div class="learn-title"><a href="https://www.deeplearning.ai/courses/governing-ai-agents">Governing AI Agents</a></div>
+      <div class="learn-title"><a href="https://www.deeplearning.ai/courses/governing-ai-agents" target="_blank" rel="noopener">Governing AI Agents</a></div>
       <p class="learn-eli5">An AI agent that can read your data can also read things it should not. This short course treats an agent like a new employee: give it a role, give it only the tables it needs, record what it does, and have a way to switch it off. It shows this on a data-analysis agent using Unity Catalog permissions, with four ideas: lifecycle, risk, security and observability.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> It gives a platform PM a checklist for the agent-access requirements to write into the roadmap: least-privilege grants and an audit trail per agent.</p>
     </div>

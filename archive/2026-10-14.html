@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://newsroom.workday.com/2026-10-13-Workday-to-Acquire-C1-ai,-a-Leading-Agentic-Identity-Platform-for-People-and-Agents">Workday to buy C1.ai to govern what AI agents access</a></div>
+        <div class="item-title"><a href="https://newsroom.workday.com/2026-10-13-Workday-to-Acquire-C1-ai,-a-Leading-Agentic-Identity-Platform-for-People-and-Agents" target="_blank" rel="noopener">Workday to buy C1.ai to govern what AI agents access</a></div>
         <p class="item-line">Workday signed a definitive agreement on 13 October to acquire C1.ai, formerly ConductorOne, adding identity governance for people and AI agents to its Agent System of Record; closing is expected in the fourth quarter of its fiscal 2027 and terms were not disclosed. <span class="item-meta">Workday · 2026-10-13</span></p>
         
         <p class="item-sowhat">Agent access control is being bought into the systems of record, which gives a platform PM a vendor-risk data point on whether agent permissions belong in the catalog layer or in an identity layer.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.techtarget.com/data-technologies/news/366652036/SAS-launches-new-governance-suite-to-bolster-customer-trust-in-AI">SAS AI Navigator reaches general availability for governing agents</a></div>
+        <div class="item-title"><a href="https://www.techtarget.com/data-technologies/news/366652036/SAS-launches-new-governance-suite-to-bolster-customer-trust-in-AI" target="_blank" rel="noopener">SAS AI Navigator reaches general availability for governing agents</a></div>
         <p class="item-line">SAS made AI Navigator generally available on Microsoft Marketplace on 5 October: an inventory of models, agents and use cases checked against internal policy and external regulation, with six months of free access for customers. <span class="item-meta">TechTarget · 2026-10-08</span></p>
         
         <p class="item-sowhat">A vendor-neutral register of agents and models is now a buyable product, which sharpens the buy-versus-build call on where AI governance sits next to the data catalog.</p>
@@ -79,7 +81,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.techtarget.com/data-technologies/news/366651267/Governance-teams-now-emphasize-data-AI-enablement">Governance teams are reframing the job as enabling data use</a></div>
+        <div class="item-title"><a href="https://www.techtarget.com/data-technologies/news/366651267/Governance-teams-now-emphasize-data-AI-enablement" target="_blank" rel="noopener">Governance teams are reframing the job as enabling data use</a></div>
         <p class="item-line">Reporting from Dataversity&#39;s AI Governance Online conference describes governance programmes moving from controlling data use to helping people and AI systems use data well, with a Vanguard specialist saying the focus is now supporting innovation over compliance, while access controls still matter for rogue agents. <span class="item-meta">TechTarget · 2026-10-05</span></p>
         
         <p class="item-sowhat">Framing a governed layer by what it enables rather than what it blocks gives a platform roadmap an adoption argument for the governance work that makes data safe to hand a model.</p>
@@ -88,7 +90,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.techtarget.com/data-technologies/news/366651778/Security-cost-benefits-drive-the-rise-of-bringing-AI-to-data">Running AI where the data sits is beating copying data out</a></div>
+        <div class="item-title"><a href="https://www.techtarget.com/data-technologies/news/366651778/Security-cost-benefits-drive-the-rise-of-bringing-AI-to-data" target="_blank" rel="noopener">Running AI where the data sits is beating copying data out</a></div>
         <p class="item-line">An analyst piece argues that integrating models where data lives has proven safer and cheaper than porting data into LLM pipelines; Sanjeev Mohan of SanjMo says copying data into a vector database was the fastest route with governance second, and enterprises reconsidered over weak RAG accuracy and the need for real-time data. <span class="item-meta">TechTarget · 2026-10-09</span></p>
         
         <p class="item-sowhat">It supports keeping retrieval inside the governed platform rather than standing up a parallel vector store that needs its own access model.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">video · Databricks Data + AI Summit</div>
-      <div class="learn-title"><a href="https://www.databricks.com/dataaisummit/session/optimizing-analytics-infrastructure-lessons-migrating-snowflake">Optimizing Analytics Infrastructure: Lessons from Migrating Snowflake to Databricks</a></div>
+      <div class="learn-title"><a href="https://www.databricks.com/dataaisummit/session/optimizing-analytics-infrastructure-lessons-migrating-snowflake" target="_blank" rel="noopener">Optimizing Analytics Infrastructure: Lessons from Migrating Snowflake to Databricks</a></div>
       <p class="learn-eli5">Moving a company&#39;s data from one platform to another is less like moving house and more like rebuilding a working kitchen while people keep cooking in it. The talk covers how one team weighed the architecture, performance and cost differences, then planned the move of ingestion pipelines, table schemas and metadata, and dealt with data quality and downtime along the way. The useful habit is to decide what must be proven equal before and after the move, such as row counts and business metrics, so trust is measured rather than assumed.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> It frames a platform move as a governance and cost-of-dual-running decision rather than a technical one, which is the lens for any catalog or warehouse change on a roadmap.</p>
     </div>

@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.unite.ai/collibra-buys-trail-ml-adding-agent-powered-ai-governance-automation/">Collibra acquires trail ML to automate AI governance</a></div>
+        <div class="item-title"><a href="https://www.unite.ai/collibra-buys-trail-ml-adding-agent-powered-ai-governance-automation/" target="_blank" rel="noopener">Collibra acquires trail ML to automate AI governance</a></div>
         <p class="item-line">Collibra bought the Munich startup, whose agents work out which rules (EU AI Act, ISO 42001, NIST AI RMF) apply to an AI system, re-test its controls as evidence changes, and block agent actions that break policy at runtime. <span class="item-meta">Unite.AI · 2026-10-05</span></p>
         
         <p class="item-sowhat">A governance vendor folding in runtime enforcement moves the buy-versus-build line for any platform team deciding how agent actions get policed on top of a governed catalog.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://unite.ai/s-and-p-global-expands-chatiq-ai-across-capital-iq-pro-research-workflows">S&amp;P Global expands ChatIQ across Capital IQ Pro workflows</a></div>
+        <div class="item-title"><a href="https://unite.ai/s-and-p-global-expands-chatiq-ai-across-capital-iq-pro-research-workflows" target="_blank" rel="noopener">S&amp;P Global expands ChatIQ across Capital IQ Pro workflows</a></div>
         <p class="item-line">S&amp;P Global&#39;s ChatIQ assistant now answers questions spanning company, market, credit and economic data alongside filings, news and research, and adds AI tools for spreadsheet modelling, presentations and portfolio analysis. <span class="item-meta">Unite.AI · 2026-10-06</span></p>
         
         <p class="item-sowhat">A data vendor packaging its licensed content as a conversational product is the commercial data-product pattern, and sets the consumer-experience bar for any team selling or sharing data.</p>
@@ -79,7 +81,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.hpcwire.com/bigdatawire/this-just-in/precisely-introduces-new-unified-data-management-platform-to-make-enterprise-data-ai-ready/">Precisely launches a platform that scores data for AI readiness</a></div>
+        <div class="item-title"><a href="https://www.hpcwire.com/bigdatawire/this-just-in/precisely-introduces-new-unified-data-management-platform-to-make-enterprise-data-ai-ready/" target="_blank" rel="noopener">Precisely launches a platform that scores data for AI readiness</a></div>
         <p class="item-line">The Precisely Platform sits on one metadata and semantic layer, validates data as it moves through pipelines, and gives each data asset quality and governance scores that show which data is ready for use and where risk remains. <span class="item-meta">HPCwire BigDataWire · 2026-10-06</span></p>
         
         <p class="item-sowhat">Per-asset readiness scores are a candidate answer to what a gold layer should be judged on before it is opened to agents, and a yardstick to compare against in-house quality scorecards.</p>
@@ -88,7 +90,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.databricks.com/aws/en/release-notes/product/2026/october">Databricks pipelines can now run as an account group</a></div>
+        <div class="item-title"><a href="https://docs.databricks.com/aws/en/release-notes/product/2026/october" target="_blank" rel="noopener">Databricks pipelines can now run as an account group</a></div>
         <p class="item-line">Lakeflow pipelines can set their run-as identity to an account group, so a team can own an automated pipeline without tying it to one person&#39;s account. <span class="item-meta">Databricks release notes · 2026-10-05</span></p>
         
         <p class="item-sowhat">Team-owned pipeline identity removes a quiet single point of failure behind governed data products, and is worth checking against how ownership is recorded on the roadmap.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">video · Data Mesh Learning</div>
-      <div class="learn-title"><a href="https://datameshlearning.com/blog/data-mesh-products-in-a-data-mesh-world">Data Mesh Products in a Data Mesh World</a></div>
+      <div class="learn-title"><a href="https://datameshlearning.com/blog/data-mesh-products-in-a-data-mesh-world" target="_blank" rel="noopener">Data Mesh Products in a Data Mesh World</a></div>
       <p class="learn-eli5">A data product is a dataset treated the way a shop treats something it sells: someone owns it, it has a stated purpose and quality promise, it is easy to find, and people who use it can tell the owner when it breaks. A plain table in a warehouse has none of that, so nobody is sure whether to trust it. This community panel walks through how to define a data product, make one, run it and judge whether it is working.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> It gives a vocabulary for deciding when a governed gold layer counts as a product with an owner and a consumer promise, which shapes how adoption and quality are measured on a platform roadmap.</p>
     </div>

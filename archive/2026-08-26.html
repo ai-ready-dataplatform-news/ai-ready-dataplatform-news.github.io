@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://aws.amazon.com/about-aws/whats-new/2026/08/web-search-amazon-bedrock/">Bedrock AgentCore web search adds date filters, EU/APAC</a></div>
+        <div class="item-title"><a href="https://aws.amazon.com/about-aws/whats-new/2026/08/web-search-amazon-bedrock/" target="_blank" rel="noopener">Bedrock AgentCore web search adds date filters, EU/APAC</a></div>
         <p class="item-line">AWS added domain and published-date filtering to Bedrock AgentCore&#39;s built-in web search tool and expanded it from the US to Europe (Ireland) and Asia Pacific (Tokyo). <span class="item-meta">AWS What&#39;s New · 2026-08-20</span></p>
         
         <p class="item-sowhat">Agents can now be scoped to trusted domains and a recency window per call — a concrete lever for keeping retrieval-augmented answers inside a compliance boundary instead of the open web.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.theregister.com/ai-and-ml/2026/08/25/mckinsey-says-enterprise-ai-is-finally-on-the-road-to-roi/5292388">McKinsey: AI&#39;s earnings payoff still isn&#39;t showing up</a></div>
+        <div class="item-title"><a href="https://www.theregister.com/ai-and-ml/2026/08/25/mckinsey-says-enterprise-ai-is-finally-on-the-road-to-roi/5292388" target="_blank" rel="noopener">McKinsey: AI&#39;s earnings payoff still isn&#39;t showing up</a></div>
         <p class="item-line">McKinsey surveyed 1,719 leaders for its 2026 State of AI report and found just 37% attribute any EBIT impact to AI use — essentially flat against 2025 despite heavier deployment. <span class="item-meta">The Register, on McKinsey&#39;s State of AI 2026 · 2026-08-25</span></p>
         
         <p class="item-sowhat">The budget case for platform investment still can&#39;t lean on a rising ROI curve — it has to be told through specific use cases and unit economics, not aggregate adoption numbers.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.theregister.com/ai-and-ml/2026/08/20/software-development-and-tech-services-in-the-cross-hairs-as-ai-marches-on/5289668">Gartner: AI splits IT spending into winners and losers</a></div>
+        <div class="item-title"><a href="https://www.theregister.com/ai-and-ml/2026/08/20/software-development-and-tech-services-in-the-cross-hairs-as-ai-marches-on/5289668" target="_blank" rel="noopener">Gartner: AI splits IT spending into winners and losers</a></div>
         <p class="item-line">Gartner raised its 2026 worldwide IT spending forecast to $6.37 trillion (+14.2% YoY), but says AI substitution is cutting into implementation and testing services, leaving infrastructure, data-and-AI, and security as the only markets clearly positioned for growth. <span class="item-meta">The Register, on Gartner · 2026-08-20</span></p>
         
         <p class="item-sowhat">If services budgets for SAP/Salesforce/Oracle implementation work are about to shrink, that&#39;s spend freed up to redirect toward the data-and-AI platform build — worth raising before next year&#39;s plan gets drafted around last year&#39;s services mix.</p>
@@ -83,7 +85,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://venturebeat.com/orchestration/enterprises-winning-with-ai-agents-are-limiting-how-much-the-agents-can-do-alone">Enterprises are paying down two years of AI governance debt</a></div>
+        <div class="item-title"><a href="https://venturebeat.com/orchestration/enterprises-winning-with-ai-agents-are-limiting-how-much-the-agents-can-do-alone" target="_blank" rel="noopener">Enterprises are paying down two years of AI governance debt</a></div>
         <p class="item-line">McKinsey&#39;s 2026 AI Trust Maturity Survey puts average responsible-AI maturity at 2.3 out of 4, with only about 30% of organisations past level three on governance and agentic-AI controls even as deployment accelerates. <span class="item-meta">VentureBeat, on McKinsey&#39;s 2026 AI Trust Maturity Survey · 2026-08-23</span></p>
         
         <p class="item-sowhat">The organisations pulling ahead are narrowing what agents are allowed to do rather than widening it — reason to budget for guardrails and scoped permissions alongside the next round of agent rollouts, not after.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.databricks.com/aws/en/release-notes/product/2026/august">Databricks lets consumer-tier users query Unity AI Gateway</a></div>
+        <div class="item-title"><a href="https://docs.databricks.com/aws/en/release-notes/product/2026/august" target="_blank" rel="noopener">Databricks lets consumer-tier users query Unity AI Gateway</a></div>
         <p class="item-line">Databricks opened an opt-in public preview letting consumer-access users query Unity AI Gateway&#39;s model and model-provider services directly, and is telling admins to set budgets and rate limits now, before the preview becomes the default. <span class="item-meta">Databricks release notes · 2026-08-22</span></p>
         
         <p class="item-sowhat">Widening who can call the model gateway is a cost-control problem before it&#39;s a capability one — worth setting spend guardrails on this ahead of general availability rather than after the first surprise bill.</p>
@@ -106,7 +108,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-08-21-cortex-code-automations-preview">Snowflake pins agent versions inside Cortex evaluations</a></div>
+        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-08-21-cortex-code-automations-preview" target="_blank" rel="noopener">Snowflake pins agent versions inside Cortex evaluations</a></div>
         <p class="item-line">Snowflake shipped version targeting for Cortex Agent and Cortex Analyst evaluations, letting a scored run pin a specific agent version, alias or judge-model version instead of scoring against a mutable live version. <span class="item-meta">Snowflake release notes · 2026-08-21</span></p>
         
         <p class="item-sowhat">Scheduled and CI/CD evaluations that silently re-scored against whatever was live were never really reproducible — pinning the version is what makes &#39;we test our agents&#39; a claim the platform can actually back up.</p>
@@ -115,7 +117,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://community.fabric.microsoft.com/blog/fbc_pbiupdatesblog/power-bi-august-2026-feature-summary/5348434">Power BI&#39;s August update adds granular semantic model refresh</a></div>
+        <div class="item-title"><a href="https://community.fabric.microsoft.com/blog/fbc_pbiupdatesblog/power-bi-august-2026-feature-summary/5348434" target="_blank" rel="noopener">Power BI&#39;s August update adds granular semantic model refresh</a></div>
         <p class="item-line">Power BI&#39;s August 2026 feature summary adds granular semantic model refresh controls and generally-available visual calculations, alongside modern visual defaults and OneLake image URLs in visuals. <span class="item-meta">Microsoft Fabric Community · 2026-08-24</span></p>
         
         <p class="item-sowhat">Refresh control at the semantic-model level, not just the dataset, is the kind of unglamorous plumbing that decides whether an AI agent reading through Power BI ever answers from stale numbers.</p>
@@ -124,7 +126,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">video · AtScale — Semantic Layer Summit 2026 (on-demand) · 2026-05-20</div>
-      <div class="learn-title"><a href="https://www.atscale.com/resource/2026-semantic-layer-summit-on-demand-sessions/">Scale at Speed: Carrefour France&#39;s 3,000 KPIs move to one semantic layer</a></div>
+      <div class="learn-title"><a href="https://www.atscale.com/resource/2026-semantic-layer-summit-on-demand-sessions/" target="_blank" rel="noopener">Scale at Speed: Carrefour France&#39;s 3,000 KPIs move to one semantic layer</a></div>
       <p class="learn-eli5">A semantic layer is a single place where a business defines what its numbers mean — &#39;revenue&#39;, &#39;active customer&#39;, &#39;churn&#39; — once, so every dashboard, report and AI agent that asks for &#39;revenue&#39; gets back the same number, worked out the same way. Without one, every tool and every person writing their own query ends up with a slightly different answer to the same question, and nobody notices until two reports disagree in a meeting.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> This session covers migrating 3,000 existing KPI definitions into one governed layer without a big-bang rewrite — a practical playbook for any platform sitting on years of BI-tool-specific metric definitions and wondering how that migration would actually go.</p>
     </div>

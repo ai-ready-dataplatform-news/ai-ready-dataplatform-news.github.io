@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.cioandleader.com/niva-bupa-health-insurance-modernizes-core-systems-on-oracle-cloud-infrastructure/">Niva Bupa moves core policy systems to Oracle Cloud</a></div>
+        <div class="item-title"><a href="https://www.cioandleader.com/niva-bupa-health-insurance-modernizes-core-systems-on-oracle-cloud-infrastructure/" target="_blank" rel="noopener">Niva Bupa moves core policy systems to Oracle Cloud</a></div>
         <p class="item-line">Niva Bupa Health Insurance is migrating its on-premises core policy administration systems to Oracle Cloud Infrastructure, automating patching, scaling and governance of its data estate. <span class="item-meta">CIO&amp;Leader · 2026-09-14</span></p>
         
         <p class="item-sowhat">A regulated insurer&#39;s own account of what it costs to move governed policy data mid-flight is a live data point for the migration risk this quarter&#39;s buy-vs-build and platform decisions have to price in.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.securityweek.com/first-agentic-ai-data-breach-reported-to-spanish-regulator/">Spain logs first data breach blamed on an AI agent</a></div>
+        <div class="item-title"><a href="https://www.securityweek.com/first-agentic-ai-data-breach-reported-to-spanish-regulator/" target="_blank" rel="noopener">Spain logs first data breach blamed on an AI agent</a></div>
         <p class="item-line">Spain&#39;s AEPD received its first notification of a personal data breach in which an autonomous AI agent searched for vulnerabilities, logged in, and modified personal data and invoices with no human attacker involved. <span class="item-meta">SecurityWeek · 2026-09-16</span></p>
         
         <p class="item-sowhat">The first regulator-logged case of an agent, not a person, causing the breach turns agent access scoping and incident-response ownership from a theoretical governance question into one this quarter&#39;s roadmap has to answer.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://amdatalakehouse.substack.com/p/apache-data-lakehouse-weekly-september">Iceberg&#39;s REST catalog can now hand back restricted views</a></div>
+        <div class="item-title"><a href="https://amdatalakehouse.substack.com/p/apache-data-lakehouse-weekly-september" target="_blank" rel="noopener">Iceberg&#39;s REST catalog can now hand back restricted views</a></div>
         <p class="item-line">A passed Apache Iceberg vote lets a REST catalog return a restricted view of table data instead of an all-or-nothing load, replacing the proxy many enterprise deployments run in front of the catalog to fake that control. <span class="item-meta">Apache Data Lakehouse Weekly · 2026-09-09</span></p>
         
         <p class="item-sowhat">A native row- and column-level restriction primitive in the catalog itself is exactly what a shared gold layer needs to serve analytical and agentic consumers from one source without a bespoke proxy to maintain.</p>
@@ -88,7 +90,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.elastic.co/search-labs/blog/vector-database-rag-serverless">Elastic ships a serverless vector database for RAG</a></div>
+        <div class="item-title"><a href="https://www.elastic.co/search-labs/blog/vector-database-rag-serverless" target="_blank" rel="noopener">Elastic ships a serverless vector database for RAG</a></div>
         <p class="item-line">Elastic launched a serverless Elasticsearch Vector Database that automates chunking, embedding and index tuning to handle hybrid keyword-and-vector search at hundreds of billions of vectors. <span class="item-meta">Elastic Search Labs · 2026-09-11</span></p>
         
         <p class="item-sowhat">One more platform folding retrieval into its core storage rather than a bolted-on vector store narrows the buy-vs-build question for the retrieval layer sitting underneath any agentic access to a governed gold layer.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.hpcwire.com/aiwire/2026/09/10/nutrient-data-extraction-api-launches-for-source-grounded-production-ready-document-ai/">Nutrient launches source-grounded document extraction API</a></div>
+        <div class="item-title"><a href="https://www.hpcwire.com/aiwire/2026/09/10/nutrient-data-extraction-api-launches-for-source-grounded-production-ready-document-ai/" target="_blank" rel="noopener">Nutrient launches source-grounded document extraction API</a></div>
         <p class="item-line">Nutrient&#39;s new Data Extraction API scored 0.932 overall accuracy on the public opendataloader-bench corpus across reading order, table structure and heading hierarchy, with the benchmark published openly. <span class="item-meta">AIwire · 2026-09-10</span></p>
         
         <p class="item-sowhat">An open, repeatable accuracy benchmark for document extraction is what buy-vs-build for the unstructured half of a gold layer has been missing: a number to hold a vendor to instead of a demo.</p>
@@ -106,7 +108,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.confluent.io/blog/2026-q3-confluent-cloud-launch/">Confluent adds Agent Skills to its streaming platform</a></div>
+        <div class="item-title"><a href="https://www.confluent.io/blog/2026-q3-confluent-cloud-launch/" target="_blank" rel="noopener">Confluent adds Agent Skills to its streaming platform</a></div>
         <p class="item-line">Confluent&#39;s Q3 2026 Cloud release adds Agent Skills and a Real-Time Context Engine alongside IBM Granite Time Series and TimesFM model support, giving agents governed, real-time access to streaming data. <span class="item-meta">Confluent · 2026-08-18</span></p>
         
         <p class="item-sowhat">Packaging streaming access as an agent-facing contract, rather than a raw topic an agent has to interpret, is the same semantic-consistency problem this quarter&#39;s question poses for the batch side of the gold layer.</p>

@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://blog.modelcontextprotocol.io/posts/mcp-roadmap/">MCP publishes its next specification roadmap</a></div>
+        <div class="item-title"><a href="https://blog.modelcontextprotocol.io/posts/mcp-roadmap/" target="_blank" rel="noopener">MCP publishes its next specification roadmap</a></div>
         <p class="item-line">On August 22 the MCP Core Maintainers, working with the protocol&#39;s Working Groups, published an updated roadmap for the next specification release and beyond under the Linux Foundation&#39;s Agentic AI Foundation. <span class="item-meta">Model Context Protocol Blog · 2026-08-22</span></p>
         
         <p class="item-sowhat">MCP&#39;s governance now runs through a foundation roadmap rather than one vendor&#39;s release notes — worth reading before locking agent tooling to any single spec cadence.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://releasebot.io/updates/snowflake">Snowflake opens externally managed Iceberg tables</a></div>
+        <div class="item-title"><a href="https://releasebot.io/updates/snowflake" target="_blank" rel="noopener">Snowflake opens externally managed Iceberg tables</a></div>
         <p class="item-line">On August 18 Snowflake&#39;s Polaris-powered Horizon Catalog began previewing bi-directional read/write access to Apache Iceberg tables managed outside Snowflake, plus direct Amazon S3 Tables Iceberg REST connectivity. <span class="item-meta">Snowflake (via Releasebot) · 2026-08-18</span></p>
         
         <p class="item-sowhat">Data no longer has to live inside a vendor&#39;s own storage to be queried by that vendor&#39;s AI stack — a concrete test of whether &#39;open lakehouse&#39; claims survive contact with a real architecture decision.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/new-features">Snowflake previews a code-execution tool for Cortex Agents</a></div>
+        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/new-features" target="_blank" rel="noopener">Snowflake previews a code-execution tool for Cortex Agents</a></div>
         <p class="item-line">On August 20 Snowflake shipped general availability of AI_EXTRACT and AI_PARSE_DOCUMENT for client-side encrypted stages and network-restricted accounts, alongside a preview of a code-execution tool for Cortex Agents. <span class="item-meta">Snowflake Release Notes · 2026-08-20</span></p>
         
         <p class="item-sowhat">Document extraction now works inside encrypted, network-locked accounts — closing a real blocker for regulated teams that want agentic AI without loosening perimeter controls.</p>
@@ -83,7 +85,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.forbes.com/councils/forbestechcouncil/2026/08/24/what-agentic-breaches-actually-show-about-ai-risk/">Agentic breaches expose an accountability gap</a></div>
+        <div class="item-title"><a href="https://www.forbes.com/councils/forbestechcouncil/2026/08/24/what-agentic-breaches-actually-show-about-ai-risk/" target="_blank" rel="noopener">Agentic breaches expose an accountability gap</a></div>
         <p class="item-line">An August 24 analysis of the OpenAI–Hugging Face agent breach notes Hugging Face had to reconstruct 17,000 events to explain what its AI agent had actually done, and argues most organisations couldn&#39;t answer that question today. <span class="item-meta">Forbes Technology Council · 2026-08-24</span></p>
         
         <p class="item-sowhat">If an agent&#39;s actions can&#39;t be reconstructed on demand, that&#39;s a gap in the data platform&#39;s audit logging, not just a security control — worth checking before any agent gets write access to production data.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://releasebot.io/updates/snowflake">Snowflake ships Power BI ingestion for Semantic View Autopilot</a></div>
+        <div class="item-title"><a href="https://releasebot.io/updates/snowflake" target="_blank" rel="noopener">Snowflake ships Power BI ingestion for Semantic View Autopilot</a></div>
         <p class="item-line">On August 18 Snowflake made Power BI ingestion for Semantic View Autopilot generally available, letting Power BI read the semantic views Cortex generates automatically rather than raw tables. <span class="item-meta">Snowflake (via Releasebot) · 2026-08-18</span></p>
         
         <p class="item-sowhat">The path from a governed semantic layer to an existing BI estate just got shorter — worth checking whether Power BI reports are still hand-built against raw tables that a model would have to guess at.</p>
@@ -106,7 +108,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.globenewswire.com/news-release/2026/08/19/3347861/31982/en/cloudera-powers-the-agentic-ai-era-with-cloudera-anywhere-cloud.html">Cloudera launches a hybrid control plane for agentic AI</a></div>
+        <div class="item-title"><a href="https://www.globenewswire.com/news-release/2026/08/19/3347861/31982/en/cloudera-powers-the-agentic-ai-era-with-cloudera-anywhere-cloud.html" target="_blank" rel="noopener">Cloudera launches a hybrid control plane for agentic AI</a></div>
         <p class="item-line">Cloudera launched Anywhere Cloud on August 19, a single control plane that runs agentic AI directly against data held in public cloud, sovereign infrastructure, private data centres or the edge without moving it. <span class="item-meta">GlobeNewswire (Cloudera) · 2026-08-19</span></p>
         
         <p class="item-sowhat">Keeping sensitive data in place while still exposing it to agents is the governance argument every AI-ready pitch has to make — this is a concrete instance to weigh against build-vs-buy calls.</p>
@@ -115,7 +117,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">podcast · AtScale Data-Driven Podcast · 2026-01-09</div>
-      <div class="learn-title"><a href="https://www.atscale.com/podcast/agentic-ai-semantic-layers-enterprise-analytics/">How Agentic AI and Semantic Layers Are Transforming Enterprise Analytics</a></div>
+      <div class="learn-title"><a href="https://www.atscale.com/podcast/agentic-ai-semantic-layers-enterprise-analytics/" target="_blank" rel="noopener">How Agentic AI and Semantic Layers Are Transforming Enterprise Analytics</a></div>
       <p class="learn-eli5">A semantic layer is a translation step between a database&#39;s raw tables and the words a person or an AI agent actually uses — &#39;revenue&#39;, &#39;active customer&#39;, &#39;churn&#39; — defined once, in one place, so every tool that asks for &#39;revenue&#39; gets the same number back. Without one, an AI agent asked for revenue just writes its own SQL against raw tables and can quietly get the definition wrong in a way nobody notices. With one, the agent looks the metric up instead of reinventing it each time.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> Before wiring an agent up to &#39;answer questions from the warehouse,&#39; check whether it queries a governed semantic layer or improvises SQL against raw tables — that one architectural choice decides whether wrong answers stay rare and traceable, or become routine and invisible.</p>
     </div>

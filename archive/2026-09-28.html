@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://techcrunch.com/2026/09/24/databricks-buys-row-zero-and-is-scouting-for-more-startups-to-acquire/">Databricks acquires Row Zero for governed spreadsheets</a></div>
+        <div class="item-title"><a href="https://techcrunch.com/2026/09/24/databricks-buys-row-zero-and-is-scouting-for-more-startups-to-acquire/" target="_blank" rel="noopener">Databricks acquires Row Zero for governed spreadsheets</a></div>
         <p class="item-line">Databricks acquired spreadsheet startup Row Zero on September 24 and is folding it into Genie, giving finance and ops teams a governed spreadsheet interface over live, permissioned data instead of an exported copy. <span class="item-meta">TechCrunch · 2026-09-24</span></p>
         
         <p class="item-sowhat">Another build-vs-buy data point for the catalog and observability stack: platform vendors are absorbing the last mile of analytical consumption rather than leaving it to spreadsheets exported outside governance.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://siliconangle.com/2026/09/22/anthropic-releases-claude-opus-5-5-and-openai-counters-with-two-cheaper-gpt-6-models/">Anthropic and OpenAI cut frontier model token prices</a></div>
+        <div class="item-title"><a href="https://siliconangle.com/2026/09/22/anthropic-releases-claude-opus-5-5-and-openai-counters-with-two-cheaper-gpt-6-models/" target="_blank" rel="noopener">Anthropic and OpenAI cut frontier model token prices</a></div>
         <p class="item-line">Claude Opus 5.5 and OpenAI&#39;s GPT-6 Sol and Luna launched within about 90 minutes of each other on September 22, cutting frontier and mid-tier token prices 20-50% — GPT-6 Sol at $2/$10 per million tokens against Opus 5.5&#39;s $4/$20. <span class="item-meta">SiliconANGLE · 2026-09-22</span></p>
         
         <p class="item-sowhat">Feeds the cost-per-governed-dataset and platform FinOps case directly: inference cost is now falling faster than platform compute cost, which shifts the economics of conversational access — like the Genie-to-Claude pilot — relative to the pipeline work underneath it.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.reinsurancene.ws/clara-analytics-launches-first-agentic-claims-intelligence-platform/">CLARA Analytics launches agentic AI for claims</a></div>
+        <div class="item-title"><a href="https://www.reinsurancene.ws/clara-analytics-launches-first-agentic-claims-intelligence-platform/" target="_blank" rel="noopener">CLARA Analytics launches agentic AI for claims</a></div>
         <p class="item-line">CLARA Analytics launched Agentic Intelligence on September 22, an AI workforce that runs casualty and workers&#39;-comp claims from first notice of loss through resolution while adjusters keep the final decision. <span class="item-meta">Reinsurance News · 2026-09-22</span></p>
         
         <p class="item-sowhat">A concrete case of governed AI agents operating inside a regulated claims workflow with a human still accountable for the outcome — the same shape the platform&#39;s own gold-layer-to-agent question has to answer.</p>
@@ -88,7 +90,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://github.com/amundsen-io/amundsenfrontendlibrary/pull/1084">Amundsen, the open-source data catalog, is archived</a></div>
+        <div class="item-title"><a href="https://github.com/amundsen-io/amundsenfrontendlibrary/pull/1084" target="_blank" rel="noopener">Amundsen, the open-source data catalog, is archived</a></div>
         <p class="item-line">The LF AI &amp; Data governing board archived the Amundsen project on September 10 after it stalled — the code stays available under Apache-2.0 but the repo is now read-only, with no further releases or security patches. <span class="item-meta">GitHub / LF AI &amp; Data · 2026-09-10</span></p>
         
         <p class="item-sowhat">One open metadata standard loses momentum while governed commercial catalogs absorb the same job — evidence for the buy-vs-build catalog and observability decision rather than betting a roadmap on community-maintained metadata tooling.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.cloud.google.com/dataplex/docs/release-notes">BigLake catalog adds GA support for Iceberg REST Catalog</a></div>
+        <div class="item-title"><a href="https://docs.cloud.google.com/dataplex/docs/release-notes" target="_blank" rel="noopener">BigLake catalog adds GA support for Iceberg REST Catalog</a></div>
         <p class="item-line">Google&#39;s BigLake metastore reached general availability for the Apache Iceberg REST Catalog spec, giving BigLake Iceberg tables the same lineage, profiling, data-quality and discovery coverage as native BigQuery data, with federated reads from Databricks Unity, AWS Glue and Snowflake Horizon catalogs still in preview. <span class="item-meta">Google Cloud (Knowledge Catalog release notes) · 2026-09-24</span></p>
         
         <p class="item-sowhat">Bears directly on the buy-vs-build catalog decision and on cross-platform lineage for a stack that already spans Unity Catalog and Redshift — one governance layer reading Iceberg tables across vendors is the alternative to maintaining that mapping by hand.</p>
@@ -106,7 +108,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">podcast · Experiencing Data w/ Brian T. O&#39;Neill</div>
-      <div class="learn-title"><a href="https://brian2r.podbean.com/e/194-ai-for-bi-juan-sequeda-on-preparing-your-analytics-to-work-with-llms/">AI for BI: preparing analytics to work with LLMs</a></div>
+      <div class="learn-title"><a href="https://brian2r.podbean.com/e/194-ai-for-bi-juan-sequeda-on-preparing-your-analytics-to-work-with-llms/" target="_blank" rel="noopener">AI for BI: preparing analytics to work with LLMs</a></div>
       <p class="learn-eli5">A knowledge graph is a map of what a business&#39;s data actually means and how the pieces connect — this customer record is that account, revenue means net-of-returns, a claim belongs to a policy. A dashboard works without one because a person built the query and already knew those connections. An LLM doesn&#39;t: ask it what churn was last quarter and it will guess at a join and a definition, often wrong in a way that sounds completely confident. A knowledge graph, or a semantic layer doing the same job, is what lets the model look up the real definition instead of guessing one.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> Speaks directly to whether a governed gold layer can serve analytical and agentic consumption from one source without the two paths diverging — the decision live this quarter. The argument here is that the semantic layer, not the model, is what has to carry that consistency.</p>
     </div>

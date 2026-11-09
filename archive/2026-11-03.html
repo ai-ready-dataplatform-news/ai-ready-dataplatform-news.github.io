@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.dataiku.com/company/news/dataiku-introduces-headless">Dataiku lets coding agents build governed projects</a></div>
+        <div class="item-title"><a href="https://www.dataiku.com/company/news/dataiku-introduces-headless" target="_blank" rel="noopener">Dataiku lets coding agents build governed projects</a></div>
         <p class="item-line">Dataiku Headless, announced on 27 October, ships as a plugin for Claude Code, Codex, Cursor, GitHub Copilot and other coding agents and uses an MCP server so that pipelines, models and dashboards an agent builds land as governed Dataiku projects rather than loose scripts, including rebuilds of legacy Excel and Alteryx work. <span class="item-meta">Dataiku · 2026-10-27</span></p>
         
         <p class="item-sowhat">Agents writing transformation code will route around a governed platform unless the platform meets them in their tools; a buy-versus-build call on the transformation layer now has to ask whether work done through a coding agent inherits the same lineage, review and ownership as work done in the UI.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.globenewswire.com/news-release/2026/10/22/3386300/0/en/introducing-agentspot-from-chatbots-to-multiplayer-ai.html">ThoughtSpot opens AgentSpot for shared agents on its semantic layer</a></div>
+        <div class="item-title"><a href="https://www.globenewswire.com/news-release/2026/10/22/3386300/0/en/introducing-agentspot-from-chatbots-to-multiplayer-ai.html" target="_blank" rel="noopener">ThoughtSpot opens AgentSpot for shared agents on its semantic layer</a></div>
         <p class="item-line">ThoughtSpot launched AgentSpot on 22 October, a platform for building and sharing agents, workflows and business apps across teams, built on the company&#39;s existing semantic layer so that agents draw on the same metric definitions as its analytics. <span class="item-meta">ThoughtSpot, via GlobeNewswire · 2026-10-22</span></p>
         
         <p class="item-sowhat">A BI vendor building agents directly on the metrics layer is a bet that the agent&#39;s answer and the dashboard&#39;s number stay the same because they share one definition; that makes the gold layer&#39;s business definitions, not the model, the asset to govern before any agent use case goes live.</p>
@@ -79,7 +81,7 @@ document.addEventListener('click', function (e) {
     <li class="is-update">
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.dnb.com/en-us/newsroom/press-releases/dnb-survey-finds-ai-returns-stable-for-most.html">Fully AI-ready data edges up to 8% in Dun &amp; Bradstreet&#39;s survey</a></div>
+        <div class="item-title"><a href="https://www.dnb.com/en-us/newsroom/press-releases/dnb-survey-finds-ai-returns-stable-for-most.html" target="_blank" rel="noopener">Fully AI-ready data edges up to 8% in Dun &amp; Bradstreet&#39;s survey</a></div>
         <p class="item-line">Dun &amp; Bradstreet&#39;s fourth-quarter AI Momentum survey of 10,000 businesses in 32 countries found 8% describe their enterprise data as fully ready for AI at scale, with 33% mostly and 44% partially ready; 81% of the fully ready report broad or strong ROI against 12% of the partially ready, while overall broad-or-strong ROI held at 28%. <span class="item-meta">Dun &amp; Bradstreet · 2026-10-28</span></p>
         <p class="item-update"><span class="item-update-tag">Update</span> <span class="item-meta">you saw this on 2026-10-09</span> A new quarterly wave: the share with fully AI-ready data rose from 6% to 8%, and the ready-versus-partly-ready ROI gap was put at 6.5 times.</p>
         <p class="item-sowhat">A two-point move in a quarter is the pace to plan against, and the gap in returns between ready and partly ready firms is an argument for judging a foundation-phase platform on readiness of what it holds rather than on adoption. The sponsor sells business data, so read the ROI link as correlation.</p>
@@ -88,7 +90,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://siliconangle.com/?p=852113">Jedify formally launches Data Agents on its context graph</a></div>
+        <div class="item-title"><a href="https://siliconangle.com/?p=852113" target="_blank" rel="noopener">Jedify formally launches Data Agents on its context graph</a></div>
         <p class="item-line">Jedify formally launched Data Agents on 28 October, letting business teams set up autonomous analysts in plain language that monitor metrics, investigate anomalies and identify likely drivers, grounded in the company&#39;s context graph of business definitions; it is free during the launch period, with pricing to follow. <span class="item-meta">SiliconANGLE · 2026-10-28</span></p>
         
         <p class="item-sowhat">Agents that watch metrics on their own only stay trustworthy if the definitions beneath them are owned and versioned; a platform that wants analysts and agents reading one source needs its business glossary in a form a context graph can consume, not only in a BI tool.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">case study · Uber Engineering blog · 2025-07-17</div>
-      <div class="learn-title"><a href="https://www.uber.com/blog/unlocking-financial-insights-with-finch">Unlocking financial insights with Finch, Uber&#39;s conversational data agent</a></div>
+      <div class="learn-title"><a href="https://www.uber.com/blog/unlocking-financial-insights-with-finch" target="_blank" rel="noopener">Unlocking financial insights with Finch, Uber&#39;s conversational data agent</a></div>
       <p class="learn-eli5">Finance staff at Uber wanted answers without writing SQL or waiting on a data request, so Uber built an assistant in Slack that turns a plain question into a query. It works well because it does not search the whole warehouse: it reads from a small set of curated single-table marts, and it keeps a lookup of the everyday words people use for columns and values so its filters match the data. Permissions decide who can ask about sensitive figures, so the assistant cannot see more than the person asking.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> The accuracy came from curating the data an agent reads, not from the model; for a gold layer meant to serve both analysts and conversational access, it argues for publishing a narrow, well-named set of agent-ready tables with mapped business terms and inherited permissions before widening scope.</p>
     </div>

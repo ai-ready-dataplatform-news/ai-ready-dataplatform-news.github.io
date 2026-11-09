@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The AI-Ready Data Platform Brief · Friday 6 November 2026</title>
+<title>The AI-Ready Data Platform Brief · Monday 9 November 2026</title>
 <meta name="description" content="Data products and the platforms beneath them, and the shift from analytics-ready to AI-ready data — each read from the product seat.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The AI-Ready Data Platform Brief">
@@ -19,18 +19,20 @@
 <link rel="stylesheet" href="assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
 <div class="band band-top">
   <div class="inner">
     <div class="masthead">The AI-Ready Data Platform Brief</div>
-    <div class="day-date">Friday · 6 November 2026</div>
+    <div class="day-date">Monday · 9 November 2026</div>
     <p class="standfirst">Data products and the platforms beneath them, and the shift from analytics-ready to AI-ready data — each read from the product seat.</p>
     <p class="byline">Curated by <a href="https://www.linkedin.com/in/rathnamuthumanickam">Rathna Muthumanickam</a> with the use of Claude Code. <span class="byline-note">I build data platforms and the data products on top of them. I read this stuff anyway, so I automated the reading and published the result.</span></p>
     <a class="archive-link" href="archive/">Browse the last 30 days in the archive &rarr;</a>
@@ -42,9 +44,9 @@ document.addEventListener('click', function (e) {
     
   <section class="quote">
     <h2 class="heading">On leading</h2>
-    <blockquote>Before you are a leader, success is all about growing yourself. When you become a leader, success is all about growing others.</blockquote>
-    <div class="attribution">Jack Welch</div>
-    <p class="quote-prompt">Give one person on your team a piece of work slightly beyond their current reach.</p>
+    <blockquote>The best executive is the one who has sense enough to pick good people to do what he wants done, and self-restraint enough to keep from meddling with them while they do it.</blockquote>
+    <div class="attribution">Theodore Roosevelt · An Autobiography, 1913</div>
+    <p class="quote-prompt">Find the thread you&#39;re hovering over and step out of it for a day.</p>
   </section>
     
   <section class="news">
@@ -53,28 +55,28 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.datastudios.org/post/snowflake-open-data-sharing-generally-available-iceberg-rest-open-clients">Snowflake shares Iceberg tables with non-Snowflake engines</a></div>
-        <p class="item-line">Snowflake&#39;s release note of 2 November moves Open Data Sharing to general availability: providers can share live, read-only Snowflake-managed Iceberg tables with consumers who have no Snowflake account, who read them from their own engine through the standard Iceberg REST Catalog API with short-lived tokens; standard Snowflake tables and externally managed Iceberg tables are not shareable this way. <span class="item-meta">Data Studios, on Snowflake&#39;s 2 November release note · 2026-11-02</span></p>
+        <div class="item-title"><a href="https://www.snowflake.com/en/news/press-releases/expedition-2026-autonomous-data-engineering/" target="_blank" rel="noopener">Snowflake puts agents on pipeline repair, engineers approve</a></div>
+        <p class="item-line">At Expedition 2026 on 3 November Snowflake announced what it calls autonomous data engineering: CoCo Cloud Agents run its coding agent in a Snowflake-managed environment rather than on an engineer&#39;s laptop, and CoCo Automations run those agents on a schedule to detect and repair pipeline faults, alerting engineers when a fix is ready for them to approve into production. <span class="item-meta">Snowflake · 2026-11-03</span></p>
         
-        <p class="item-sowhat">A data product team selling or exchanging data no longer has to make buyers open a Snowflake account or run export jobs, which changes the packaging decision for partner-facing data supply: the open table format becomes the delivery contract, and the consumer&#39;s engine stops being the provider&#39;s problem.</p>
+        <p class="item-sowhat">Agents that edit pipelines move the control point from writing code to approving changes, so a platform PM weighing what the transformation framework should standardise needs review gates, lineage and contract tests that hold whether a person or an agent made the change.</p>
       </div>
     </li>
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.fca.org.uk/publications/multi-firm-reviews/wholesale-banks-supervision-insights-3-autumn-2026">FCA finds a coding defect starved a bank&#39;s crime control</a></div>
-        <p class="item-line">The FCA&#39;s Wholesale Banks Supervision Insights 3, published 2 November, describes data that was never ingested into a financial crime control because of a coding defect and went unnoticed for an extended period, and expects firms to check source-data lineage and completeness rather than trust downstream monitoring; on AI it found incomplete inventories, weak kill-switch arrangements and enterprise search making misclassified data easier to find. <span class="item-meta">Financial Conduct Authority · 2026-11-02</span></p>
+        <div class="item-title"><a href="https://www.citybiz.co/article/929808/first-advantage-acquires-data-diver-technologies-for-125-million-to-expand-background-screening-capabilities/" target="_blank" rel="noopener">First Advantage buys the data supplier it already used</a></div>
+        <p class="item-line">Background-screening firm First Advantage said on 5 November it has acquired Data Diver Technologies, an AI and automation platform that collects, aggregates and delivers high-volume criminal records data and was already one of its third-party data providers, for about $125 million, framing the deal as strengthening its proprietary data. <span class="item-meta">Citybiz, on First Advantage&#39;s 5 November announcement · 2026-11-05</span></p>
         
-        <p class="item-sowhat">A regulator now names completeness checks at ingestion, not dashboards downstream, as the control it expects, so a platform PM in financial services has a supervisory reference for funding source-to-control reconciliation and for gating enterprise AI search on classification quality.</p>
+        <p class="item-sowhat">A buyer paying to own its data supply shows where the margin in a data product sits; for anyone pricing or running an external data feed, it is a reminder that a supplier whose data is core to a client&#39;s product is also an acquisition target, and that supply terms should cover that case.</p>
       </div>
     </li>
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://learn.microsoft.com/en-us/azure/databricks/release-notes/product/2026/november">Unity Catalog can now keep managed tables in OneLake</a></div>
-        <p class="item-line">Azure Databricks&#39; 2 November release notes put OneLake external locations into Public Preview: a OneLake location can serve as a Unity Catalog catalog&#39;s managed storage, holding managed tables, volumes, materialized views and streaming tables in Microsoft OneLake while Unity Catalog keeps governing access, enabled by workspace admins from the Previews page. <span class="item-meta">Azure Databricks release notes · 2026-11-02</span></p>
+        <div class="item-title"><a href="https://www.blocksandfiles.com/architecture/2026/11/06/edb-buying-altinity-to-integrate-postgresql-with-clickhouse/5308082" target="_blank" rel="noopener">EDB buys Altinity to pair Postgres with ClickHouse</a></div>
+        <p class="item-line">EDB announced on 5 November that it has acquired Altinity, the second-largest independent contributor to ClickHouse, for undisclosed terms; Altinity becomes EDB&#39;s Real-Time Analytics group, ClickHouse and Altinity&#39;s builds stay Apache 2.0, and integrated enterprise ClickHouse capabilities are promised for Q4 2026. <span class="item-meta">Blocks and Files · 2026-11-06</span></p>
         
-        <p class="item-sowhat">For an estate running Databricks for engineering and Power BI for consumption, the question of whether gold data has to be copied into Fabric gets a preview answer of no; a platform PM can test one governed catalog in OneLake before committing to a mirroring pipeline, keeping in mind it is not yet production-supported.</p>
+        <p class="item-sowhat">One vendor now supports both the transactional and the real-time analytical engine, which changes the buy-versus-build sum for estates running Postgres operationally and wanting fast analytics without a warehouse hop; the open-licence commitment is the clause to check before betting a roadmap on it.</p>
       </div>
     </li></ol>
   </section>
@@ -85,18 +87,27 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://iapp.org/news/a/eu-member-states-finalize-digital-omnibus-negotiating-stance">EU governments keep the GDPR&#39;s personal data definition</a></div>
-        <p class="item-line">EU member states agreed their Digital Omnibus negotiating mandate on 21 October, keeping the GDPR&#39;s existing definition of personal data, rejecting the Commission&#39;s proposed change to Article 4(1), adding a provision on pseudonymisation standards and attaching safeguards to processing personal data for AI training; nothing is law until Parliament sets its position and trilogue concludes. <span class="item-meta">IAPP · 2026-10-22</span></p>
+        <div class="item-title"><a href="https://www.infoworld.com/article/4243932/snowflake-launches-business-ontology-to-boost-ai-agent-reliability.html" target="_blank" rel="noopener">Snowflake gives agents and dashboards one set of definitions</a></div>
+        <p class="item-line">Snowflake&#39;s Business Ontology, announced at Expedition 2026 on 3 November inside Horizon Catalog, lets teams define and approve business concepts such as net revenue, assign each an owner and bind it to tables, views and Semantic Views, so people and agents use the same approved meaning; reports differ on whether it is in private or upcoming public preview. <span class="item-meta">InfoWorld · 2026-11-03</span></p>
         
-        <p class="item-sowhat">The hoped-for relief that pseudonymised data might fall outside the GDPR is off the table for now, so a roadmap that treats pseudonymisation as making data safe to hand a model should keep pseudonymised datasets inside the same access, lineage and purpose controls as raw personal data.</p>
+        <p class="item-sowhat">This is the agent-versus-dashboard consistency problem built into the catalog: the decision it sharpens is whether business definitions are owned once, centrally, with a named owner per term, rather than encoded separately in BI models and agent prompts that drift apart.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">02</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.bankofengland.co.uk/speech/2026/november/ben-martin-speech-at-data-ai-conference-europe-2026" target="_blank" rel="noopener">Bank of England&#39;s data chief sets out three missions</a></div>
+        <p class="item-line">Ben Martin, the Bank of England&#39;s Chief Data Officer, told the DAMA Data and AI Conference Europe on 4 November that the Bank&#39;s data and analytics transformation runs on three missions, including making data easy for colleagues to work with and building solid foundations, and that it uses DAMA&#39;s data management framework as the basis for that work rather than as a standalone control. <span class="item-meta">Bank of England · 2026-11-04</span></p>
+        
+        <p class="item-sowhat">A central bank treating its data management framework as the foundation of delivery, not a compliance checklist, is a reference point for a financial-services platform team arguing that capability maturity should be judged by what it enables, which bears directly on how a foundation-phase platform is measured.</p>
       </div>
     </li></ol>
     
     <div class="learn">
-      <div class="learn-tag">course · CDQ Academy · 2026-11-10</div>
-      <div class="learn-title"><a href="https://www.cdq.com/DataProductManagementTraining">Managing Data Products at Enterprise Scale</a></div>
-      <p class="learn-eli5">A data product is a dataset someone has promised to look after for the people who use it, the way a shop promises the milk is fresh and in the same place tomorrow. That promise needs an owner, a description of what is inside, and a written agreement about what the consumer can rely on, which is what a data contract is. This three half-day online course walks through that lifecycle: who owns a data product, how it is changed and retired, and how contracts and metadata let other teams use and share it safely.</p>
-      <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> Most data product writing stops at the idea; this course spends its time on roles, processes and contracts, which is the part a platform roadmap has to fund. A PM deciding whether modelling authority sits centrally or with consuming domains can use its lifecycle as a checklist for what each side must own before the second governed dataset goes live.</p>
+      <div class="learn-tag">blog · Google Cloud blog</div>
+      <div class="learn-title"><a href="https://cloud.google.com/blog/products/application-development/at-john-lewis-partnership-measuring-developer-platform-value/" target="_blank" rel="noopener">At John Lewis Partnership, measuring developer platform value</a></div>
+      <p class="learn-eli5">A platform team builds the shared roads other teams drive on, so the hard question is how to show the roads are worth paying for. Counting how many teams use them proves little when using them is compulsory. John Lewis Partnership&#39;s platform team moved from measuring lead time, to the four DORA delivery measures, to a Technical Health score: small automated jobs that check each team against more than 35 measures, such as security and operational readiness, and show the result as traffic lights.</p>
+      <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> It is a worked example of the argument that adoption is the wrong headline metric early on. A data platform PM can borrow the pattern and swap in data measures, such as governed coverage, time to onboard a dataset and contract-test pass rate, so the scorecard shows whether the platform reduces friction rather than whether people were made to use it.</p>
     </div>
   </section>
     <div class="site-foot">

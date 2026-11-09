@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -40,6 +42,13 @@ document.addEventListener('click', function (e) {
 <div class="band">
   <div class="inner">
     
+    <div class="day">
+      <div class="day-head">
+        <a class="day-link" href="2026-11-06.html">Friday · 6 November 2026</a>
+        <span class="day-count">3 stories</span>
+      </div>
+      <ul class="day-heads"><li>Snowflake shares Iceberg tables with non-Snowflake engines</li><li>FCA finds a coding defect starved a bank&#39;s crime control</li><li>Unity Catalog can now keep managed tables in OneLake</li></ul>
+    </div>
     <div class="day">
       <div class="day-head">
         <a class="day-link" href="2026-11-05.html">Thursday · 5 November 2026</a>
@@ -242,13 +251,6 @@ document.addEventListener('click', function (e) {
         <span class="day-count">3 stories</span>
       </div>
       <ul class="day-heads"><li>Databricks acquires Row Zero for governed spreadsheets</li><li>Anthropic and OpenAI cut frontier model token prices</li><li>CLARA Analytics launches agentic AI for claims</li></ul>
-    </div>
-    <div class="day">
-      <div class="day-head">
-        <a class="day-link" href="2026-09-25.html">Friday · 25 September 2026</a>
-        <span class="day-count">3 stories</span>
-      </div>
-      <ul class="day-heads"><li>Open-source OpenObserve reaches v1.0 with AI observability</li><li>Finosec launches an AI Governance module for banks</li><li>EU draft would let AI training skip GDPR consent</li></ul>
     </div>
     <div class="site-foot">
       <a href="../">Today</a> · <a href="../archive/">Archive</a>

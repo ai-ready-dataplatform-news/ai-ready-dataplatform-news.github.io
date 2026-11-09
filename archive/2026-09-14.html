@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.globenewswire.com/news-release/2026/09/14/3361396/0/en/releasepad-launches-mcp-server-so-ai-agents-can-draft-publish-and-measure-product-changelogs.html">ReleasePad opens an MCP server for changelogs</a></div>
+        <div class="item-title"><a href="https://www.globenewswire.com/news-release/2026/09/14/3361396/0/en/releasepad-launches-mcp-server-so-ai-agents-can-draft-publish-and-measure-product-changelogs.html" target="_blank" rel="noopener">ReleasePad opens an MCP server for changelogs</a></div>
         <p class="item-line">ReleasePad launched an MCP server that lets Claude, Codex and other AI agents draft, publish and measure product changelogs directly from a conversation. <span class="item-meta">GlobeNewswire · 2026-09-14</span></p>
         
         <p class="item-sowhat">Every new vertical-SaaS MCP server is another write-capable surface an agent can reach — worth a quick check against your own MCP governance list before agents start touching release data unsupervised.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.gamingtechlaw.com/2026/08/data-act-access-by-design/">EU Data Act&#39;s &#39;access by design&#39; rule takes effect</a></div>
+        <div class="item-title"><a href="https://www.gamingtechlaw.com/2026/08/data-act-access-by-design/" target="_blank" rel="noopener">EU Data Act&#39;s &#39;access by design&#39; rule takes effect</a></div>
         <p class="item-line">From 12 September 2026, connected products and related services placed on the EU market must make their data accessible to users by default and in real time, not just on request. <span class="item-meta">GamingTechLaw</span></p>
         
         <p class="item-sowhat">Any platform ingesting device or connected-product telemetry from EU-market products now inherits a by-design accessibility obligation — worth flagging to legal before the next product-data pipeline ships.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li class="is-update">
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.snowflake.com/en/user-guide/snowflake-cortex/snowflake-cowork/automations">Snowflake&#39;s CoWork Automations reach general availability</a></div>
+        <div class="item-title"><a href="https://docs.snowflake.com/en/user-guide/snowflake-cortex/snowflake-cowork/automations" target="_blank" rel="noopener">Snowflake&#39;s CoWork Automations reach general availability</a></div>
         <p class="item-line">Automations in Snowflake CoWork, which re-run a saved question on a schedule and email the results, moved from public preview to general availability on 11 September. <span class="item-meta">Snowflake Documentation · 2026-09-11</span></p>
         <p class="item-update"><span class="item-update-tag">Update</span> <span class="item-meta">you saw this on 2026-08-24</span> Automations moved from public preview (with a default-open execute privilege) to full general availability on 2026-09-11.</p>
         <p class="item-sowhat">The scheduler whose execute-privilege defaulted open to all users in August is now GA — worth re-checking who can actually schedule agent tasks against production data before wider rollout.</p>
@@ -83,7 +85,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://thehackernews.com/2026/09/cisa-flags-exploited-cisco-citrix.html">CISA orders patches for exploited Cisco, Citrix bugs</a></div>
+        <div class="item-title"><a href="https://thehackernews.com/2026/09/cisa-flags-exploited-cisco-citrix.html" target="_blank" rel="noopener">CISA orders patches for exploited Cisco, Citrix bugs</a></div>
         <p class="item-line">CISA added a maximum-severity Cisco Secure Firewall Management Center auth-bypass flaw and a Citrix NetScaler auth-bypass flaw to its Known Exploited Vulnerabilities catalog, with a 12 September federal patch deadline. <span class="item-meta">The Hacker News · 2026-09-12</span></p>
         
         <p class="item-sowhat">Firewall and gateway infrastructure often sits directly in front of a data platform&#39;s ingress — an actively exploited auth-bypass here is a vendor-risk item for this week&#39;s security review, not just a routine patch note.</p>
@@ -92,7 +94,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">05</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://finopsweekly.com/news/ai-economics-provider-updates-2026-09-11/">Gemini Enterprise pay-as-you-go reaches general availability</a></div>
+        <div class="item-title"><a href="https://finopsweekly.com/news/ai-economics-provider-updates-2026-09-11/" target="_blank" rel="noopener">Gemini Enterprise pay-as-you-go reaches general availability</a></div>
         <p class="item-line">Google made Gemini Enterprise pay-as-you-go pricing and its AI developer tools broadly available to any project linked to an invoiced Google Cloud Billing account. <span class="item-meta">FinOps Weekly · 2026-09-11</span></p>
         
         <p class="item-sowhat">Removes a procurement gate for piloting Gemini Enterprise against a data platform without a committed contract — useful leverage in a build-vs-buy or multi-vendor cost comparison this quarter.</p>
@@ -106,7 +108,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.globenewswire.com/news-release/2026/09/08/3357352/0/en/prophecy-launches-ai-data-prep-tools-to-close-the-gap-between-ai-investment-and-ai-results.html">Prophecy adds AI data-prep agents on Snowflake</a></div>
+        <div class="item-title"><a href="https://www.globenewswire.com/news-release/2026/09/08/3357352/0/en/prophecy-launches-ai-data-prep-tools-to-close-the-gap-between-ai-investment-and-ai-results.html" target="_blank" rel="noopener">Prophecy adds AI data-prep agents on Snowflake</a></div>
         <p class="item-line">Prophecy launched AI data-prep agents on Snowflake, alongside its existing Databricks support, with a step-by-step review flow built on Claude Code that shows exactly what an agent changed before approval. <span class="item-meta">GlobeNewswire · 2026-09-08</span></p>
         
         <p class="item-sowhat">A reviewable approval step in front of agent-driven data prep is a concrete pattern for making &#39;AI touched this&#39; auditable — worth checking against however your own platform currently lets agents write to shared tables.</p>
@@ -115,7 +117,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">podcast · AI in Infrastructure Podcast, with Anahita Tafvizi (Snowflake) · 2026-07-08</div>
-      <div class="learn-title"><a href="https://sites.libsyn.com/620430/building-secure-role-based-access-for-agentic-ai-in-regulated-industries-with-anahita-tafviz-of-snowflake">Building Secure Role-Based Access for Agentic AI</a></div>
+      <div class="learn-title"><a href="https://sites.libsyn.com/620430/building-secure-role-based-access-for-agentic-ai-in-regulated-industries-with-anahita-tafviz-of-snowflake" target="_blank" rel="noopener">Building Secure Role-Based Access for Agentic AI</a></div>
       <p class="learn-eli5">Dashboard-era access control asks &#39;can this person see this data&#39; once, at login. An AI agent doesn&#39;t just look at data — it acts on it, chaining together steps a human never explicitly approved one by one. So the access question has to move from &#39;can this person see it&#39; to &#39;can this specific action, in this specific workflow, happen at all&#39; — checked at every step, not just the front door.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> Role-based access built for dashboards doesn&#39;t transfer cleanly to agents that read, decide and write in one pass — worth auditing whether your platform&#39;s access model checks at the action level or still assumes a human is the one clicking.</p>
     </div>

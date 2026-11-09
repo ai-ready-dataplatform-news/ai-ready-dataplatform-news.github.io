@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.gartner.com/en/newsroom/press-releases/2026-09-16-gartner-forecasts-worldwide-ai-spending-to-grow-49-point-5-percent-in-2026">Gartner: worldwide AI spending to grow 49.5% in 2026</a></div>
+        <div class="item-title"><a href="https://www.gartner.com/en/newsroom/press-releases/2026-09-16-gartner-forecasts-worldwide-ai-spending-to-grow-49-point-5-percent-in-2026" target="_blank" rel="noopener">Gartner: worldwide AI spending to grow 49.5% in 2026</a></div>
         <p class="item-line">Gartner forecasts worldwide AI spending will reach $2.7 trillion in 2026, up 49.5% year-on-year, with financial services alone projected at $118 billion, 19% of the global total. <span class="item-meta">Gartner · 2026-09-16</span></p>
         
         <p class="item-sowhat">A citable macro figure for this quarter&#39;s FinOps and cost-per-governed-dataset argument — and a reminder that regulated financial services carries an outsized share of that spend, which is where the platform&#39;s own budget case gets made.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://fintech.global/2026/09/16/why-faster-insurance-ai-needs-stronger-governance/">Why faster insurance AI needs stronger governance</a></div>
+        <div class="item-title"><a href="https://fintech.global/2026/09/16/why-faster-insurance-ai-needs-stronger-governance/" target="_blank" rel="noopener">Why faster insurance AI needs stronger governance</a></div>
         <p class="item-line">Analysis built around Earnix&#39;s AIOS platform argues that faster AI-driven underwriting and pricing decisions only pay off when paired with the coordination and oversight to keep them accountable, not automation for its own sake. <span class="item-meta">FinTech Global · 2026-09-16</span></p>
         
         <p class="item-sowhat">Direct ammunition for the platform&#39;s own governance-versus-speed argument in a UK insurtech and price-comparison remit, where a faster decision that can&#39;t be explained is a liability, not a win.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.morningstar.com/news/business-wire/20260914478787/imply-lumi-loglake-now-generally-available-making-security-data-in-data-lakes-immediately-searchable">Imply&#39;s Lumi Loglake reaches general availability</a></div>
+        <div class="item-title"><a href="https://www.morningstar.com/news/business-wire/20260914478787/imply-lumi-loglake-now-generally-available-making-security-data-in-data-lakes-immediately-searchable" target="_blank" rel="noopener">Imply&#39;s Lumi Loglake reaches general availability</a></div>
         <p class="item-line">Lumi Loglake is now generally available, letting security and ops teams search unstructured logs directly in object storage — AWS S3, Delta Lake, Apache Iceberg — without schemas, catalogs or rehydration pipelines. <span class="item-meta">Business Wire / Morningstar · 2026-09-14</span></p>
         
         <p class="item-sowhat">A live example of observability tooling moving to query logs in place rather than duplicating them into a separate store — relevant to any buy-vs-build call on the platform&#39;s own quality and observability stack.</p>
@@ -83,7 +85,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://status.snowflake.com/history">Snowflake SSO outage locks users out for nearly 7 hours</a></div>
+        <div class="item-title"><a href="https://status.snowflake.com/history" target="_blank" rel="noopener">Snowflake SSO outage locks users out for nearly 7 hours</a></div>
         <p class="item-line">An authentication-handling update caused SSO sign-in attempts to fail or loop across multiple Snowflake regions for nearly seven hours overnight on 13-14 September, per Snowflake&#39;s own incident record. <span class="item-meta">Snowflake Status · 2026-09-14</span></p>
         
         <p class="item-sowhat">Concrete evidence for any vendor-concentration or exit-plan argument — a platform-wide authentication failure is exactly the single point of failure regulators have started naming explicitly.</p>
@@ -92,7 +94,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">05</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.computerweekly.com/news/366650397/Zopa-Bank-launches-voice-controlled-banking">Zopa launches &#39;Ask Zopa&#39; conversational AI for everyday banking</a></div>
+        <div class="item-title"><a href="https://www.computerweekly.com/news/366650397/Zopa-Bank-launches-voice-controlled-banking" target="_blank" rel="noopener">Zopa launches &#39;Ask Zopa&#39; conversational AI for everyday banking</a></div>
         <p class="item-line">Zopa&#39;s Biscuit account now offers a voice-and-text AI agent, built on the bank&#39;s own agentic architecture, that moves money, pays bills and can pull in data from accounts at other banks to shape savings advice. <span class="item-meta">Computer Weekly · 2026-09-17</span></p>
         
         <p class="item-sowhat">A directly comparable UK lender shipping agentic banking on its own data platform — a live benchmark for what &#39;agent-ready&#39; looks like from inside the same regulated-lending world this seat operates in.</p>
@@ -106,7 +108,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.computerweekly.com/blog/CW-Developer-Network/Acceldata-drives-new-AI-application-power-with-xFactory">Acceldata launches xFactory for governed AI apps on federated data</a></div>
+        <div class="item-title"><a href="https://www.computerweekly.com/blog/CW-Developer-Network/Acceldata-drives-new-AI-application-power-with-xFactory" target="_blank" rel="noopener">Acceldata launches xFactory for governed AI apps on federated data</a></div>
         <p class="item-line">xFactory lets teams build, test and deploy AI agents and applications from a stated business intent, running governance checks against federated data across hybrid environments rather than one consolidated copy. <span class="item-meta">Computer Weekly · 2026-09-18</span></p>
         
         <p class="item-sowhat">Federation-first governance is the alternative to the medallion-and-centralise approach this platform has taken — worth weighing against continuing to insist on one governed copy before any AI consumption.</p>
@@ -115,7 +117,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-09-02-cortex-agent-lineage">Snowflake adds data lineage for what Cortex Agents can reach</a></div>
+        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-09-02-cortex-agent-lineage" target="_blank" rel="noopener">Snowflake adds data lineage for what Cortex Agents can reach</a></div>
         <p class="item-line">Lineage now traces which semantic views and search services an agent&#39;s declared tools expose, so a Cortex Analyst or Cortex Search tool shows up as an upstream dependency of the agent itself. <span class="item-meta">Snowflake Documentation · 2026-09-02</span></p>
         
         <p class="item-sowhat">Lineage that stops at the agent&#39;s tool declarations, not just the pipeline, is exactly the visibility gap between analytical and agentic consumption this quarter&#39;s governed-gold-layer decision has to close.</p>
@@ -124,7 +126,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">blog · Thoughtworks · 2026-07-02</div>
-      <div class="learn-title"><a href="https://www.thoughtworks.com/en-us/insights/blog/data-strategy/the-state-of-data-mesh-in-2026-from-hype-to-hard-won-maturity">The state of data mesh in 2026: from hype to hard-won maturity</a></div>
+      <div class="learn-title"><a href="https://www.thoughtworks.com/en-us/insights/blog/data-strategy/the-state-of-data-mesh-in-2026-from-hype-to-hard-won-maturity" target="_blank" rel="noopener">The state of data mesh in 2026: from hype to hard-won maturity</a></div>
       <p class="learn-eli5">Data mesh is the idea that instead of one central team owning all of a company&#39;s data, the teams closest to each subject — orders, customers, payments — own their own &#39;data product&#39;: a dataset with a name, an owner, a quality bar and a promise about what it means. Thoughtworks&#39; 2026 field report argues the idea has stopped being a slide-deck pitch and become something enterprises actually run, but only where four things are all true together: someone in the domain owns the data, that data is packaged as a product with real consumers, there&#39;s a self-serve platform so domains don&#39;t need a platform team&#39;s help to publish, and a federated set of rules keeps every domain&#39;s data usable together rather than each one doing its own thing. The newest twist: those same domain-owned data products increasingly have to work for two different kinds of consumer at once — a person building a dashboard and an AI agent reasoning over the same numbers — which the report calls a &#39;dual-use&#39; data product, built once and trusted by both.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> This is the same question the platform&#39;s own foundation-phase roadmap is trying to answer — whether one governed source can serve a dashboard and an agent without the two drifting apart — and it hands over a named pattern, &#39;dual-use data product&#39;, and a maturity bar to borrow rather than invent from scratch.</p>
     </div>

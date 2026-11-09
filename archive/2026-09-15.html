@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/new-features">Snowflake opens interactive warehouses to every table format</a></div>
+        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/new-features" target="_blank" rel="noopener">Snowflake opens interactive warehouses to every table format</a></div>
         <p class="item-line">Support for all table formats in Snowflake&#39;s interactive warehouses reached general availability on 14 September, removing the restriction that had kept sub-second, high-concurrency queries to a subset of table types. <span class="item-meta">Snowflake Documentation · 2026-09-14</span></p>
         
         <p class="item-sowhat">Not a platform this seat runs, but it closes a buy-vs-build gap worth knowing before any future interactive-serving decision leans on an assumption that only one table format gets the fast path.</p>
@@ -70,7 +72,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">course · Regulation AI Academy</div>
-      <div class="learn-title"><a href="https://www.regulation-ai.eu/en/academy/ai-act-fundamentals/">AI Act Fundamentals: a free five-module course</a></div>
+      <div class="learn-title"><a href="https://www.regulation-ai.eu/en/academy/ai-act-fundamentals/" target="_blank" rel="noopener">AI Act Fundamentals: a free five-module course</a></div>
       <p class="learn-eli5">The EU AI Act doesn&#39;t regulate AI in one lump; it sorts systems into risk tiers — unacceptable, high-risk, limited-risk, minimal-risk — and attaches different duties to each. A customer-facing chatbot mainly owes people a disclosure that they&#39;re talking to AI; a system used in credit decisions or fraud detection sits in the high-risk tier and owes a risk-management file, human oversight and logging that a regulator can inspect. The course walks through those tiers, the deadlines attached to each, and who has to prove what.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> DORA already forces documented ICT risk management for anything a bank&#39;s platform touches; the AI Act&#39;s Article 9(10) lets that same risk file double up for AI obligations rather than building a parallel one — which makes &#39;which of our governed datasets feed a high-risk system&#39; a mapping exercise worth doing on this platform now, ahead of the tightened 2027 deadline rather than after it.</p>
     </div>

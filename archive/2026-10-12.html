@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.lexisnexis.co.uk/legal/news/ico-seeks-views-on-application-of-data-protection-law-to-agentic-ai">ICO opens call for evidence on agentic AI</a></div>
+        <div class="item-title"><a href="https://www.lexisnexis.co.uk/legal/news/ico-seeks-views-on-application-of-data-protection-law-to-agentic-ai" target="_blank" rel="noopener">ICO opens call for evidence on agentic AI</a></div>
         <p class="item-line">The UK Information Commissioner&#39;s Office opened a six-week call for evidence on 8 October, closing 20 November, on how data protection law applies to AI agents, covering security, transparency, accountability, automated decisions and lawful data use. <span class="item-meta">LexisNexis · 2026-10-08</span></p>
         
         <p class="item-sowhat">A platform PM weighing agent access to governed data has a dated consultation to feed, and a signal that agent autonomy will not excuse weak lineage or access control.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://thenextweb.com/news/ico-ai-developers-data-protection-changes-ai-agents">ICO secures data protection changes from ten AI developers</a></div>
+        <div class="item-title"><a href="https://thenextweb.com/news/ico-ai-developers-data-protection-changes-ai-agents" target="_blank" rel="noopener">ICO secures data protection changes from ten AI developers</a></div>
         <p class="item-line">The ICO&#39;s report says Amazon, Anthropic, Apple, Cohere, DeepSeek, Google, Meta, Microsoft, OpenAI and Stability AI have made or committed to changes, and sets regulatory positions on special category data and whether models themselves can contain personal data. <span class="item-meta">The Next Web · 2026-10-08</span></p>
         
         <p class="item-sowhat">Where a team fine-tunes or grounds models on customer data, the regulator&#39;s stance on personal data inside models is now a documented input to retention and consent design.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.cloud.google.com/knowledge-catalog/docs/release-notes">Google data products can now package Looker assets</a></div>
+        <div class="item-title"><a href="https://docs.cloud.google.com/knowledge-catalog/docs/release-notes" target="_blank" rel="noopener">Google data products can now package Looker assets</a></div>
         <p class="item-line">Knowledge Catalog data products now support Looker assets in general availability, so reports and explores can be packaged, governed and shared alongside tables with group mirroring and IAM access controls. <span class="item-meta">Knowledge Catalog release notes · 2026-10-05</span></p>
         
         <p class="item-sowhat">Shipping the dashboard and the data under one owned, access-controlled product gives a platform PM a way to extend product treatment to the BI layer without a second governance model.</p>
@@ -88,7 +90,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">blog · Data Mesh Learning</div>
-      <div class="learn-title"><a href="https://medium.com/data-mesh-learning/data-product-vs-data-contract-whats-the-difference-d39e82cf8ed3">Data Product vs. Data Contract: What&#39;s the Difference?</a></div>
+      <div class="learn-title"><a href="https://medium.com/data-mesh-learning/data-product-vs-data-contract-whats-the-difference-d39e82cf8ed3" target="_blank" rel="noopener">Data Product vs. Data Contract: What&#39;s the Difference?</a></div>
       <p class="learn-eli5">A data product is the thing people actually use: a dataset packaged with an owner, a purpose and a way to reach it. A data contract is the written promise about that thing: what columns it has, how fresh it will be, how good it is, and how changes get announced. A product can offer several ways in, called output ports, and each one should carry its own promise. Mixing the two up is how teams end up with a pile of agreements and nothing anyone owns.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> It gives a platform PM the vocabulary to decide which datasets earn a product owner and which only need a contract on their output, which sizes the stewardship work on a roadmap.</p>
     </div>

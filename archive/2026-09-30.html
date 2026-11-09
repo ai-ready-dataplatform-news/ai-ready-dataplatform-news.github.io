@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.databricks.com/blog/genie-one-mcp-now-generally-available">Databricks Genie One MCP reaches general availability</a></div>
+        <div class="item-title"><a href="https://www.databricks.com/blog/genie-one-mcp-now-generally-available" target="_blank" rel="noopener">Databricks Genie One MCP reaches general availability</a></div>
         <p class="item-line">The Genie One MCP server is now generally available as system.ai.genie_one_mcp in Unity Gateway, letting Claude, ChatGPT, Cursor or custom agents query Genie with Unity Catalog permissions enforced on every request; the Beta endpoint is sunset on October 31, 2026. <span class="item-meta">Databricks Blog · 2026-09-22</span></p>
         
         <p class="item-sowhat">A platform PM deciding whether agent access to a governed gold layer runs through the platform&#39;s own gateway now has a supported route, and a hard October 31 migration date for any Beta pilots.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.cloud.google.com/release-notes">BigQuery continuous queries can now write to Iceberg tables</a></div>
+        <div class="item-title"><a href="https://docs.cloud.google.com/release-notes" target="_blank" rel="noopener">BigQuery continuous queries can now write to Iceberg tables</a></div>
         <p class="item-line">BigQuery continuous queries can write their output rows into Apache Iceberg managed tables with a plain INSERT statement, so streaming results land directly in an open-format lakehouse; the destination table must already exist. <span class="item-meta">Google Cloud release notes · 2026-09-28</span></p>
         
         <p class="item-sowhat">Gives a platform PM weighing open table formats a streaming path into Iceberg that needs no separate pipeline, which changes the build-versus-buy line for real-time ingestion.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/new-features">Snowflake lets Iceberg tables change partitioning without rewrites</a></div>
+        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/new-features" target="_blank" rel="noopener">Snowflake lets Iceberg tables change partitioning without rewrites</a></div>
         <p class="item-line">Partition evolution reached general availability on September 18 for Snowflake-managed Iceberg tables, allowing partition fields to be added, dropped or replaced after creation without rewriting existing data. <span class="item-meta">Snowflake Documentation · 2026-09-18</span></p>
         
         <p class="item-sowhat">Removes a rewrite cost from the case against partitioning early, which matters to any platform team costing a table-layout decision before the query patterns are known.</p>
@@ -83,7 +85,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.helpnetsecurity.com/2026/09/28/ai-agent-security-governance-aws-report/">AWS study: AI approval processes are built for six-month programmes</a></div>
+        <div class="item-title"><a href="https://www.helpnetsecurity.com/2026/09/28/ai-agent-security-governance-aws-report/" target="_blank" rel="noopener">AWS study: AI approval processes are built for six-month programmes</a></div>
         <p class="item-line">AWS&#39;s Reimagine 2026, drawn from interviews with 154 executives at 128 organisations, finds review processes designed for six-month IT programmes are slowing days-long AI work, and cites a survey where 24% have a documented responsible-AI approach and 10% a data governance strategy. <span class="item-meta">Help Net Security · 2026-09-28</span></p>
         
         <p class="item-sowhat">Supplies numbers for the argument that governance has to be built into the platform path itself, rather than added as an approval queue in front of it.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://releases.fru.dev/releases/snowflake-cortex-2026-09-21-cortex-ai-function-evaluation-for-measuring-quality-public-preview">Snowflake previews evaluation for AI function output quality</a></div>
+        <div class="item-title"><a href="https://releases.fru.dev/releases/snowflake-cortex-2026-09-21-cortex-ai-function-evaluation-for-measuring-quality-public-preview" target="_blank" rel="noopener">Snowflake previews evaluation for AI function output quality</a></div>
         <p class="item-line">Cortex AI Function Evaluation entered Public Preview on September 21, measuring output quality, cost and token usage of AI function calls against labeled datasets, in SQL or through Cortex AI Function Studio. <span class="item-meta">Snowflake release notes (via fru.dev) · 2026-09-21</span></p>
         
         <p class="item-sowhat">Puts a repeatable baseline in the platform for the question of whether cleaner data improved a model&#39;s output, which is the feedback loop most readiness roadmaps lack.</p>
@@ -106,7 +108,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-09-14-ai-summarize-multimodal-preview">Snowflake AI_SUMMARIZE previews summarising documents and images</a></div>
+        <div class="item-title"><a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-09-14-ai-summarize-multimodal-preview" target="_blank" rel="noopener">Snowflake AI_SUMMARIZE previews summarising documents and images</a></div>
         <p class="item-line">Multimodal AI_SUMMARIZE entered Public Preview on September 14, taking text or a FILE reference to an image or document and returning a summary from one SQL function, with no custom chunking, parsing or model selection. <span class="item-meta">Snowflake Documentation · 2026-09-14</span></p>
         
         <p class="item-sowhat">Treats documents and images as columns in the platform rather than a side pipeline, which shifts the readiness work to governing the files behind those references.</p>
@@ -115,7 +117,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-redshift-supports-apache-iceberg-v3/">Redshift adds Iceberg v3 with row lineage and deletion vectors</a></div>
+        <div class="item-title"><a href="https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-redshift-supports-apache-iceberg-v3/" target="_blank" rel="noopener">Redshift adds Iceberg v3 with row lineage and deletion vectors</a></div>
         <p class="item-line">Amazon Redshift can read and write Apache Iceberg v3 tables, adding default column values, row lineage pseudo-columns for incremental and CDC pipelines, and deletion vectors that replace v2 delete files for compliance-driven record removal. <span class="item-meta">AWS What&#39;s New · 2026-08-31</span></p>
         
         <p class="item-sowhat">Row-level lineage in the table format itself gives a platform team a portable building block for incremental pipelines and deletion obligations, independent of any one catalog.</p>
@@ -124,7 +126,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.publicissapient.com/company/news/ai-adoption-enterprise-readiness-report-2026">Publicis Sapient: 73% use AI regularly, 10% say it is core</a></div>
+        <div class="item-title"><a href="https://www.publicissapient.com/company/news/ai-adoption-enterprise-readiness-report-2026" target="_blank" rel="noopener">Publicis Sapient: 73% use AI regularly, 10% say it is core</a></div>
         <p class="item-line">A survey of 1,550 AI decision-makers fielded between April 29 and May 14 finds 73% say AI is used regularly or across most processes, only 10% say it is core to how the business operates, and 42% say the organisation is not set up to capture its value. <span class="item-meta">Publicis Sapient · 2026-06-17</span></p>
         
         <p class="item-sowhat">Adds a large-sample reference point that adoption is not the same as readiness, useful when arguing what a platform in its foundation phase should be measured on.</p>
@@ -133,7 +135,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">blog · dbt Developer Blog</div>
-      <div class="learn-title"><a href="https://docs.getdbt.com/blog/semantic-layer-vs-text-to-sql-2026">Semantic Layer vs. Text-to-SQL: 2026 Benchmark Update</a></div>
+      <div class="learn-title"><a href="https://docs.getdbt.com/blog/semantic-layer-vs-text-to-sql-2026" target="_blank" rel="noopener">Semantic Layer vs. Text-to-SQL: 2026 Benchmark Update</a></div>
       <p class="learn-eli5">When someone asks a data question in plain English, an AI can write the database query itself, which is called text-to-SQL, or it can ask a rulebook of agreed metric definitions to build the query, which is what a semantic layer is. Left to guess from raw tables, the AI gets an insurance-style test right about 64.5% of the time, up from 32.7% in 2023. Given the rulebook, the same models score between 98% and 100% on the questions it covers. The bigger difference is how failure looks: without the rulebook a wrong answer looks plausible, and with it a wrong request comes back as an error.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> Frames the decision of whether conversational access to a governed gold layer should route through modelled metrics or raw tables, with an error-not-wrong-answer failure mode as the deciding argument for anything an auditor might read.</p>
     </div>

@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.gethynellis.com/2026/09/microsoft-data-ai-news-7-september-2026/">Microsoft to retire Fabric&#39;s embedded ODBC drivers</a></div>
+        <div class="item-title"><a href="https://www.gethynellis.com/2026/09/microsoft-data-ai-news-7-september-2026/" target="_blank" rel="noopener">Microsoft to retire Fabric&#39;s embedded ODBC drivers</a></div>
         <p class="item-line">Microsoft will start pulling Fabric&#39;s embedded ODBC drivers for Databricks, Snowflake, BigQuery, Dremio, Impala and Spark connectors from late Q3/Q4 2026, moving connections onto Arrow Database Connectivity instead. <span class="item-meta">Gethyn Ellis · 2026-09-07</span></p>
         
         <p class="item-sowhat">Any Fabric pipeline that leans on the built-in Databricks, Snowflake or BigQuery connector needs an ADBC migration plan before the ODBC path is pulled — worth raising with integration owners now rather than at cutover.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.beri.net/article/valsoft-square-9-acquisition-perpetual-hold-idp-model-refresh-roadmap">Valsoft&#39;s TAG buys document-AI vendor Square 9</a></div>
+        <div class="item-title"><a href="https://www.beri.net/article/valsoft-square-9-acquisition-perpetual-hold-idp-model-refresh-roadmap" target="_blank" rel="noopener">Valsoft&#39;s TAG buys document-AI vendor Square 9</a></div>
         <p class="item-line">Valsoft&#39;s TAG Software Group acquired intelligent-document-processing vendor Square 9 Softworks, whose software reads invoices, purchase orders and contracts for more than 1,000 organizations across healthcare, government and manufacturing. <span class="item-meta">THE D*AI*LY BRIEF · 2026-09-08</span></p>
         
         <p class="item-sowhat">Another buy-and-hold consolidation of an unstructured-data ingestion vendor — worth checking how sticky the document-AI layer feeding your platform actually is before a roadmap leans on it.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.helpnetsecurity.com/2026/09/03/sans-aws-agentic-ai-security/">SANS and AWS: a system prompt isn&#39;t a security control</a></div>
+        <div class="item-title"><a href="https://www.helpnetsecurity.com/2026/09/03/sans-aws-agentic-ai-security/" target="_blank" rel="noopener">SANS and AWS: a system prompt isn&#39;t a security control</a></div>
         <p class="item-line">New SANS and AWS guidance says prompt instructions can be bypassed, ignored or overridden, and recommends enforcing authorization at the data retrieval layer instead, propagating user context through the agent to downstream services. <span class="item-meta">Help Net Security · 2026-09-03</span></p>
         
         <p class="item-sowhat">If agent access to governed data still leans on prompt wording anywhere in the stack, that&#39;s the exact gap this guidance calls out — worth an audit before an incident forces one.</p>
@@ -83,7 +85,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.dataengineeringweekly.com/p/data-engineering-weekly-286">Instacart lets AI agents run its ML experiments</a></div>
+        <div class="item-title"><a href="https://www.dataengineeringweekly.com/p/data-engineering-weekly-286" target="_blank" rel="noopener">Instacart lets AI agents run its ML experiments</a></div>
         <p class="item-line">Instacart has integrated AI agents into its Griffin ML platform to autonomously generate, code and evaluate machine learning hypotheses under human supervision. <span class="item-meta">Data Engineering Weekly · 2026-09-07</span></p>
         
         <p class="item-sowhat">A concrete production example of agentic AI operating inside an ML platform rather than beside it — useful evidence for the build-vs-buy case on agentic tooling in your own stack.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.omni.co/demos">Omni ships Git overhaul and Fireworks AI support</a></div>
+        <div class="item-title"><a href="https://docs.omni.co/demos" target="_blank" rel="noopener">Omni ships Git overhaul and Fireworks AI support</a></div>
         <p class="item-line">Omni&#39;s latest release adds a rebuilt Git workflow, a personalized sidebar, Fireworks AI model support, stable table names for input columns, and more app-building tools including APIs and snapshots. <span class="item-meta">Omni · 2026-09-04</span></p>
         
         <p class="item-sowhat">A semantic-layer vendor investing in Git-native workflow and model choice at once is a signal worth tracking for any team weighing Omni against a homegrown metrics layer.</p>
@@ -106,7 +108,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">case study · AtScale</div>
-      <div class="learn-title"><a href="https://www.atscale.com/resource/semantic-layer-modernization-home-improvement-case-study/">Case study: modernizing analytics with a semantic layer</a></div>
+      <div class="learn-title"><a href="https://www.atscale.com/resource/semantic-layer-modernization-home-improvement-case-study/" target="_blank" rel="noopener">Case study: modernizing analytics with a semantic layer</a></div>
       <p class="learn-eli5">A semantic layer is a single place where a business defines what &#39;revenue&#39; or &#39;active customer&#39; actually means, once, so every dashboard, spreadsheet, and now every AI agent that asks for that number gets the same governed answer instead of each tool computing its own slightly different version. This case study follows a large home-improvement retailer that put one in front of its warehouse: hundreds of people who used to build their own Excel pulls now hit the same governed numbers, IT support load dropped, and the company is now layering natural-language question-asking on top of that same foundation.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> The retailer&#39;s actual win was fewer competing definitions and less manual prep, not a flashy AI feature — a reminder that the unglamorous plumbing work is what determines whether an agent layer built on top ever gives a trustworthy answer.</p>
     </div>

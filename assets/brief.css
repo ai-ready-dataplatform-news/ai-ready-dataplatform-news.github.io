@@ -118,6 +118,14 @@
   .learn-title a:hover { border-bottom-color: var(--clay); }
   .learn-title a:focus-visible { outline: 2px solid var(--clay); outline-offset: 3px;
     border-radius: 2px; }
+  /* Article links open in a new tab, and say so. The arrow is drawn here
+     rather than written into the link, so the link's text stays the title.
+     The second content line gives screen readers words instead of an arrow;
+     a browser that cannot read it keeps the plain arrow from the first. */
+  .item-title a::after, .learn-title a::after { content: "\2197";
+    content: "\2197" / " (opens in a new tab)";
+    font-size: .8em; margin-left: .2em; color: var(--ink-grey); font-weight: 400;
+    display: inline-block; text-decoration: none; }
   .learn-eli5 { margin: 12px 0 0; color: var(--ink); max-width: 44em; }
   .learn-sowhat { margin: 12px 0 0; color: var(--ink-grey); max-width: 44em; }
   .learn-lede { color: var(--ink); font-weight: 600; }

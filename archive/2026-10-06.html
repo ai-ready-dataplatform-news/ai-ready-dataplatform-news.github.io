@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://montecarlo.ai/blog-updates-to-conversations-in-monte-carlo">Monte Carlo makes the conversation the unit of agent trust</a></div>
+        <div class="item-title"><a href="https://montecarlo.ai/blog-updates-to-conversations-in-monte-carlo" target="_blank" rel="noopener">Monte Carlo makes the conversation the unit of agent trust</a></div>
         <p class="item-line">Monte Carlo&#39;s update adds conversation counts, end-user identity on platform agents and monitors scoped to conversation clusters, with end-user names now shown in Snowflake Cortex and Databricks Genie traces. <span class="item-meta">Monte Carlo · 2026-09-30</span></p>
         
         <p class="item-sowhat">A platform PM can ask for per-user, per-conversation quality signals on agent workloads as a readiness requirement rather than only table-level checks.</p>
@@ -70,7 +72,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://datalakehousehub.com/blog/multi-tenant-data-agents-lakehouse">Serving many customers from one lakehouse without data leakage</a></div>
+        <div class="item-title"><a href="https://datalakehousehub.com/blog/multi-tenant-data-agents-lakehouse" target="_blank" rel="noopener">Serving many customers from one lakehouse without data leakage</a></div>
         <p class="item-line">A practitioner article lays out isolation models for multi-tenant data agents and maps tenants onto Apache Polaris catalogs, principals and roles, in a pattern it says works for any engine reading Iceberg through a REST catalog. <span class="item-meta">Data Lakehouse Hub · 2026-10-05</span></p>
         
         <p class="item-sowhat">A platform PM offering agents to several customers or business units can weigh catalog-per-tenant against shared catalogs before committing an isolation model.</p>
@@ -79,7 +81,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">blog · Monte Carlo</div>
-      <div class="learn-title"><a href="https://montecarlo.ai/blog-agent-trust-in-2-weeks-part-2">Agent Trust In 2 Weeks, Part 2: What To Monitor</a></div>
+      <div class="learn-title"><a href="https://montecarlo.ai/blog-agent-trust-in-2-weeks-part-2" target="_blank" rel="noopener">Agent Trust In 2 Weeks, Part 2: What To Monitor</a></div>
       <p class="learn-eli5">A table can look perfect and still feed an agent that gives wrong answers. So alongside checking the data, you also watch what the agent was asked and what it replied. Think of it as a restaurant that inspects the ingredients and also tastes the dishes before they leave the kitchen. This post is a practitioner&#39;s guide to choosing which of those signals are worth watching first.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> It helps a platform PM decide which agent-level quality signals to put beside table-level data checks on the roadmap.</p>
     </div>

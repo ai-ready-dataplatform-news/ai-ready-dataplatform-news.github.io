@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.cloud.google.com/bigquery/docs/security-center-overview">BigQuery Security center reaches general availability</a></div>
+        <div class="item-title"><a href="https://docs.cloud.google.com/bigquery/docs/security-center-overview" target="_blank" rel="noopener">BigQuery Security center reaches general availability</a></div>
         <p class="item-line">Google made the BigQuery Security center generally available on 30 September, a console view for analysing a data security profile and managing row- and column-level security policies, governance tags and policy tags. <span class="item-meta">Google Cloud Documentation · 2026-09-30</span></p>
         
         <p class="item-sowhat">Puts access-policy authoring and a security posture view in one place, so a central governance team and domain owners can be weighed against a console that supports either.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/fabric-september-2026-feature-summary/5325825">Microsoft Fabric adds condition-based policies in preview</a></div>
+        <div class="item-title"><a href="https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/fabric-september-2026-feature-summary/5325825" target="_blank" rel="noopener">Microsoft Fabric adds condition-based policies in preview</a></div>
         <p class="item-line">The September Fabric feature summary introduces Policies (Preview), stored in Policy Set items, that let admins control who can create item types, change workspace settings or share data externally, scoped by workspace, security group and sensitivity label. <span class="item-meta">Microsoft Fabric Community Blog · 2026-10-01</span></p>
         
         <p class="item-sowhat">Shows central admins narrowing self-service by condition rather than switching features off tenant-wide, a pattern a platform PM can borrow when deciding where the governance bar sits on new datasets.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.finout.io/blog/snowflake-cortex-pricing">Snowflake prices Cortex REST API below the SQL function</a></div>
+        <div class="item-title"><a href="https://www.finout.io/blog/snowflake-cortex-pricing" target="_blank" rel="noopener">Snowflake prices Cortex REST API below the SQL function</a></div>
         <p class="item-line">Finout reports that Snowflake&#39;s Service Consumption Table, effective 30 September 2026, prices the Cortex REST API about 17% lower per token than the AI_COMPLETE SQL function for the same model. <span class="item-meta">Finout · 2026-09-30</span></p>
         
         <p class="item-sowhat">Makes the call route a cost variable, so a platform PM building cost per governed dataset has to attribute AI spend by access path as well as by model.</p>
@@ -88,7 +90,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.databricks.com/aws/en/release-notes/product/2026/september">Unity Catalog ABAC policies now attach at metastore level</a></div>
+        <div class="item-title"><a href="https://docs.databricks.com/aws/en/release-notes/product/2026/september" target="_blank" rel="noopener">Unity Catalog ABAC policies now attach at metastore level</a></div>
         <p class="item-line">From 17 September a single ABAC policy, whether row filter, column mask, GRANT or DENY, can sit at the metastore level and apply to every catalog including ones created later (Beta). <span class="item-meta">Databricks Release Notes · 2026-09-17</span></p>
         
         <p class="item-sowhat">A governed gold layer can inherit one organisation-wide masking rule instead of copying it per catalog, which moves the question to who owns the metastore-level rule.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://cloud.google.com/bigquery/docs/release-notes">BigQuery pipelines gain metadata enrichment and quality scorecards</a></div>
+        <div class="item-title"><a href="https://cloud.google.com/bigquery/docs/release-notes" target="_blank" rel="noopener">BigQuery pipelines gain metadata enrichment and quality scorecards</a></div>
         <p class="item-line">Generally available on 1 October: BigQuery pipelines support automated metadata enrichment and Knowledge Catalog data quality scorecard integration, and the Data Engineering Agent can generate semantic metadata for pipeline assets. <span class="item-meta">BigQuery Release Notes · 2026-10-01</span></p>
         
         <p class="item-sowhat">Metadata and quality scores produced inside the pipeline rather than after it make governed a build-time property, which bears on both time to onboard and governed coverage.</p>
@@ -106,7 +108,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.fca.org.uk/publications/corporate-documents/mills-review">FCA&#39;s Mills Review keeps existing rules, adds no AI rulebook</a></div>
+        <div class="item-title"><a href="https://www.fca.org.uk/publications/corporate-documents/mills-review" target="_blank" rel="noopener">FCA&#39;s Mills Review keeps existing rules, adds no AI rulebook</a></div>
         <p class="item-line">The 147-page review published on 6 July gives the FCA Board seven recommendations and concludes that the Consumer Duty, Senior Managers Regime and operational resilience requirements remain sound for AI. <span class="item-meta">Financial Conduct Authority · 2026-07-06</span></p>
         
         <p class="item-sowhat">Accountability for AI outputs lands on existing named-owner regimes, so a platform serving regulated firms is better served by lineage and ownership evidence than by waiting for an AI-specific standard.</p>
@@ -115,7 +117,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">podcast · Experiencing Data with Brian T. O&#39;Neill · 2026-04-15</div>
-      <div class="learn-title"><a href="https://designingforanalytics.com/resources/episodes/192-product-usage-does-not-value-why-adoption-metrics-are-misleading-you/">Product Usage Does Not = Value: Why &#39;Adoption&#39; Metrics Are Misleading You</a></div>
+      <div class="learn-title"><a href="https://designingforanalytics.com/resources/episodes/192-product-usage-does-not-value-why-adoption-metrics-are-misleading-you/" target="_blank" rel="noopener">Product Usage Does Not = Value: Why &#39;Adoption&#39; Metrics Are Misleading You</a></div>
       <p class="learn-eli5">Counting how often people open a data product only tells you the number is not zero. A dashboard opened daily out of habit and one opened daily because it changes a decision look identical on a usage chart. The episode argues for asking users what they were trying to get done and whether the product got them there, and for using that as the baseline instead of logins.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> Tests the argument that adoption is the wrong headline metric for a platform in its foundation phase: swap usage counts on the scorecard for a measured user outcome, such as time to a trusted answer.</p>
     </div>

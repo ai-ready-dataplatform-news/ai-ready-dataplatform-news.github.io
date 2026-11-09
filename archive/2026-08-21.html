@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.axios.com/2026/08/17/a2a-agentic-ai-foundation-open-ai-standards">Google&#39;s A2A protocol joins the Agentic AI Foundation</a></div>
+        <div class="item-title"><a href="https://www.axios.com/2026/08/17/a2a-agentic-ai-foundation-open-ai-standards" target="_blank" rel="noopener">Google&#39;s A2A protocol joins the Agentic AI Foundation</a></div>
         <p class="item-line">Google is moving its Agent2Agent protocol from the Linux Foundation&#39;s broader portfolio into the Agentic AI Foundation — the same home as MCP — whose membership has grown past 250 organizations including Google, Microsoft, Anthropic and OpenAI. <span class="item-meta">Axios · August 17, 2026</span></p>
         
         <p class="item-sowhat">Tool-connection and agent-to-agent standards are consolidating under one foundation, which lowers the risk of building a platform&#39;s agent integrations on the wrong protocol.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.forrester.com/blogs/beyond-the-saaspocalypse-introducing-the-forrester-ai-disruption-model/">Forrester launches a model for where AI disrupts markets</a></div>
+        <div class="item-title"><a href="https://www.forrester.com/blogs/beyond-the-saaspocalypse-introducing-the-forrester-ai-disruption-model/" target="_blank" rel="noopener">Forrester launches a model for where AI disrupts markets</a></div>
         <p class="item-line">Forrester&#39;s new AI Disruption Model scores more than 200 markets across 17 tech and service categories on how AI accelerates, reshapes or disrupts them, finding that products which enable, secure and govern AI are set for the strongest growth. <span class="item-meta">Forrester · August 19, 2026</span></p>
         
         <p class="item-sowhat">A ready-made lens for the buy-vs-build and vendor-risk conversation — where a platform lands on this model says whether to invest in it or hedge against it being reshaped from under you.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.databricks.com/blog/databricks-document-intelligence-pushing-frontier-complex-document-extraction">Databricks claims record accuracy on messy document extraction</a></div>
+        <div class="item-title"><a href="https://www.databricks.com/blog/databricks-document-intelligence-pushing-frontier-complex-document-extraction" target="_blank" rel="noopener">Databricks claims record accuracy on messy document extraction</a></div>
         <p class="item-line">Databricks&#39; new Precision Mode for ai_extract pairs finetuned models with an agentic, parallel-extraction harness that hit 94.7% accuracy across roughly 9,000 complex documents, beating a GPT-5.6-based chunk-and-merge approach by seven points. <span class="item-meta">Databricks · August 18, 2026</span></p>
         
         <p class="item-sowhat">Unstructured documents are one of the widest gaps between analytical-ready and AI-ready data; a real accuracy jump here changes the buy-vs-build math for document pipelines feeding agents.</p>
@@ -83,7 +85,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.databricks.com/blog/how-databricks-feature-store-serves-features-sub-second-freshness">Databricks cuts ML feature latency to milliseconds</a></div>
+        <div class="item-title"><a href="https://www.databricks.com/blog/how-databricks-feature-store-serves-features-sub-second-freshness" target="_blank" rel="noopener">Databricks cuts ML feature latency to milliseconds</a></div>
         <p class="item-line">Databricks Feature Store now streams features from Kafka into online serving at 200ms p99 latency, using Spark&#39;s Real-Time Mode and Lakebase to collapse feature lag from minutes to milliseconds for cases like fraud detection. <span class="item-meta">Databricks · August 17, 2026</span></p>
         
         <p class="item-sowhat">Freshness has been the weak pillar of most data-quality stacks; closing it to milliseconds removes a real excuse for keeping high-stakes model decisions on stale data.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">blog · Data Science Collective (Medium)</div>
-      <div class="learn-title"><a href="https://medium.com/data-science-collective/why-most-ai-ready-data-platforms-are-complete-fiction-in-2026-234f68edfb7d">Why Most &#39;AI-Ready&#39; Data Platforms Are Complete Fiction</a></div>
+      <div class="learn-title"><a href="https://medium.com/data-science-collective/why-most-ai-ready-data-platforms-are-complete-fiction-in-2026-234f68edfb7d" target="_blank" rel="noopener">Why Most &#39;AI-Ready&#39; Data Platforms Are Complete Fiction</a></div>
       <p class="learn-eli5">A vendor demo shows a clean four-minute pipeline turning raw data into a perfect AI answer. Real companies don&#39;t have that: eleven years of records spread across four old systems, three databases from acquisitions nobody finished merging, and a spreadsheet one retired employee kept by hand. &#39;AI-ready&#39; doesn&#39;t mean a platform with an AI feature bolted on — it means the underlying data is findable, trustworthy and explained well enough that a model, which can&#39;t lean over and ask a colleague for context the way a person can, doesn&#39;t just confidently make something up.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> The gap the survey numbers describe — most respondents saying their data isn&#39;t clean or contextualized enough for AI — is the actual roadmap item: buying an AI feature doesn&#39;t fix the data behind it, so readiness work has to be budgeted and sequenced before the AI capability, not bolted alongside it as an afterthought.</p>
     </div>

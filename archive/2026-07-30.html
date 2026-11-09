@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://news.microsoft.com/source/2026/07/23/databricks-and-microsoft-expand-partnership-to-help-enterprises-bring-business-context-to-enterprise-ai/">Databricks and Microsoft extend partnership into the 2030s</a></div>
+        <div class="item-title"><a href="https://news.microsoft.com/source/2026/07/23/databricks-and-microsoft-expand-partnership-to-help-enterprises-bring-business-context-to-enterprise-ai/" target="_blank" rel="noopener">Databricks and Microsoft extend partnership into the 2030s</a></div>
         <p class="item-line">Databricks and Microsoft expanded their decade-long partnership on July 23, with Databricks moving its own core operations onto Microsoft&#39;s newer Azure Cobalt 200 infrastructure and deepening Genie integration across Microsoft&#39;s products. <span class="item-meta">Microsoft Source · 2026-07-23</span></p>
         
         <p class="item-sowhat">Signals Azure as an increasingly default runtime for Databricks workloads — worth weighing against any multi-cloud or cloud-neutrality commitments already on the platform roadmap.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.hpcwire.com/bigdatawire/this-just-in/latest-lakefs-release-delivers-ai-governance-by-design-as-the-eu-ai-act-takes-effect/">lakeFS ships AI governance features ahead of AI Act deadline</a></div>
+        <div class="item-title"><a href="https://www.hpcwire.com/bigdatawire/this-just-in/latest-lakefs-release-delivers-ai-governance-by-design-as-the-eu-ai-act-takes-effect/" target="_blank" rel="noopener">lakeFS ships AI governance features ahead of AI Act deadline</a></div>
         <p class="item-line">lakeFS&#39;s Summer 2026 release, out July 29, adds automated governance and control over the unstructured and structured data feeding AI models and agents, timed to the EU AI Act&#39;s August 2 transparency obligations. <span class="item-meta">BigDATAwire · 2026-07-29</span></p>
         
         <p class="item-sowhat">A concrete data-versioning option for the governance gap the AI Act creates this week — worth evaluating against building equivalent lineage controls in-house.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.infoq.com/news/2026/07/mcp-ema-enterprise-auth/">MCP&#39;s enterprise authorization extension goes stable</a></div>
+        <div class="item-title"><a href="https://www.infoq.com/news/2026/07/mcp-ema-enterprise-auth/" target="_blank" rel="noopener">MCP&#39;s enterprise authorization extension goes stable</a></div>
         <p class="item-line">The Model Context Protocol&#39;s July 28 specification update promotes its Enterprise-Managed Authorization extension to stable, giving organizations a standard way to gate MCP server access through their identity provider, already adopted by Anthropic, Microsoft and Okta. <span class="item-meta">InfoQ · 2026-07-28</span></p>
         
         <p class="item-sowhat">Removes a real blocker to putting MCP servers in front of production data — worth checking whether current identity-provider integration plans already account for this extension.</p>
@@ -83,7 +85,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.forbes.com/sites/stevemcdowell/2026/07/24/enterprise-storage-is-rebuilding-itself-around-ai-ready-data/">Enterprise storage rebuilds itself around AI-ready data</a></div>
+        <div class="item-title"><a href="https://www.forbes.com/sites/stevemcdowell/2026/07/24/enterprise-storage-is-rebuilding-itself-around-ai-ready-data/" target="_blank" rel="noopener">Enterprise storage rebuilds itself around AI-ready data</a></div>
         <p class="item-line">Fragmented, ungoverned data is stalling AI initiatives even where GPU spend is already in place, and storage spending rose 22.7% in Q1 2026 as companies prioritize infrastructure that makes data usable for AI. <span class="item-meta">Forbes · 2026-07-24</span></p>
         
         <p class="item-sowhat">Reframes the next platform investment case: the bottleneck to fund isn&#39;t more compute, it&#39;s the data-readiness layer underneath it.</p>
@@ -92,7 +94,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">05</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://dev.to/alexmercedcoder/apache-data-lakehouse-weekly-july-21-to-july-29-2026-p73">Polaris pulls its 1.7.0 release over a licensing gap</a></div>
+        <div class="item-title"><a href="https://dev.to/alexmercedcoder/apache-data-lakehouse-weekly-july-21-to-july-29-2026-p73" target="_blank" rel="noopener">Polaris pulls its 1.7.0 release over a licensing gap</a></div>
         <p class="item-line">Apache Polaris found a licensing gap across 44 staged jars while trying to ship version 1.7.0 and pulled the release candidate, part of a broader push this week across Iceberg, Parquet and Arrow toward stricter, written spec guarantees. <span class="item-meta">Apache Data Lakehouse Weekly · 2026-07-29</span></p>
         
         <p class="item-sowhat">A pulled release over licensing hygiene is a reason to audit dependency provenance before pinning a Polaris version into production catalog infrastructure.</p>

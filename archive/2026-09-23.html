@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.techtarget.com/searchbusinessanalytics/news/366646124/Domo-acquired-for-400M-sells-to-Progress-Software">Progress Software completes $400M purchase of Domo</a></div>
+        <div class="item-title"><a href="https://www.techtarget.com/searchbusinessanalytics/news/366646124/Domo-acquired-for-400M-sells-to-Progress-Software" target="_blank" rel="noopener">Progress Software completes $400M purchase of Domo</a></div>
         <p class="item-line">Progress Software finalized its $400 million purchase of Domo&#39;s AI and data platform business on September 22, 2026. <span class="item-meta">TechTarget</span></p>
         
         <p class="item-sowhat">Another mid-market BI and data platform vendor exits as a standalone company — a fresh data point for vendor-risk and consolidation clauses in any multi-year platform contract.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.globenewswire.com/news-release/2026/09/15/3362421/0/en/egnyte-launches-context-layer-to-power-more-accurate-ai-agents-across-business-workflows.html">Egnyte launches a context layer for AI agents</a></div>
+        <div class="item-title"><a href="https://www.globenewswire.com/news-release/2026/09/15/3362421/0/en/egnyte-launches-context-layer-to-power-more-accurate-ai-agents-across-business-workflows.html" target="_blank" rel="noopener">Egnyte launches a context layer for AI agents</a></div>
         <p class="item-line">Egnyte introduced its Context Layer on September 15, 2026, mapping relationships across content, people, projects and systems so agents get business context without redundant processing. <span class="item-meta">GlobeNewswire (Egnyte)</span></p>
         
         <p class="item-sowhat">Every major vendor is now shipping some version of a context layer for agents — the differentiator for a buyer isn&#39;t the concept but whether it plugs into a catalog and lineage a platform already governs, or becomes one more disconnected metadata store to reconcile.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.gartner.com/en/newsroom/press-releases/2026-09-10-gartner-survey-finds-93-percent-of-audit-functions-use-ai-but-60-percent-lack">Gartner: most audit teams use AI without a strategy</a></div>
+        <div class="item-title"><a href="https://www.gartner.com/en/newsroom/press-releases/2026-09-10-gartner-survey-finds-93-percent-of-audit-functions-use-ai-but-60-percent-lack" target="_blank" rel="noopener">Gartner: most audit teams use AI without a strategy</a></div>
         <p class="item-line">Gartner found 93% of audit functions now use AI, but 60% still lack a formal strategy governing that use, as of September 10, 2026. <span class="item-meta">Gartner</span></p>
         
         <p class="item-sowhat">The same ungoverned-adoption pattern shows up in audit as in data platforms: teams reach for AI before the operating model or accountability is decided — a caution against judging any function, including a platform still in its foundation phase, on usage alone.</p>
@@ -83,7 +85,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://fintech.global/2026/09/17/patra-launches-ai-powered-managed-services-for-insurers/">Patra launches AI-run managed services for insurers</a></div>
+        <div class="item-title"><a href="https://fintech.global/2026/09/17/patra-launches-ai-powered-managed-services-for-insurers/" target="_blank" rel="noopener">Patra launches AI-run managed services for insurers</a></div>
         <p class="item-line">Patra introduced agentic AI-run managed services on September 17, 2026, where a single client trigger runs an entire insurance servicing workflow with built-in quality checks before human review. <span class="item-meta">FinTech Global</span></p>
         
         <p class="item-sowhat">An outsourced agentic workflow like this depends entirely on the data behind it being governed and current — a preview of the bar a data platform will be judged against once operations, not just analytics, run on top of it.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://analyticsindiamag.com/ai-news/databricks-rolls-out-gpt-6-astra-to-all-3500-engineers">Databricks adds GPT-6 Astra to Unity Gateway</a></div>
+        <div class="item-title"><a href="https://analyticsindiamag.com/ai-news/databricks-rolls-out-gpt-6-astra-to-all-3500-engineers" target="_blank" rel="noopener">Databricks adds GPT-6 Astra to Unity Gateway</a></div>
         <p class="item-line">Databricks made OpenAI&#39;s GPT-6 Astra available through Unity Gateway as a day-zero release on September 3, 2026, routing every call through the same governance, audit trail and cost controls as its other models. <span class="item-meta">Analytics India Magazine</span></p>
         
         <p class="item-sowhat">Routing a frontier model through the same governance layer as everything else in Unity Catalog keeps model access inside the existing access-control and audit story — the alternative is another unmanaged integration point outside the platform&#39;s own governance.</p>
@@ -106,7 +108,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://openai.com/index/introducing-openai-privacy-filter/">OpenAI ships a model built to detect PII</a></div>
+        <div class="item-title"><a href="https://openai.com/index/introducing-openai-privacy-filter/" target="_blank" rel="noopener">OpenAI ships a model built to detect PII</a></div>
         <p class="item-line">OpenAI launched Privacy Filter on September 18, 2026, a small model built for context-aware detection of personal data in unstructured text at high throughput. <span class="item-meta">OpenAI</span></p>
         
         <p class="item-sowhat">A dedicated PII-detection model separate from the generation model is a candidate building block for the boundary between a governed gold layer and agentic consumption — worth evaluating against whatever masking and classification tooling the platform already runs.</p>
@@ -115,7 +117,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">podcast · Experiencing Data w/ Brian T. O&#39;Neill</div>
-      <div class="learn-title"><a href="https://brian2r.podbean.com/e/186-why-powerful-ai-products-feel-useless-to-buyers/">Why Powerful AI &amp; Analytics Products Feel Useless to Buyers</a></div>
+      <div class="learn-title"><a href="https://brian2r.podbean.com/e/186-why-powerful-ai-products-feel-useless-to-buyers/" target="_blank" rel="noopener">Why Powerful AI &amp; Analytics Products Feel Useless to Buyers</a></div>
       <p class="learn-eli5">Two different people decide whether a B2B analytics or AI product survives: the buyer, who signs the contract and needs to defend the purchase with low perceived risk, and the user, who just wants their daily work easier or safer. The episode&#39;s point is that model accuracy and clean analytics data have become table stakes — nearly every serious vendor now has them — so they no longer win a deal. What actually wins or loses one is whether the buyer can see, in plain terms, how the tool changes a decision they make, and whether the user knows what to do with an answer the moment they see it. A technically excellent product that never translates its outputs into that story reads as a black box, and buyers walk from black boxes.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> The same translation gap applies inside a platform team&#39;s own walls: a governed gold layer or a Genie connection is &#39;powerful&#39; by engineering measures, but the people deciding whether to keep funding it — product managers, analysts, sponsors — judge it by whether it visibly changed a decision, not by lineage completeness or query latency. It&#39;s a reason to report a foundation-phase platform on decisions unblocked rather than on adoption counts alone.</p>
     </div>

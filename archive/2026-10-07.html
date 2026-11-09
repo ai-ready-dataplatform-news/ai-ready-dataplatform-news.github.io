@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.lseg.com/en/media-centre/press-releases/2026/lseg-snowflake-collaboration-financial-data-ai-workflows">LSEG and Snowflake sign a five-year expanded partnership</a></div>
+        <div class="item-title"><a href="https://www.lseg.com/en/media-centre/press-releases/2026/lseg-snowflake-collaboration-financial-data-ai-workflows" target="_blank" rel="noopener">LSEG and Snowflake sign a five-year expanded partnership</a></div>
         <p class="item-line">LSEG is raising its Snowflake commitment under a five-year agreement covering its own migration programmes and customer-facing data services, while joint customers can combine licensed LSEG content with their own data inside a governed environment. <span class="item-meta">LSEG · 2026-09-30</span></p>
         
         <p class="item-sowhat">A financial-data vendor putting its distribution on a cloud data platform for five years is the build-versus-buy signal for any team choosing how licensed market data reaches its governed layer.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-in-barcelona-building-the-data-foundation-for-microsoft-copilot-and-agents/">Fabric previews a Data Engineering Agent for migrations</a></div>
+        <div class="item-title"><a href="https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-in-barcelona-building-the-data-foundation-for-microsoft-copilot-and-agents/" target="_blank" rel="noopener">Fabric previews a Data Engineering Agent for migrations</a></div>
         <p class="item-line">Announced at FabCon Europe, the agent plans and runs migrations, ETL and performance work as persistent tasks inside guardrails the engineer sets. <span class="item-meta">Microsoft Azure Blog · 2026-09-29</span></p>
         
         <p class="item-sowhat">Migration effort is the cost line behind most platform-switch cases, so an agent that executes inside defined guardrails changes the effort estimate in a buy-versus-stay decision.</p>
@@ -79,7 +81,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://kanerika.com/blogs/fabcon-europe-2026-announcements/">Fabric IQ business context now flows into Copilot</a></div>
+        <div class="item-title"><a href="https://kanerika.com/blogs/fabcon-europe-2026-announcements/" target="_blank" rel="noopener">Fabric IQ business context now flows into Copilot</a></div>
         <p class="item-line">Fabric IQ, the layer that holds business definitions and context, is generally available inside Microsoft Copilot, with IQ Sharing in OneLake in preview for passing governed data and context to partners. <span class="item-meta">Kanerika · 2026-09-29</span></p>
         
         <p class="item-sowhat">Shared business definitions served to an assistant is the semantic-layer bridge between BI-ready and AI-ready, and it raises the question of which definitions the roadmap must own first.</p>
@@ -88,7 +90,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">case study · Sphere Inc</div>
-      <div class="learn-title"><a href="https://www.sphereinc.com/guides/enterprise-rag-guide">Why enterprise RAG breaks: root causes from 23 engagements</a></div>
+      <div class="learn-title"><a href="https://www.sphereinc.com/guides/enterprise-rag-guide" target="_blank" rel="noopener">Why enterprise RAG breaks: root causes from 23 engagements</a></div>
       <p class="learn-eli5">A RAG system lets an AI look things up in your documents before it answers. Most failures are not about the AI at all. Documents get cut into pieces badly, so the answer is split across two pieces. The permission tags saying who may see a document are missing, so the system cannot tell what to hide. Nobody measures answer quality until users complain. Sphere&#39;s post-mortems across 23 engagements put chunking mismatch at 61%, missing permission metadata at 52% and no evaluation framework at 43%.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> The top causes are data-platform properties, not model properties, which makes ingest-time permission metadata and a standing evaluation set roadmap items for the governed layer rather than something each AI team patches alone.</p>
     </div>

@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.dremio.com/blog/state-of-the-open-lakehouse-september-2026/">Open Lakehouse Report: The Format War Is Over</a></div>
+        <div class="item-title"><a href="https://www.dremio.com/blog/state-of-the-open-lakehouse-september-2026/" target="_blank" rel="noopener">Open Lakehouse Report: The Format War Is Over</a></div>
         <p class="item-line">Dremio&#39;s September survey of the lakehouse ecosystem finds Iceberg locked in as the production standard while Polaris turns from catalog into control plane, and every core project spent 2026 building formal change-management processes — Iceberg&#39;s conformance repo, Arrow&#39;s security model, Parquet&#39;s versioning policy. <span class="item-meta">Dremio · 2026-09-02</span></p>
         
         <p class="item-sowhat">With the table-format fight settled, the live 2026 decision moves to catalog and governance choice — Polaris vs. Unity vs. Horizon — not which file format to standardize on.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://finopsweekly.com/news/ai-economics-provider-updates-2026-09-04/">Anthropic and Google Publish New Token Pricing Tiers</a></div>
+        <div class="item-title"><a href="https://finopsweekly.com/news/ai-economics-provider-updates-2026-09-04/" target="_blank" rel="noopener">Anthropic and Google Publish New Token Pricing Tiers</a></div>
         <p class="item-line">Claude Fable 5.1 launched with published pricing of $10 per million input tokens and $50 per million output tokens, and Gemini 3.8 Flash reached general availability across Gemini Enterprise&#39;s global, US and EU endpoints as a lower-cost routing tier. <span class="item-meta">FinOps Weekly · 2026-09-04</span></p>
         
         <p class="item-sowhat">Transparently priced, lower-cost model tiers give cost-aware routing of routine platform workloads a firmer basis than estimating from vendor blog posts — worth folding into the next FinOps review.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.theregister.com/off-prem/2026/09/07/thailand-pauses-all-datacenter-builds-and-approvals/5294688">Thailand Pauses 166 Data Center Projects</a></div>
+        <div class="item-title"><a href="https://www.theregister.com/off-prem/2026/09/07/thailand-pauses-all-datacenter-builds-and-approvals/5294688" target="_blank" rel="noopener">Thailand Pauses 166 Data Center Projects</a></div>
         <p class="item-line">Thailand&#39;s new data-centre policy board froze 49 projects under construction and 117 awaiting permits at its first meeting on September 4, giving four subcommittees a month to write nationwide rules on power, water and land use before approvals resume. <span class="item-meta">The Register · 2026-09-07</span></p>
         
         <p class="item-sowhat">Regional capacity plans built on Southeast Asian expansion now carry regulatory-pause risk on top of the usual power and water constraints — worth flagging before committing new APAC workloads to projects still in the pipeline.</p>
@@ -88,7 +90,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">blog · MIT CISR · 2026-05-01</div>
-      <div class="learn-title"><a href="https://cisr.mit.edu/publication/2026_0501_SemanticLayer_LefebvreWixomLegnerVandermeulenBeath">The Case for a Semantic Layer</a></div>
+      <div class="learn-title"><a href="https://cisr.mit.edu/publication/2026_0501_SemanticLayer_LefebvreWixomLegnerVandermeulenBeath" target="_blank" rel="noopener">The Case for a Semantic Layer</a></div>
       <p class="learn-eli5">A semantic layer is a shared dictionary that sits between raw data and everyone who uses it — a person building a dashboard, or an AI agent answering a question. It says &#39;this column means revenue, defined this way, in this currency&#39; once, instead of every tool and every person guessing for themselves. Without it, two people — or two AI agents — asking about &#39;active customers&#39; can get two different, equally confident answers, with no way to tell which one is right. MIT&#39;s researchers found that teams who build this dictionary well for human analysts usually end up with AI-ready data almost by accident, because the same clear definitions an analyst needs are exactly what stops an AI agent from picking the wrong table or the wrong calculation.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> If agent pilots keep stalling on &#39;the numbers don&#39;t match&#39;, the fix belongs on the semantic-layer backlog, not the model-selection one — treat metric definitions as a governed product with an owner, not a side effect of the BI rollout.</p>
     </div>

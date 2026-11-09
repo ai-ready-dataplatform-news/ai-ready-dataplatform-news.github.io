@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.lexisnexis.co.uk/legal/news/cma-updates-ai-agents-guidance-with-drcf-joint-statement">UK regulators say existing law already covers AI agents</a></div>
+        <div class="item-title"><a href="https://www.lexisnexis.co.uk/legal/news/cma-updates-ai-agents-guidance-with-drcf-joint-statement" target="_blank" rel="noopener">UK regulators say existing law already covers AI agents</a></div>
         <p class="item-line">The CMA, FCA, ICO and Ofcom, through the Digital Regulation Cooperation Forum, said in a joint statement on 30 October that competition, consumer, data protection, online safety and financial services rules already apply to AI agents, and that an agent&#39;s autonomy does not reduce the deploying organisation&#39;s responsibility; the CMA updated its AI agents guidance to include it. <span class="item-meta">LexisNexis, on the DRCF joint statement · 2026-10-30</span></p>
         
         <p class="item-sowhat">With no AI-specific rulebook coming, a PM putting agents on governed data in a regulated firm carries the full existing obligations from day one, which makes per-agent identity, access logging and decision lineage part of the platform&#39;s minimum bar rather than later hardening.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://siliconangle.com/2026/11/04/sentra-raises-150m-to-control-what-ai-agents-can-reach-in-corporate-data/">Sentra raises $150M to limit what agents can read</a></div>
+        <div class="item-title"><a href="https://siliconangle.com/2026/11/04/sentra-raises-150m-to-control-what-ai-agents-can-reach-in-corporate-data/" target="_blank" rel="noopener">Sentra raises $150M to limit what agents can read</a></div>
         <p class="item-line">Data security company Sentra announced $150 million on 4 November, led by Capital One Ventures, for a platform that classifies data in the customer&#39;s own tenant, maps which people, service accounts and AI agents can reach each dataset, and enforces minimum permissions with audit trails; SiliconANGLE puts total funding above $250 million. <span class="item-meta">SiliconANGLE · 2026-11-04</span></p>
         
         <p class="item-sowhat">A bank&#39;s venture arm leading the round signals that agent-to-dataset access mapping is becoming a buying category of its own; a platform PM deciding whether catalog permissions are enough for agents now has a market to compare the native controls against.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://siliconangle.com/2026/11/03/crowdstrike-to-acquire-cybersecurity-startups-fiddler-ai-dreadnode-for-reported-495m/">CrowdStrike buys Fiddler and Dreadnode to watch AI agents</a></div>
+        <div class="item-title"><a href="https://siliconangle.com/2026/11/03/crowdstrike-to-acquire-cybersecurity-startups-fiddler-ai-dreadnode-for-reported-495m/" target="_blank" rel="noopener">CrowdStrike buys Fiddler and Dreadnode to watch AI agents</a></div>
         <p class="item-line">CrowdStrike agreed on 3 November to acquire Fiddler AI, which monitors and explains AI agents after deployment and will become Falcon Observe, and Dreadnode, which red-teams AI systems and their MCP servers before deployment, for a combined $495 million reported by The Wall Street Journal; CrowdStrike did not disclose terms. <span class="item-meta">SiliconANGLE · 2026-11-03</span></p>
         
         <p class="item-sowhat">Agent and model monitoring is being absorbed into security suites, so a platform team that adopted a standalone AI observability tool should check its vendor risk and decide whether agent telemetry belongs to the data platform or to security operations.</p>
@@ -83,7 +85,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://oracle.com/news/announcement/ai-world-oracle-expands-native-ai-and-data-services-on-oci-with-snowflake-2026-10-27/">Snowflake will run natively on Oracle Cloud</a></div>
+        <div class="item-title"><a href="https://oracle.com/news/announcement/ai-world-oracle-expands-native-ai-and-data-services-on-oci-with-snowflake-2026-10-27/" target="_blank" rel="noopener">Snowflake will run natively on Oracle Cloud</a></div>
         <p class="item-line">Oracle and Snowflake announced on 27 October that Snowflake will be offered as a first-party service on Oracle Cloud Infrastructure, bought under an Oracle contract, billed through OCI and payable with Oracle Universal Credits, placed near Fusion, NetSuite and Autonomous Database data; Snowflake describes it as planned, with no availability date or pricing. <span class="item-meta">Oracle newsroom · 2026-10-27</span></p>
         
         <p class="item-sowhat">Being able to spend existing cloud commitments on a data platform changes the buy decision for Oracle-heavy finance and supply-chain estates, but with no date or price yet, it is a negotiating point for this budget cycle rather than something to plan a roadmap on.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.databricks.com/aws/en/ai-bi/release-notes/2026">Genie Agents can now read PDFs and decks in governed volumes</a></div>
+        <div class="item-title"><a href="https://docs.databricks.com/aws/en/ai-bi/release-notes/2026" target="_blank" rel="noopener">Genie Agents can now read PDFs and decks in governed volumes</a></div>
         <p class="item-line">Databricks&#39; 2 November release note opens file analysis in Genie Agents to workspaces through the Previews page: an agent in Agent mode can search PDFs, Office documents and images in Unity Catalog managed volumes, combine them with table data and cite the source page, running with the asking user&#39;s permissions. <span class="item-meta">Databricks AI/BI release notes · 2026-11-02</span></p>
         
         <p class="item-sowhat">Documents become something a governed agent answers from, so the gold layer is no longer the only thing that needs ownership and quality rules; a platform PM should decide which volumes are curated enough to attach before analysts start attaching shared drives.</p>
@@ -106,7 +108,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.marktechpost.com/2026/11/01/nvidia-auto-ontology-open-source-semantic-layer-ai-agents/">NVIDIA open-sources a semantic layer agents must query through</a></div>
+        <div class="item-title"><a href="https://www.marktechpost.com/2026/11/01/nvidia-auto-ontology-open-source-semantic-layer-ai-agents/" target="_blank" rel="noopener">NVIDIA open-sources a semantic layer agents must query through</a></div>
         <p class="item-line">NVIDIA&#39;s Auto Ontology, released under Apache 2.0 with its Agent Knowledge Foundation bundle at GTC Berlin in late October, builds a graph-based context layer from enterprise metadata over sources including Databricks, Snowflake and Postgres, and exposes it to agents through nine read-only MCP tools with no tool for browsing raw schemas. <span class="item-meta">MarkTechPost · 2026-11-01</span></p>
         
         <p class="item-sowhat">The design choice worth copying is the missing tool: agents reach certified definitions and never the raw schema. A PM deciding how agents get the gold layer&#39;s business definitions has an open reference to test against, though the 90% faster ontology build is NVIDIA&#39;s own figure.</p>
@@ -115,7 +117,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.cdomagazine.tech/aiml/accenture-survey-finds-enterprise-ai-governance-and-data-readiness-lag-behind-adoption">Half of CIOs say the data foundation blocks scaling AI</a></div>
+        <div class="item-title"><a href="https://www.cdomagazine.tech/aiml/accenture-survey-finds-enterprise-ai-governance-and-data-readiness-lag-behind-adoption" target="_blank" rel="noopener">Half of CIOs say the data foundation blocks scaling AI</a></div>
         <p class="item-line">Accenture&#39;s CIO Pulse, published 3 November from 300 CIOs and senior technology leaders, found 53% cite poor data readiness and quality, sovereignty or regulatory constraints as barriers to scaling AI, 51% the absence of a trusted and governed data foundation, and 54% governance and responsible-AI concerns, while 64% say they are scaling AI and 7% are optimising it at scale. <span class="item-meta">CDO Magazine, on Accenture&#39;s CIO Pulse · 2026-11-03</span></p>
         
         <p class="item-sowhat">The gap between 64% scaling and 7% optimising is the argument for judging a foundation-phase platform on governed coverage and trust rather than adoption; the figures give a PM an outside benchmark for that case.</p>
@@ -124,7 +126,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">podcast · Experiencing Data, Brian T. O&#39;Neill (episode 192) · 2026-04-15</div>
-      <div class="learn-title"><a href="https://brian2r.podbean.com/e/192-%e2%80%93-product-usage-does-not-value-why-adoption-metrics-are-misleading-you/">Product Usage Does Not = Value: Why &#39;Adoption&#39; Metrics Are Misleading You</a></div>
+      <div class="learn-title"><a href="https://brian2r.podbean.com/e/192-%e2%80%93-product-usage-does-not-value-why-adoption-metrics-are-misleading-you/" target="_blank" rel="noopener">Product Usage Does Not = Value: Why &#39;Adoption&#39; Metrics Are Misleading You</a></div>
       <p class="learn-eli5">Counting how often people open a dashboard or query a table tells you one thing for sure: the number isn&#39;t zero. It doesn&#39;t tell you whether anyone&#39;s work got easier, faster or more correct. People can use a product a lot because they&#39;re forced to, or because it&#39;s confusing and they keep coming back, and they can use a good one rarely because it answers the question in one go. This episode argues for measuring the change in the user&#39;s outcome rather than the activity.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> This bears directly on how a data platform in its foundation phase is judged: usage counts flatter or punish it for the wrong reasons. A roadmap can carry outcome measures instead, such as time from question to trusted answer or how much rework consumers no longer do, with usage reported only as context.</p>
     </div>

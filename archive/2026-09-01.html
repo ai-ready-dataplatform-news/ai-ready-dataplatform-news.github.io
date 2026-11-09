@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.globenewswire.com/news-release/2026/08/31/3353356/19933/en/broadcom-unveils-ai-ready-data-foundations-in-vmware-tanzu-platform-to-power-secure-enterprise-ai-cloud.html">Broadcom brings AI-ready data foundations to VMware Tanzu</a></div>
+        <div class="item-title"><a href="https://www.globenewswire.com/news-release/2026/08/31/3353356/19933/en/broadcom-unveils-ai-ready-data-foundations-in-vmware-tanzu-platform-to-power-secure-enterprise-ai-cloud.html" target="_blank" rel="noopener">Broadcom brings AI-ready data foundations to VMware Tanzu</a></div>
         <p class="item-line">Broadcom added AI-ready data foundations to the VMware Tanzu Platform, pairing governed agents with governed data inside a customer&#39;s own private-cloud boundary. <span class="item-meta">GlobeNewswire · 2026-08-31</span></p>
         
         <p class="item-sowhat">A credible private-cloud path for governed AI data changes the buy-vs-cloud calculus for teams wary of egress fees and multi-tenant exposure.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.businesswire.com/news/home/20260830976587/en/CrowdStrike-Brings-the-Falcon-Platform-to-Snowflake-Unifying-Security-and-Data-at-Enterprise-Scale">CrowdStrike brings Falcon security to Snowflake Marketplace</a></div>
+        <div class="item-title"><a href="https://www.businesswire.com/news/home/20260830976587/en/CrowdStrike-Brings-the-Falcon-Platform-to-Snowflake-Unifying-Security-and-Data-at-Enterprise-Scale" target="_blank" rel="noopener">CrowdStrike brings Falcon security to Snowflake Marketplace</a></div>
         <p class="item-line">CrowdStrike&#39;s Falcon platform is now available through Snowflake Marketplace, letting customers pay for it out of Snowflake capacity they&#39;ve already committed to. <span class="item-meta">Business Wire · 2026-08-31</span></p>
         
         <p class="item-sowhat">Bundling security spend into an existing data-platform commitment is a new lever for platform PMs negotiating both budget lines at once.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.dataengineeringweekly.com/p/data-engineering-weekly-285">DuckLake outpaces Iceberg on CDC-heavy workloads</a></div>
+        <div class="item-title"><a href="https://www.dataengineeringweekly.com/p/data-engineering-weekly-285" target="_blank" rel="noopener">DuckLake outpaces Iceberg on CDC-heavy workloads</a></div>
         <p class="item-line">New benchmarks show DuckLake&#39;s database-backed metadata handling change-data-capture workloads meaningfully faster than Iceberg, where compaction and global locks slow things down. <span class="item-meta">Data Engineering Weekly · 2026-08-31</span></p>
         
         <p class="item-sowhat">For CDC-heavy pipelines feeding models, a table format&#39;s metadata design is now a real performance and cost lever, not just a compatibility checkbox.</p>
@@ -83,7 +85,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">04</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://siliconangle.com/2026/08/31/cloud-ai-economics-push-enterprises-toward-private-clouds-vmwareexplore/">AI economics push workloads back to private clouds</a></div>
+        <div class="item-title"><a href="https://siliconangle.com/2026/08/31/cloud-ai-economics-push-enterprises-toward-private-clouds-vmwareexplore/" target="_blank" rel="noopener">AI economics push workloads back to private clouds</a></div>
         <p class="item-line">Rising token costs, hardware prices and security exposure are pushing enterprises to bring AI workloads back inside their own data centers, VMware Explore speakers said. <span class="item-meta">SiliconANGLE · 2026-08-31</span></p>
         
         <p class="item-sowhat">A public-cloud-only AI roadmap now needs a private-cloud contingency case — repatriation is boardroom-credible, not fringe.</p>
@@ -92,7 +94,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">05</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.globenewswire.com/news-release/2026/08/27/3351759/0/en/accuknox-launches-agentz-to-help-enterprises-build-run-and-govern-ai-agents-at-scale.html">AccuKnox launches AgentZ to govern AI agents at scale</a></div>
+        <div class="item-title"><a href="https://www.globenewswire.com/news-release/2026/08/27/3351759/0/en/accuknox-launches-agentz-to-help-enterprises-build-run-and-govern-ai-agents-at-scale.html" target="_blank" rel="noopener">AccuKnox launches AgentZ to govern AI agents at scale</a></div>
         <p class="item-line">AgentZ bundles agent execution, tools, workflows, permissions and governance into one platform, with SaaS, on-prem and air-gapped deployment options. <span class="item-meta">GlobeNewswire · 2026-08-27</span></p>
         
         <p class="item-sowhat">A single governed stack for agent permissioning and audit lowers the build cost of the control layer platform PMs keep having to justify separately.</p>
@@ -106,7 +108,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://devolutions.net/blog/sneak-peek-at-our-2026-ai-maturity-benchmark-report-4-findings/">Devolutions previews its 2026 AI Maturity Benchmark</a></div>
+        <div class="item-title"><a href="https://devolutions.net/blog/sneak-peek-at-our-2026-ai-maturity-benchmark-report-4-findings/" target="_blank" rel="noopener">Devolutions previews its 2026 AI Maturity Benchmark</a></div>
         <p class="item-line">A sneak peek at Devolutions&#39; survey of 616 IT professionals finds 92% already using AI daily, but maturity in governing that use lags adoption. <span class="item-meta">Devolutions · 2026-08-27</span></p>
         
         <p class="item-sowhat">Another data point that adoption has outrun governance — worth flagging before the full report lands in September and resets the readiness conversation.</p>
@@ -115,7 +117,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">podcast · Nexla Podcast</div>
-      <div class="learn-title"><a href="https://nexla.com/podcast/data-catalog-semantic-layer-ai-agents/">AI-Ready Data, Semantic Layers, and Governance</a></div>
+      <div class="learn-title"><a href="https://nexla.com/podcast/data-catalog-semantic-layer-ai-agents/" target="_blank" rel="noopener">AI-Ready Data, Semantic Layers, and Governance</a></div>
       <p class="learn-eli5">A semantic layer is a shared dictionary that sits between raw data and everything that reads it — dashboards, models, AI agents — so &#39;revenue&#39; means the same thing everywhere it&#39;s asked. Without one, an AI agent answering a question about revenue might silently pick a different table, join, or definition than the dashboard next to it, and both will sound equally confident. The semantic layer is where an organization writes its definitions down once and makes every consumer, human or model, use that same version.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> Before shipping more AI-facing features, check whether the semantic layer is the governed source those features actually query — an ungoverned layer means every new agent is a new place for definitions to quietly drift.</p>
     </div>

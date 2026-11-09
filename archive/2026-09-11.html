@@ -19,11 +19,13 @@
 <link rel="stylesheet" href="../assets/brief.css">
 <script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>
-document.addEventListener('click', function (e) {
+function countArticle(e) {
   var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
   if (!a || !window.goatcounter || !window.goatcounter.count) return;
   window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
-});
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
 </script>
 </head>
 <body>
@@ -56,7 +58,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://writer.com/blog/enterprise-ai-adoption-2026/">Writer survey: 79% hit AI adoption snags in 2026</a></div>
+        <div class="item-title"><a href="https://writer.com/blog/enterprise-ai-adoption-2026/" target="_blank" rel="noopener">Writer survey: 79% hit AI adoption snags in 2026</a></div>
         <p class="item-line">Writer&#39;s 2026 enterprise AI survey with Workplace Intelligence finds 79% of organizations face adoption challenges despite heavy spend, with 54% of C-suite leaders saying AI is straining their company and only 29% seeing significant ROI from generative AI. <span class="item-meta">Writer · 2026-09-07</span></p>
         
         <p class="item-sowhat">A widely-cited ROI gap this stark is the number a platform PM should have ready when a steering committee asks why the data foundation work matters more than another pilot.</p>
@@ -65,7 +67,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://thenewstack.io/docusign-mcp-agentic-agreements/">Docusign opens its MCP server to every AI agent</a></div>
+        <div class="item-title"><a href="https://thenewstack.io/docusign-mcp-agentic-agreements/" target="_blank" rel="noopener">Docusign opens its MCP server to every AI agent</a></div>
         <p class="item-line">Docusign announced its Model Context Protocol server will be generally available to any AI agent on September 30, making agreement data and its Iris engine callable natively from Claude, ChatGPT, Gemini, Copilot and Slack. <span class="item-meta">The New Stack · 2026-09-04</span></p>
         
         <p class="item-sowhat">One more large SaaS vendor treating MCP as its default integration surface is a data point for whether to build a governed MCP gateway in-house or wait for source systems to ship their own.</p>
@@ -74,7 +76,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://americanbazaaronline.com/2026/09/10/salesforce-in-talks-to-acquire-ai-startup-listen-labs-for-2-billion-487894/">Salesforce in talks to buy Listen Labs for $2B</a></div>
+        <div class="item-title"><a href="https://americanbazaaronline.com/2026/09/10/salesforce-in-talks-to-acquire-ai-startup-listen-labs-for-2-billion-487894/" target="_blank" rel="noopener">Salesforce in talks to buy Listen Labs for $2B</a></div>
         <p class="item-line">Salesforce is reportedly in talks to acquire Listen Labs, a three-year-old startup that runs automated qualitative customer interviews at enterprise scale, for around $2 billion to feed Agentforce. <span class="item-meta">American Bazaar · 2026-09-10</span></p>
         
         <p class="item-sowhat">Salesforce&#39;s fourth AI acquisition of the year is buying proprietary customer-research data rather than infrastructure — worth watching for what it signals about where vendors think the defensible data moat actually sits.</p>
@@ -88,7 +90,7 @@ document.addEventListener('click', function (e) {
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://p4sc4l.substack.com/p/cxo-data-summit-europe-2026-ai-itself">CXO summit: match AI ownership to accountability</a></div>
+        <div class="item-title"><a href="https://p4sc4l.substack.com/p/cxo-data-summit-europe-2026-ai-itself" target="_blank" rel="noopener">CXO summit: match AI ownership to accountability</a></div>
         <p class="item-line">A writeup from the CXO Data Summit Europe argues AI itself is becoming unexceptional, and the harder, unpurchasable problem is building clear executive accountability for the outcomes it&#39;s meant to deliver. <span class="item-meta">p4sc4l (Substack) · 2026-09-09</span></p>
         
         <p class="item-sowhat">Before proposing a Chief AI Officer or folding AI into an existing data leader&#39;s remit, this is the sharper question to answer first: which outcome needs single-threaded ownership, and does the current org chart actually assign it to anyone.</p>
@@ -97,7 +99,7 @@ document.addEventListener('click', function (e) {
     
     <div class="learn">
       <div class="learn-tag">blog · Sourcegraph</div>
-      <div class="learn-title"><a href="https://sourcegraph.com/blog/context-engineering">Why AI agents keep failing on enterprise data</a></div>
+      <div class="learn-title"><a href="https://sourcegraph.com/blog/context-engineering" target="_blank" rel="noopener">Why AI agents keep failing on enterprise data</a></div>
       <p class="learn-eli5">A human analyst answering &quot;how many active customers do we have&quot; silently draws on years of tribal knowledge — which system is the source of truth, what &quot;active&quot; actually excludes, how a customer that appears in three databases under three different IDs is really one customer. An AI agent has none of that by default, so it fails in one of four predictable ways: the meaning of a term fragments across systems, the definition only ever lived in someone&#39;s head, an entity resolves to a different identity in every database it touches, or the answer it gives can&#39;t be traced back to where it came from. Context engineering is the practice of writing all of that down in a form the agent can actually query, rather than leaving it undocumented and hoping the agent guesses right.</p>
       <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> Each of those four failure modes maps directly onto a roadmap line item — entity resolution, a documented metrics layer, lineage — so this is a usable checklist for diagnosing why a pilot agent gives inconsistent answers before blaming the model.</p>
     </div>
