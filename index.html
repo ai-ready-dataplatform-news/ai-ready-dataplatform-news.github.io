@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The AI-Ready Data Platform Brief · Thursday 19 November 2026</title>
+<title>The AI-Ready Data Platform Brief · Friday 20 November 2026</title>
 <meta name="description" content="Data products and the platforms beneath them, and the shift from analytics-ready to AI-ready data — each read from the product seat.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The AI-Ready Data Platform Brief">
@@ -32,7 +32,7 @@ document.addEventListener('auxclick', function (e) { if (e.button === 1) countAr
 <div class="band band-top">
   <div class="inner">
     <div class="masthead">The AI-Ready Data Platform Brief</div>
-    <div class="day-date">Thursday · 19 November 2026</div>
+    <div class="day-date">Friday · 20 November 2026</div>
     <p class="standfirst">Data products and the platforms beneath them, and the shift from analytics-ready to AI-ready data — each read from the product seat.</p>
     <p class="byline">Curated by <a href="https://www.linkedin.com/in/rathnamuthumanickam">Rathna Muthumanickam</a> with the use of Claude Code. <span class="byline-note">I build data platforms and the data products on top of them. I read this stuff anyway, so I automated the reading and published the result.</span></p>
     <a class="archive-link" href="archive/">Browse the last 30 days in the archive &rarr;</a>
@@ -44,9 +44,9 @@ document.addEventListener('auxclick', function (e) { if (e.button === 1) countAr
     
   <section class="quote">
     <h2 class="heading">On leading</h2>
-    <blockquote>The function of leadership is to produce more leaders, not more followers.</blockquote>
-    <div class="attribution">Ralph Nader</div>
-    <p class="quote-prompt">Hand over a decision you&#39;d normally make, and back the answer you get.</p>
+    <blockquote>A leader takes people where they want to go. A great leader takes people where they don&#39;t necessarily want to go, but ought to be.</blockquote>
+    <div class="attribution">Rosalynn Carter</div>
+    <p class="quote-prompt">Name the unpopular direction you believe is right, and make the case once.</p>
   </section>
     
   <section class="news">
@@ -55,28 +55,19 @@ document.addEventListener('auxclick', function (e) { if (e.button === 1) countAr
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://databricks.com/blog/introducing-databricks-ai-index-state-enterprise-ai-tokenomics" target="_blank" rel="noopener">Databricks publishes what its customers actually spend on models</a></div>
-        <p class="item-line">Databricks launched the Databricks AI Index on 16 November, tracking token and spend shares across proprietary and open-weight models on its Unity Gateway; as reported from the index, open-weight models took 30.9% of tokens sent to Databricks-hosted models in the week of 2 November, up from 7.3% in the week of 20 July, and the median user&#39;s weekly spend rose from $0.40 to $2.49 over the same period. <span class="item-meta">Databricks · 2026-11-16</span></p>
+        <div class="item-title"><a href="https://techcommunity.microsoft.com/blog/analyticsonazure/from-purview-data-governance-to-the-fabric-onelake-catalog/4573422" target="_blank" rel="noopener">Microsoft retires Purview Data Governance for the OneLake catalog</a></div>
+        <p class="item-line">Microsoft has given notice that support for Purview Data Governance, including the Unified Catalog and Data Map, ends on 12 November 2027, with governance of Fabric data moving to the OneLake catalog while Purview stays on as the security and compliance layer; Microsoft names Atlan, Alation, Collibra and Informatica as integrations for estates that reach beyond Fabric. <span class="item-meta">Microsoft Tech Community, Analytics on Azure blog · 2026-11-13</span></p>
         
-        <p class="item-sowhat">A cost-per-governed-dataset case that ignores model spend is now missing its fastest-growing line, and a sixfold rise in median per-user spend in four months gives a platform PM a dated benchmark to set an AI budget and gateway quotas against rather than a guess.</p>
+        <p class="item-sowhat">Anyone weighing catalog buy-versus-build on a Microsoft-heavy estate now has a twelve-month clock and a fork to choose: govern inside the platform&#39;s own catalog, or keep an independent governance layer that spans Databricks, Redshift and Power BI alike.</p>
       </div>
     </li>
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://digiday.com/media/yahoo-becomes-first-licensee-of-spotify-like-collective-ai-content-licensing-model/" target="_blank" rel="noopener">Publishers&#39; AI licensing collective signs Yahoo as first payer</a></div>
-        <p class="item-line">The Internet Licensing Collective, formerly the RSL Collective, launched on 12 November with more than 3,000 publisher members and Yahoo Scout as its first commercial licensee, paying a blanket fee for access and distributing royalties according to how each publisher&#39;s content appears in Yahoo&#39;s AI answers; the fee was not disclosed. <span class="item-meta">Digiday · 2026-11-12</span></p>
+        <div class="item-title"><a href="https://aws.amazon.com/blogs/big-data/multi-statement-transactions-for-apache-iceberg-tables-in-amazon-redshift/" target="_blank" rel="noopener">Redshift commits several writes to one Iceberg table atomically</a></div>
+        <p class="item-line">From Patch 206, Amazon Redshift runs several INSERT, UPDATE, DELETE or MERGE statements against one Apache Iceberg table inside a single BEGIN … COMMIT and publishes them as one snapshot, so other sessions and engines see none of the changes until commit; all writes in a transaction must target the same table, and AWS asks Glue Data Catalog users to switch on orphan-file deletion first. <span class="item-meta">AWS Big Data Blog · 2026-11-13</span></p>
         
-        <p class="item-sowhat">It is a working template for pricing data sold to AI rather than to people: one blanket licence with payouts metered by use, which is the packaging question any team turning governed data into an external product has to answer before it signs a first buyer.</p>
-      </div>
-    </li>
-    <li>
-      <span class="numeral">03</span>
-      <div class="item-body">
-        <div class="item-title"><a href="https://thebridge.jp/2026/11/edelbyte-raises-70m-data-platform-ai-agents" target="_blank" rel="noopener">Ex-Kusto engineers raise $70M for an agent-scale query engine</a></div>
-        <p class="item-line">Edelbyte, founded in 2025 by former Microsoft engineers who built Kusto, came out of stealth on 11 November with $70 million in seed and Series A funding led by Sequoia and Quiet Capital, for one engine combining search, analytics, vector, graph and geospatial queries, built for the query volume AI agents generate; it reports petabyte-scale deployments at several Fortune 500 companies, which is the company&#39;s own claim. <span class="item-meta">The Bridge · 2026-11-11</span></p>
-        
-        <p class="item-sowhat">Investors are now betting that agent query load will break the warehouse cost model, so a platform PM opening governed data to agents should measure how many queries each conversational answer actually fires before that load lands on the compute bill.</p>
+        <p class="item-sowhat">A warehouse that can now do a governed, all-or-nothing load into an open table changes the cost of keeping Redshift alongside a lakehouse: gold-layer refreshes no longer have to be single statements to stay consistent for the dashboards and agents reading them.</p>
       </div>
     </li></ol>
   </section>
@@ -87,36 +78,36 @@ document.addEventListener('auxclick', function (e) { if (e.button === 1) countAr
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.itbrew.com/stories/data-priorities-among-concerns-for-ai-integration-research-finds" target="_blank" rel="noopener">Governance gaps stalled AI at 81% of large enterprises</a></div>
-        <p class="item-line">Transcend&#39;s survey of more than 220 senior IT leaders at enterprises with over 5,000 employees found 81% had at least one AI initiative delayed, scaled back or abandoned, with roughly a third of initiatives affected, and that data issues during the AI life cycle related to permissions or governance 93% of the time; Transcend, which sells governance software, says only a quarter have a governance model that runs in real time across every system. <span class="item-meta">IT Brew, on Transcend&#39;s CIO data readiness report · 2026-06-10</span></p>
+        <div class="item-title"><a href="https://www.datastudios.org/post/snowflake-cortex-ai-function-studio-ga-optimization-cheaper-models" target="_blank" rel="noopener">Snowflake makes scored, optimised AI functions generally available</a></div>
+        <p class="item-line">Snowflake made Cortex AI Function Studio and Cortex AI Function Optimization generally available on 16 November, letting a team build a custom AI function in SQL, score it against a labelled, versioned sample of about 50 to 200 rows, and have Snowflake search for a better prompt or a cheaper model before it reaches production; no separate pricing is published for either. <span class="item-meta">Data Studios, citing the Snowflake release notes · 2026-11-16</span></p>
         
-        <p class="item-sowhat">It places the blocker on the permissions layer rather than on data quality or models, which supports keeping the governance bar absolute inside a narrow scope and treating the access model, not more datasets, as the thing that has to scale before agents do.</p>
+        <p class="item-sowhat">It turns &#39;is the data good enough for the model&#39; into a measured gate inside the warehouse, with a labelled sample as the contract, which is the pattern a governed gold layer needs before any AI-derived column is allowed to feed a dashboard.</p>
       </div>
     </li>
     <li>
       <span class="numeral">02</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://docs.databricks.com/gcp/en/release-notes/unity-gateway/" target="_blank" rel="noopener">Databricks counts document-parsing AI spend in gateway budgets</a></div>
-        <p class="item-line">From 1 November, Unity Gateway budgets include spend from task-specific AI Functions such as ai_parse_document, ai_extract and ai_classify, across both batch and real-time execution paths. <span class="item-meta">Databricks Unity Gateway release notes · 2026-11-01</span></p>
+        <div class="item-title"><a href="https://finance.yahoo.com/technology/ai/articles/atlan-microsoft-collaborate-extend-onelake-193100830.html" target="_blank" rel="noopener">Atlan offers a route out of Purview that keeps data products</a></div>
+        <p class="item-line">Atlan announced on 17 November a collaboration with Microsoft to extend governance across the OneLake catalog, including a Migration Studio, in private preview, that reads Purview Data Governance and carries glossaries, governance domains, data products, custom attributes and classifications across, and exposes Atlan&#39;s metadata in OneLake through Iceberg shortcuts in preview. <span class="item-meta">Yahoo Finance, on Atlan&#39;s announcement · 2026-11-17</span></p>
         
-        <p class="item-sowhat">Turning documents into governed tables is now metered under the same budget as agent traffic, so the cost of making unstructured data model-ready can be attributed per pipeline and per team rather than vanishing into general compute.</p>
+        <p class="item-sowhat">Data products, domains and glossary terms are now being treated as portable metadata rather than something rebuilt per catalog, which is the test to set any catalog vendor: can the definitions agreed for a gold layer leave with you.</p>
       </div>
     </li>
     <li>
       <span class="numeral">03</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.datastudios.org/post/bigquery-ai-parse-document-generally-available-document-ai-layout-parser" target="_blank" rel="noopener">BigQuery&#39;s document parser reaches general availability</a></div>
-        <p class="item-line">Google made BigQuery&#39;s AI.PARSE_DOCUMENT function generally available on 2 November, extracting titles, headings, paragraphs, lists, tables and images from documents through the Document AI layout parser, which runs on a processor the customer creates and pays for separately. <span class="item-meta">Data Studios, citing the BigQuery release notes · 2026-11-02</span></p>
+        <div class="item-title"><a href="https://www.thoughtspot.com/data-chief/ep149/the-data-first-ai-strategy-behind-a-dollar7m-healthcare-ai-roi" target="_blank" rel="noopener">A hospital took 18 months on its data before scaling AI</a></div>
+        <p class="item-line">Hospital for Special Surgery&#39;s chief transformation and digital information officer describes asking his board for 18 months to centralise the organisation&#39;s data before scaling AI, declining one-off use cases until the data was right, and ties that sequencing to a reported $7M return from healthcare AI, though the episode listing does not say how the figure was calculated. <span class="item-meta">The Data &amp; AI Chief (ThoughtSpot), episode 149, Dr. Ashis Barad of HSS · 2026-11-11</span></p>
         
-        <p class="item-sowhat">With both Databricks and BigQuery now offering document parsing as a supported SQL function, the choice between bringing documents into the governed platform and running a separate pipeline is a cost-attribution decision, not a capability one.</p>
+        <p class="item-sowhat">It is a named, board-level case for judging a platform on its foundation before its adoption numbers, which is the argument a foundation-phase platform team has to win when asked why AI use cases are not yet multiplying.</p>
       </div>
     </li></ol>
     
     <div class="learn">
-      <div class="learn-tag">video · LeadDev, LDX3 London 2025, Thomas Inman of Auto Trader</div>
-      <div class="learn-title"><a href="https://leaddev.com/technical-direction/going-all-in-on-data-products" target="_blank" rel="noopener">Going all-in on data products</a></div>
-      <p class="learn-eli5">Most teams build an app first and let someone else work out the data afterwards, usually by scraping whatever the app happened to store. Auto Trader&#39;s team did it the other way round on a new online car-buying project: the same people who built the customer-facing product also designed the data that comes out of it, as a product in its own right. That data then fed a dashboard showing what the project delivered and even the billing system. It cost more effort up front, and the talk is open about where those costs landed.</p>
-      <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> It is a named case for putting data modelling authority with the team that builds the operational product, with the costs stated, which is the evidence a platform PM needs when arguing where modelling should sit; on a roadmap that means making a data product definition part of the definition of done for new operational features, rather than a platform backlog item afterwards.</p>
+      <div class="learn-tag">course · Coursera, Saïd Business School, University of Oxford</div>
+      <div class="learn-title"><a href="https://www.coursera.org/specializations/ai-financial-services-foundations-future-trends/paidmedia" target="_blank" rel="noopener">AI in Financial Services: Foundations through Future Trends</a></div>
+      <p class="learn-eli5">Banks and insurers already use AI to spot fraud, score credit and answer customers, and each of those only works if the data underneath can be reached, trusted and shared. This three-course series starts with how such systems are built and where they go wrong, then turns to why data access and interoperability decide which AI ideas are even possible, and ends with open finance, where customers can tell their bank to share their data with someone else. The thread through all three is that in finance the rules about data shape the AI more than the models do.</p>
+      <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> It frames AI governance in financial services as a data-access and interoperability question rather than a model question, which gives a platform PM the vocabulary to put consent, sharing and interoperability requirements on the roadmap now, ahead of the AI use cases that will depend on them.</p>
     </div>
   </section>
     <div class="site-foot">
