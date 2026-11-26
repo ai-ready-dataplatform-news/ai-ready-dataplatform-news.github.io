@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The AI-Ready Data Platform Brief · Wednesday 25 November 2026</title>
+<title>The AI-Ready Data Platform Brief · Thursday 26 November 2026</title>
 <meta name="description" content="Data products and the platforms beneath them, and the shift from analytics-ready to AI-ready data — each read from the product seat.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The AI-Ready Data Platform Brief">
@@ -32,7 +32,7 @@ document.addEventListener('auxclick', function (e) { if (e.button === 1) countAr
 <div class="band band-top">
   <div class="inner">
     <div class="masthead">The AI-Ready Data Platform Brief</div>
-    <div class="day-date">Wednesday · 25 November 2026</div>
+    <div class="day-date">Thursday · 26 November 2026</div>
     <p class="standfirst">Data products and the platforms beneath them, and the shift from analytics-ready to AI-ready data — each read from the product seat.</p>
     <p class="byline">Curated by <a href="https://www.linkedin.com/in/rathnamuthumanickam">Rathna Muthumanickam</a> with the use of Claude Code. <span class="byline-note">I build data platforms and the data products on top of them. I read this stuff anyway, so I automated the reading and published the result.</span></p>
     <a class="archive-link" href="archive/">Browse the last 30 days in the archive &rarr;</a>
@@ -44,9 +44,9 @@ document.addEventListener('auxclick', function (e) { if (e.button === 1) countAr
     
   <section class="quote">
     <h2 class="heading">On leading</h2>
-    <blockquote>Great leaders are almost always great simplifiers.</blockquote>
-    <div class="attribution">Colin Powell</div>
-    <p class="quote-prompt">Reduce your current strategy to one sentence a new joiner could repeat.</p>
+    <blockquote>The most important thing in communication is hearing what isn&#39;t said.</blockquote>
+    <div class="attribution">Peter Drucker</div>
+    <p class="quote-prompt">In today&#39;s review, listen for the objection nobody is willing to voice.</p>
   </section>
     
   <section class="news">
@@ -55,50 +55,23 @@ document.addEventListener('auxclick', function (e) { if (e.button === 1) countAr
     <li>
       <span class="numeral">01</span>
       <div class="item-body">
-        <div class="item-title"><a href="https://www.databricks.com/blog/introducing-genie-zeroops" target="_blank" rel="noopener">Databricks opens its pipeline-fixing agent to public beta</a></div>
-        <p class="item-line">Genie ZeroOps went to public beta on 19 November. It is a background agent that monitors production jobs, pipelines and tables, investigates failures and proposes fixes for a team to verify before applying, and Databricks says it observed more than 80,000 real customer issues during the private preview. A workspace admin switches it on from the Previews page, and catching data quality issues relies on Databricks&#39; data quality monitoring, which is billed separately. <span class="item-meta">Databricks blog · 2026-11-19</span></p>
+        <div class="item-title"><a href="https://www.snowflake.com/en/blog/engineering/snowflake-data-ingestion-error-logging-check-constraints/" target="_blank" rel="noopener">Snowflake now quarantines bad rows at load time</a></div>
+        <p class="item-line">Error logging and CHECK constraint enforcement for COPY INTO and Snowpipe reached general availability on 19 November. With error logging on and ON_ERROR set to CONTINUE, rows that fail a type conversion or break a business rule, such as a negative quantity, are written to an error table with the reason they failed, while the valid rows still load. The defaults differ, though: SKIP_FILE for Snowpipe and ABORT_STATEMENT for COPY INTO. <span class="item-meta">Snowflake engineering blog and release notes · 2026-11-19</span></p>
         
-        <p class="item-sowhat">This puts a platform-native option on the observability side of buy versus build, next to a separate quality tool. The comparison should cover cost per governed dataset, since detection is billed on top, and who signs off a proposed fix before it reaches the gold layer.</p>
-      </div>
-    </li>
-    <li>
-      <span class="numeral">02</span>
-      <div class="item-body">
-        <div class="item-title"><a href="https://www.getdbt.com/blog/whats-new-in-dbt-november-2026" target="_blank" rel="noopener">dbt puts its charts inside Claude and ChatGPT</a></div>
-        <p class="item-line">dbt Labs&#39; November update, dated 17 November, puts dbt Charts into Claude and ChatGPT in beta through a single MCP connection, so users can work with their boards and warehouse from inside those apps. dbt&#39;s own benchmark puts token use 20% to 50% below building the same dashboards from scratch. The update also adds local unit tests in alpha and batch testing in dbt v2. <span class="item-meta">dbt Labs blog · 2026-11-17</span></p>
-        
-        <p class="item-sowhat">The transformation layer is now offering a governed route from the chat window to the warehouse. That matters to anyone deciding what the transformation framework should standardise, because a definition built in dbt would then reach a chat answer without going through the BI tool.</p>
-      </div>
-    </li>
-    <li>
-      <span class="numeral">03</span>
-      <div class="item-body">
-        <div class="item-title"><a href="https://docs.thoughtspot.com/cloud/latest/notes" target="_blank" rel="noopener">ThoughtSpot&#39;s November release caps API calls per Org</a></div>
-        <p class="item-line">ThoughtSpot Cloud 26.11.0.cl was scheduled for general availability on 24 November. It brings Spotter, the AI analyst, into embedded apps and onto Liveboards (Visual Embed SDK 1.54.0 or later), and lets personalised Liveboard views carry over from development to production. It also introduces a limit of 50 requests per second per Org on public REST endpoints for instances using Orgs, which ThoughtSpot flags as a change that affects upgrades. <span class="item-meta">ThoughtSpot documentation, 26.11.0.cl release notes · 2026-11-24</span></p>
-        
-        <p class="item-sowhat">An agent or pipeline calling ThoughtSpot&#39;s REST API at machine speed will now hit a ceiling, so any plan for agentic consumption through the BI layer has to budget its call rate per Org, alongside the pricing.</p>
+        <p class="item-sowhat">This puts a basic quality gate inside the warehouse&#39;s load path, so a buy-versus-build decision on data quality now starts from what the platform already rejects and records. The question to settle is whether rule definitions live in table constraints or in the transformation framework, because keeping both creates two sources of truth.</p>
       </div>
     </li></ol>
   </section>
     
   <section class="readiness">
     <h2 class="heading">AI-ready vs analytical-ready data</h2>
-    <ol class="items">
-    <li>
-      <span class="numeral">01</span>
-      <div class="item-body">
-        <div class="item-title"><a href="https://windowsforum.com/news/microsoft-iq-at-ignite-2026-governed-ai-agent-context-and-frontier-business-plugins.452805/" target="_blank" rel="noopener">Microsoft bundles Fabric IQ into one agent context layer</a></div>
-        <p class="item-line">At Ignite on 17 November, Microsoft grouped Work IQ, Fabric IQ, Foundry IQ and Web IQ into Microsoft IQ, a context layer for agents that is not sold on its own; each part bills through an existing meter, with Fabric IQ drawing on Fabric capacity. Fabric IQ links business data to metrics and meaning, and is being extended to Excel, Copilot, ChatGPT, Claude and GitHub Copilot. Sources disagree on which pieces are generally available and which, including the Fabric IQ ontologies and the third-party chat connectors, are still in preview. <span class="item-meta">Windows Forum, on Microsoft IQ at Ignite 2026 · 2026-11-17</span></p>
-        
-        <p class="item-sowhat">Microsoft is making the Power BI semantic model the place where an agent&#39;s answer gets its meaning, which is one answer to keeping the agent and the dashboard in agreement. A team running Power BI next to a Databricks gold layer now has two candidate homes for its metric definitions, and should decide which one is authoritative before both drift.</p>
-      </div>
-    </li></ol>
+    
     
     <div class="learn">
-      <div class="learn-tag">podcast · Nexla podcast, episode 15</div>
-      <div class="learn-title"><a href="https://nexla.com/podcast/agent-management-how-do-you-govern-ai-you-didnt-build/" target="_blank" rel="noopener">Agent Management: How Do You Govern AI You Didn&#39;t Build?</a></div>
-      <p class="learn-eli5">Most organisations will not build all of their AI agents themselves. They will buy them inside tools, switch them on in platforms, or find that teams have connected them without asking. Governing an agent you did not build means treating what it reads and what it produces the way you treat any other important data: someone owns it, it has agreed definitions, and it can be traced. The episode&#39;s argument is that the outputs of AI become data products in their own right, and that a shared semantic and context layer underneath is what keeps different agents saying the same thing.</p>
-      <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> This turns AI governance from a model problem into a platform one. A foundation-phase roadmap can extend the gold layer&#39;s existing ownership and definition rules to agent inputs and outputs, starting with Genie, before a second agent arrives with its own idea of what a metric means.</p>
+      <div class="learn-tag">video · Mind the Product, ProductTank Bellevue talk with Zefr&#39;s Chief AI Officer</div>
+      <div class="learn-title"><a href="https://mindtheproduct.com/how-to-lead-data-centric-product-teams-jon-mora-chief-ai-officer-zefr" target="_blank" rel="noopener">How to lead data-centric product teams</a></div>
+      <p class="learn-eli5">On most product teams the customer sits outside the building. On a data team, many of the customers are other engineers and analysts, and what they receive is a table, an interface or a model rather than a screen. The product manager&#39;s job there is to understand those interfaces well enough to describe them clearly, to keep asking whether each piece of work serves someone&#39;s real need, and to be honest about the hardest problem: whether the ground truth the data is checked against can actually be trusted.</p>
+      <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> This frames the platform PM role as interface ownership plus customer empathy. In practice that means writing the contract and the documentation for a governed dataset as part of the product, and testing roadmap items against a named consumer&#39;s need rather than against what the engineering team finds interesting.</p>
     </div>
   </section>
     <div class="site-foot">

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The AI-Ready Data Platform Brief · Thursday 26 November 2026</title>
+<meta name="description" content="Data products and the platforms beneath them, and the shift from analytics-ready to AI-ready data — each read from the product seat.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The AI-Ready Data Platform Brief">
+<meta property="og:title" content="The AI-Ready Data Platform Brief · Thursday 26 November 2026">
+<meta property="og:description" content="A daily brief on data products, the platforms beneath them, and the shift from analytical-ready to AI-ready data.">
+<meta property="og:url" content="https://ai-ready-dataplatform-news.github.io/archive/2026-11-26.html">
+<meta property="og:image" content="https://ai-ready-dataplatform-news.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The AI-Ready Data Platform Brief, curated by Rathna Muthumanickam">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://ai-ready-dataplatform-news.github.io/archive/2026-11-26.html">
+<link rel="stylesheet" href="../assets/brief.css">
+<script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+function countArticle(e) {
+  var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
+  if (!a || !window.goatcounter || !window.goatcounter.count) return;
+  window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
+</script>
+</head>
+<body>
+<div class="band band-top">
+  <div class="inner">
+    <div class="masthead"><a href="../">The AI-Ready Data Platform Brief</a></div>
+    <div class="day-date">Thursday · 26 November 2026</div>
+    <p class="standfirst">Data products and the platforms beneath them, and the shift from analytics-ready to AI-ready data — each read from the product seat.</p>
+    <p class="byline">Curated by <a href="https://www.linkedin.com/in/rathnamuthumanickam">Rathna Muthumanickam</a> with the use of Claude Code. <span class="byline-note">I build data platforms and the data products on top of them. I read this stuff anyway, so I automated the reading and published the result.</span></p>
+    <div class="top-nav">
+      <a class="archive-link" href="../">&larr; Today</a>
+      <a class="archive-link" href="../archive/">Browse the last 30 days in the archive &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<div class="band">
+  <div class="inner">
+    
+  <section class="quote">
+    <h2 class="heading">On leading</h2>
+    <blockquote>The most important thing in communication is hearing what isn&#39;t said.</blockquote>
+    <div class="attribution">Peter Drucker</div>
+    <p class="quote-prompt">In today&#39;s review, listen for the objection nobody is willing to voice.</p>
+  </section>
+    
+  <section class="news">
+    <h2 class="heading">AI news for Data Products and Data Platforms</h2>
+    <ol class="items">
+    <li>
+      <span class="numeral">01</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.snowflake.com/en/blog/engineering/snowflake-data-ingestion-error-logging-check-constraints/" target="_blank" rel="noopener">Snowflake now quarantines bad rows at load time</a></div>
+        <p class="item-line">Error logging and CHECK constraint enforcement for COPY INTO and Snowpipe reached general availability on 19 November. With error logging on and ON_ERROR set to CONTINUE, rows that fail a type conversion or break a business rule, such as a negative quantity, are written to an error table with the reason they failed, while the valid rows still load. The defaults differ, though: SKIP_FILE for Snowpipe and ABORT_STATEMENT for COPY INTO. <span class="item-meta">Snowflake engineering blog and release notes · 2026-11-19</span></p>
+        
+        <p class="item-sowhat">This puts a basic quality gate inside the warehouse&#39;s load path, so a buy-versus-build decision on data quality now starts from what the platform already rejects and records. The question to settle is whether rule definitions live in table constraints or in the transformation framework, because keeping both creates two sources of truth.</p>
+      </div>
+    </li></ol>
+  </section>
+    
+  <section class="readiness">
+    <h2 class="heading">AI-ready vs analytical-ready data</h2>
+    
+    
+    <div class="learn">
+      <div class="learn-tag">video · Mind the Product, ProductTank Bellevue talk with Zefr&#39;s Chief AI Officer</div>
+      <div class="learn-title"><a href="https://mindtheproduct.com/how-to-lead-data-centric-product-teams-jon-mora-chief-ai-officer-zefr" target="_blank" rel="noopener">How to lead data-centric product teams</a></div>
+      <p class="learn-eli5">On most product teams the customer sits outside the building. On a data team, many of the customers are other engineers and analysts, and what they receive is a table, an interface or a model rather than a screen. The product manager&#39;s job there is to understand those interfaces well enough to describe them clearly, to keep asking whether each piece of work serves someone&#39;s real need, and to be honest about the hardest problem: whether the ground truth the data is checked against can actually be trusted.</p>
+      <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> This frames the platform PM role as interface ownership plus customer empathy. In practice that means writing the contract and the documentation for a governed dataset as part of the product, and testing roadmap items against a named consumer&#39;s need rather than against what the engineering team finds interesting.</p>
+    </div>
+  </section>
+    <div class="site-foot">
+      <a href="../">Today</a> · <a href="../archive/">Archive</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
