@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The AI-Ready Data Platform Brief · Friday 27 November 2026</title>
+<meta name="description" content="Data products and the platforms beneath them, and the shift from analytics-ready to AI-ready data — each read from the product seat.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The AI-Ready Data Platform Brief">
+<meta property="og:title" content="The AI-Ready Data Platform Brief · Friday 27 November 2026">
+<meta property="og:description" content="A daily brief on data products, the platforms beneath them, and the shift from analytical-ready to AI-ready data.">
+<meta property="og:url" content="https://ai-ready-dataplatform-news.github.io/archive/2026-11-27.html">
+<meta property="og:image" content="https://ai-ready-dataplatform-news.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The AI-Ready Data Platform Brief, curated by Rathna Muthumanickam">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://ai-ready-dataplatform-news.github.io/archive/2026-11-27.html">
+<link rel="stylesheet" href="../assets/brief.css">
+<script data-goatcounter="https://aireadydata-dailybrief.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+function countArticle(e) {
+  var a = e.target.closest && e.target.closest('.item-title a, .learn-title a');
+  if (!a || !window.goatcounter || !window.goatcounter.count) return;
+  window.goatcounter.count({ path: a.href, title: a.textContent, event: true });
+}
+document.addEventListener('click', countArticle);
+document.addEventListener('auxclick', function (e) { if (e.button === 1) countArticle(e); });
+</script>
+</head>
+<body>
+<div class="band band-top">
+  <div class="inner">
+    <div class="masthead"><a href="../">The AI-Ready Data Platform Brief</a></div>
+    <div class="day-date">Friday · 27 November 2026</div>
+    <p class="standfirst">Data products and the platforms beneath them, and the shift from analytics-ready to AI-ready data — each read from the product seat.</p>
+    <p class="byline">Curated by <a href="https://www.linkedin.com/in/rathnamuthumanickam">Rathna Muthumanickam</a> with the use of Claude Code. <span class="byline-note">I build data platforms and the data products on top of them. I read this stuff anyway, so I automated the reading and published the result.</span></p>
+    <div class="top-nav">
+      <a class="archive-link" href="../">&larr; Today</a>
+      <a class="archive-link" href="../archive/">Browse the last 30 days in the archive &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<div class="band">
+  <div class="inner">
+    
+  <section class="quote">
+    <h2 class="heading">On leading</h2>
+    <blockquote>The first responsibility of a leader is to define reality. The last is to say thank you.</blockquote>
+    <div class="attribution">Max De Pree · Leadership Is an Art</div>
+    <p class="quote-prompt">State the actual situation to your team without softening the numbers.</p>
+  </section>
+    
+  <section class="news">
+    <h2 class="heading">AI news for Data Products and Data Platforms</h2>
+    <ol class="items">
+    <li>
+      <span class="numeral">01</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://mongodb.com/company/blog/news/mongodb-acquires-firebolt" target="_blank" rel="noopener">MongoDB buys Firebolt to put analytics beside operational data</a></div>
+        <p class="item-line">MongoDB announced on 17 November that it has acquired Firebolt, the Israeli low-latency analytics engine that had raised about $270 million. The plan is to run Firebolt alongside MongoDB&#39;s operational database and keep the two in sync automatically, so serving analytics to applications and agents no longer needs a separate pipeline. Price was not disclosed, reported as well below Firebolt&#39;s earlier $1.4 billion valuation, and the integration is still months from customers. <span class="item-meta">MongoDB blog, with the SEC 8-K filing · 2026-11-17</span></p>
+        
+        <p class="item-sowhat">Any shortlist that includes Firebolt for high-concurrency serving now carries vendor risk and an owner with different priorities. Operational databases are also absorbing analytics engines, so the case for copying application data into the lakehouse just to serve agents needs restating with numbers.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">02</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.bvp.com/news/lancedb-the-data-layer-for-multimodal-ai" target="_blank" rel="noopener">LanceDB raises $57.5M for a multimodal lakehouse</a></div>
+        <p class="item-line">LanceDB closed a $57.5 million Series B on 17 November, led by Bessemer and Innovation Endeavors, which brings its total funding to $98.5 million. It builds a multimodal lakehouse on its open-source Lance format for images, video and other AI training data. Revenue has reportedly grown more than tenfold since its June 2025 Series A, and Runway is a named customer. <span class="item-meta">Bessemer Venture Partners announcement · 2026-11-17</span></p>
+        
+        <p class="item-sowhat">Lance now has the funding to compete with Iceberg and Delta for multimodal data. The table-format decision for document, image and video data deserves its own look rather than a default to whatever the tabular estate uses.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">03</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://databento.com/blog/series-c" target="_blank" rel="noopener">Market data vendor Databento reaches a $1.1B valuation</a></div>
+        <p class="item-line">Databento raised a $100 million Series C at a $1.1 billion valuation, led by Fifth Down Capital with Fitch Ventures joining as a strategic investor. The round came four months after a $97 million Series B. The company says revenue has more than doubled since then while it stayed profitable, with 39 staff. The money goes to more exchange coverage, faster delivery and larger institutional customers. <span class="item-meta">Databento blog · 2026-11-13</span></p>
+        
+        <p class="item-sowhat">API-first, usage-priced market data is pulling serious money as a challenger to terminal-style licensing. When a market-data contract comes up for renewal, a consumption-priced feed delivered straight into the platform is now a credible option to price against.</p>
+      </div>
+    </li></ol>
+  </section>
+    
+  <section class="readiness">
+    <h2 class="heading">AI-ready vs analytical-ready data</h2>
+    <ol class="items">
+    <li>
+      <span class="numeral">01</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://docs.databricks.com/aws/en/release-notes/unity-gateway/" target="_blank" rel="noopener">Databricks checks embedding inputs for sensitive data</a></div>
+        <p class="item-line">A Beta dated 18 November extends Unity Gateway service policies to single and batch embedding requests, so sensitive data or unsafe content can be caught before the model runs. The scope is narrow: only the input is checked, nothing evaluates the resulting vectors, and a denial rejects the whole request with an HTTP 400. <span class="item-meta">Databricks Unity Gateway release notes · 2026-11-18</span></p>
+        
+        <p class="item-sowhat">This puts a governance check at the point where text becomes vectors, which is where PII usually escapes into a vector index unseen. A RAG roadmap can now plan on a gateway-level policy at ingestion, but bad batch requests are blocked rather than masked, so indexing pipelines need to handle failures.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">02</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://www.unite.ai/?p=521123" target="_blank" rel="noopener">SnapLogic ships a governed registry of MCP servers</a></div>
+        <p class="item-line">SnapLogic&#39;s Discovery Hub, launched on 17 November, gives teams one catalog for finding and reusing MCP servers and tools. Together with access policies and usage monitoring, SnapLogic calls it the environment&#39;s MCP gateway. Only SnapLogic-native servers are generally available, and third-party MCP discovery and agent observability are still on the roadmap. <span class="item-meta">Unite.AI, on SnapLogic&#39;s Discovery Hub launch · 2026-11-17</span></p>
+        
+        <p class="item-sowhat">Integration platforms are now competing to be where agent-facing data interfaces are registered and governed. Deciding who owns the catalog of MCP surfaces (data platform, integration layer or agent platform) belongs on this quarter&#39;s roadmap before three teams each build one.</p>
+      </div>
+    </li>
+    <li>
+      <span class="numeral">03</span>
+      <div class="item-body">
+        <div class="item-title"><a href="https://arxiv.org/pdf/2610.33946" target="_blank" rel="noopener">Query logs as the missing documentation for text-to-SQL</a></div>
+        <p class="item-line">A preprint by Akgül, Kapahi and Muppidi argues that enterprise text-to-SQL fails mostly because schemas are undocumented, with cryptic names and implicit relationships. It builds a knowledge graph offline from historical query logs: which tables are queried together, how they join, and which columns map to business concepts. The authors also note that many enterprise questions have several valid SQL answers, so scoring against one gold query understates accuracy. <span class="item-meta">arXiv preprint, University of Southern California and Amazon authors · 2026-10-24</span></p>
+        
+        <p class="item-sowhat">Query history is an AI-readiness asset the platform already owns, and it can draft context for agents where catalogs are empty. Retention and access to query logs belong in the agent-context plan, and evaluation suites should accept several valid answers before a vendor&#39;s accuracy number is believed.</p>
+      </div>
+    </li></ol>
+    
+    <div class="learn">
+      <div class="learn-tag">course · DeepLearning.AI short course with Snowflake, taught by Anupam Datta and Josh Reini</div>
+      <div class="learn-title"><a href="https://deeplearning.ai/short-courses/building-and-evaluating-data-agents" target="_blank" rel="noopener">Building and Evaluating Data Agents</a></div>
+      <p class="learn-eli5">A data agent takes a question in plain words, decides where to look, runs queries or searches, and writes an answer. It can go wrong at any of those steps: it can pick the wrong table, fetch context that does not answer the question, skip a step in its own plan, or state something the data does not support. Evaluating it properly means checking each step, not only whether the final answer looked right, so a failure can be traced to where it started. This roughly two-hour intermediate course builds an agent and then evaluates it, in eight video lessons with code.</p>
+      <p class="learn-sowhat"><span class="learn-lede">For the roadmap</span> Step-level evaluation is what turns an agent pilot into something a platform team can support. A data-agent launch should be gated on an evaluation suite that scores retrieval relevance and groundedness as well as answer correctness, owned by the platform team alongside the semantic model it relies on.</p>
+    </div>
+  </section>
+    <div class="site-foot">
+      <a href="../">Today</a> · <a href="../archive/">Archive</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
